@@ -1,7 +1,7 @@
 # Oscar
 
 ## Created by
-- Madi Tabon
+- Rimando Tabon
 - Kenny Harman
 - Irina Lim
   
