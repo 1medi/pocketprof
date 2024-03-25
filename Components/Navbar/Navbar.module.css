@@ -1,0 +1,15 @@
+.nav {
+  position: fixed; /* Position the element relative to the viewport */
+  bottom: 0; /* Stick it to the bottom */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Make it full width */
+  display: flex;
+  flex-direction: row;
+  background-color: orange;
+  justify-content: center;
+}
+
+.buttonContainer{
+  padding:10px;
+
+}
