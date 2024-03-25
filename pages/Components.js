@@ -14,7 +14,7 @@ import TooltipBottom from "@/Components/Shapes/Tooltips/TooltipBottom";
 import TooltipRight from "@/Components/Shapes/Tooltips/TooltipRight";
 import TooltipLeft from "@/Components/Shapes/Tooltips/TooltipLeft";
 import Carousel from "@/Components/Carousel";
-
+import Button4 from "@/Components/Buttons/Button4";
 
 export default function Home() {
   return (
@@ -32,6 +32,7 @@ export default function Home() {
           <Button1/>
           <Button2/>
           <Button3/>
+          <Button4/>
         </div>
         <label>Shapes!</label>
         <div className={styles.shapes}>

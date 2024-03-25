@@ -1,4 +1,5 @@
-.buttonContainer {
+.buttonContainer, .shapes {
   display: flex;
   justify-content: space-around;
+  padding: 20px;
 }
