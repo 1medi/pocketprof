@@ -1,0 +1,9 @@
+.arrowRight {
+  width: 25px;
+  height: 25px;
+  border: 10px solid #333;
+  border-left: 0;
+  border-top: 0;
+
+  transform: rotate(315deg);
+}
