@@ -1,6 +1,11 @@
 import Head from "next/head";
+import styles from "@/styles/Components.module.css"
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
+import NavBar from "@/Components/Navbar";
+import Header from "@/Components/Header"
+import Button1 from "@/Components/Buttons/Oscar"
+import Button2 from "@/Components/Buttons/Button2"
+import Button3 from "@/Components/Buttons/Button3";
 
 export default function Home() {
   return (
@@ -11,8 +16,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header/>
       <main className={`${styles.main}`}>
-      
+        <div className={styles.buttonContainer}>
+          <Button1/>
+          <Button2/>
+          <Button3/>
+        </div>
+      <NavBar/>
       </main>
     </>
   );
