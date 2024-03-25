@@ -1,0 +1,22 @@
+.tooltipRight {
+  /* Modify size here: */
+  --size: 50px;
+  --padding: 10px;
+
+  position: relative;
+  width: calc(var(--size) - var(--padding));
+  height: calc(var(--size) / 2);
+  background: #333;
+  padding: var(--padding);
+}
+
+.tooltipRight:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #333;
+  height: 16px;
+  width: 16px;
+}

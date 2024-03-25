@@ -1,0 +1,15 @@
+.plus {
+  background: #333;
+  height: 50px;
+  position: relative;
+  width: 8px;
+}
+.plus:after {
+  background: #333;
+  content: "";
+  height: 8px;
+  left: -21px;
+  position: absolute;
+  top: 21px;
+  width: 50px;
+}
