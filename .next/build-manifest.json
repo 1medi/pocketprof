@@ -17,14 +17,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-<<<<<<< Updated upstream
-=======
     "/QuizPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/QuizPage.js"
     ],
->>>>>>> Stashed changes
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
