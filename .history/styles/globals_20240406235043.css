@@ -1,0 +1,21 @@
+:root {
+background-color: beige;
+align-content: center;
+--main-color-purple: #8E71D5;
+--main-color-lightpurple: #CCBFED;
+--secondary-color-blue: #9AB7F9;
+--secondary-color-lightblue: #CCE3FB;
+
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }

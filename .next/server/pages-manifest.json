@@ -3,4 +3,7 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/Components": "pages/Components.js"
+  "/": "pages/index.js",
+  "/QuizPage": "pages/QuizPage.js",
+  "/quiz/page": "pages/quiz/page.js"
 }
