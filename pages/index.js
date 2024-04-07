@@ -2,6 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Carousel from "@/Components/Carousel";
+<<<<<<< Updated upstream
+=======
+
+import Link from 'next/link'
+>>>>>>> Stashed changes
 
 export default function Home() {
   return (
@@ -14,7 +19,16 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <Carousel />
+<<<<<<< Updated upstream
 
+=======
+        <Link href={'/Components'}>Components </Link>
+        <Link href={'/LandingPage'}>LandingPage </Link>
+        <Link href={'/Profile'}>Profile </Link>
+        <Link href={'/QuizPage'}>Quiz</Link>
+        <Link href={'/Settings'}>Settings</Link>
+        <Link href={'/Subjects'}>Subjects</Link>
+>>>>>>> Stashed changes
       </main>
     </>
   );

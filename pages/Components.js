@@ -7,6 +7,11 @@ import Button1 from "@/Components/Buttons/Oscar"
 import Button2 from "@/Components/Buttons/Button2"
 import Button3 from "@/Components/Buttons/Button3";
 import Carousel from "@/Components/Carousel";
+<<<<<<< Updated upstream
+=======
+import Button4 from "@/Components/Buttons/Button4";
+import Link from 'next/link'
+>>>>>>> Stashed changes
 
 export default function Home() {
   return (
