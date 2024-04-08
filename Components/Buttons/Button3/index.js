@@ -1,9 +1,11 @@
 import styles from "./Button3.module.css"
 
-export default function Button3(){
+export default function Button3({
+  name
+}){
   return (
     <>
-    <button className={styles.button}>I LOVE DCD</button>
+    <button className={styles.button}>{name}</button>
     </>
   )
 }

@@ -56,8 +56,7 @@ export default function Page() {
             score: prev.score + 5,
             correctAnswers: prev.correctAnswers + 1,
           }
-        : {
-            ...prev,
+        : {...prev,
             wrongAnswers: prev.wrongAnswers + 1,
           }
     );
