@@ -12,11 +12,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/Components": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Components.js"
-    ],
     "/QuizPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

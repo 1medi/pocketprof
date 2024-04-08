@@ -2,14 +2,47 @@
   position: fixed; /* Position the element relative to the viewport */
   bottom: 0; /* Stick it to the bottom */
   left: 0; /* Align it to the left */
+  max-width: 430px;
   width: 100%; /* Make it full width */
   display: flex;
   flex-direction: row;
-  background-color: orange;
+  background-color:#8E71D5;
   justify-content: center;
 }
 
 .buttonContainer{
   padding:10px;
 
+}
+
+.navOptions{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navLink{
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.navLink:hover{
+  background-color: #CCBFED;
+}
+
+.navText{
+  text-decoration: none;
+  list-style: none;
+  color:black;
+}
+
+.navText:visited{
+  text-decoration: none;
+  list-style: none;
+  color: black;
 }

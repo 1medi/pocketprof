@@ -1,6 +1,32 @@
+.main {
+  overflow-x: hidden;
+}
 
-.main{
-    overflow-x: hidden;
-    background-color: #000925;
+.container {
+  max-width: 400px;
+  max-height: 932px;
+  height: 100%;
+  width: 100%;
+  background-color: #8CACF4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left:3%;
+  border-radius: 10px;
+}
 
-  }
+.title{
+  text-align: center;
+  padding:10px;
+}
+
+.descriptionContainer{
+  text-align: center;
+  padding:10px
+}
+
+.buttonContainer {
+  text-align: center;
+  padding: 10px;
+}

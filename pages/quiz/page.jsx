@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { quiz } from "../data"
 import styles from "./page.module.css"
 import { Montserrat } from "next/font/google"
+import Header from '@/Components/Header';
+import NavBar from "@/Components/Navbar"
 
 const notoSans = Montserrat({ 
   subsets: ['latin'], // Specify any subsets, if needed
@@ -60,7 +62,8 @@ export default function Page() {
 
   return (
     <>
-        <div className={`${styles.container}`}>
+    <Header/>
+      <div className={`${styles.container}`}>
       <h1 className={styles.title}>Quiz Page</h1>
       <div>
         <h2 className={styles.activeQ}>
@@ -113,6 +116,7 @@ export default function Page() {
         )}
       </div>
     </div>
+    <NavBar/>
     </>
 
   );
