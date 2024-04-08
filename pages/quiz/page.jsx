@@ -1,12 +1,13 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { quiz } from "../data"
 import styles from "./page.module.css"
 import { Montserrat } from "next/font/google"
 
 const notoSans = Montserrat({ 
-  subsets: ['latin'], // Specify any subsets, if needed
+  subsets: ['latin'],
 });
+
 export default function Page() {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -19,10 +20,15 @@ export default function Page() {
     wrongAnswers: 0,
   });
 
-  const { questions } = quiz;
-  const { question, answers, correctAnswer } = questions[activeQuestion];
+  const nextButtonRef = useRef(null); 
 
-  const onAnswerSelected = (answer, idx) => {
+  const { questions } = quiz;
+  const { answers, correctAnswer } = questions[activeQuestion];
+
+  const onAnswerSelected = (answer, idx, event = null) => {
+    if (event && event.type === 'keydown' && (event.key !== 'Enter' && event.key !== ' ')) {
+      return;
+    }
     setChecked(true);
     setSelectedAnswerIndex(idx);
     if (answer === correctAnswer) {
@@ -34,7 +40,13 @@ export default function Page() {
     }
   };
 
-  // Calculate score and increment to next question
+  
+  useEffect(() => {
+    if (checked && nextButtonRef.current) {
+      nextButtonRef.current.focus();
+    }
+  }, [checked]); 
+
   const nextQuestion = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) =>
@@ -76,26 +88,26 @@ export default function Page() {
               <li
                 key={idx}
                 onClick={() => onAnswerSelected(answer, idx)}
+                onKeyDown={(event) => onAnswerSelected(answer, idx, event)}
                 className={`${styles.answerList} ${selectedAnswerIndex === idx ? styles.itemSelected : styles.itemHover}`}
-              >
+                tabIndex={0}>
                 <span>{answer}</span>
               </li>
             ))}
-            {checked ? (
-              <button onClick={nextQuestion} className={styles.btn}>
-                {activeQuestion === question.length - 1 ? 'Finish' : 'Next'}
-              </button>
-            ) : (
-              <button onClick={nextQuestion} disabled className={styles.btnDisabled}>
-                {' '}
-                {activeQuestion === question.length - 1 ? 'Finish' : 'Choose an Option'}
-              </button>
-            )}
+           
+            <button 
+              ref={nextButtonRef} 
+              onClick={nextQuestion} 
+              className={checked ? styles.btn : styles.btnDisabled} 
+              tabIndex={2}
+              disabled={!checked}>
+              {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+            </button>
           </div>
         ) : (
           <div className={styles.quizContainer}>
             <h3 className={styles.hthree}>Results</h3>
-            <h3 className={styles.hthree}>Overall {(result.score / 25) * 100}%</h3>
+            <h3 className={styles.hthree}>Overall {(result.score / (questions.length * 5)) * 100}%</h3>
             <p className={styles.paragraph}>
               Total Questions: <span>{questions.length}</span>
             </p>
