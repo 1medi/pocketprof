@@ -1,75 +1,75 @@
 .container{
-    padding: 2rem 5rem;
-    background-color: var(--secondary-color-lightblue);
-    font-family: "Noto", sans-serif;
-    max-width: 740px;
-    width: 50%;
-    margin: auto;
-    margin-top: 5em;
-    border-radius: 5px;
-  }
-  
+  padding: 2rem 5rem;
+  background-color: var(--secondary-color-lightblue);
+  font-family: "Noto", sans-serif;
+  max-width: 740px;
+  width: 50%;
+  margin: auto;
+  margin-top: 5em;
+  border-radius: 5px;
+}
+
 .title, 
 .activeQ{
-    color: black;
-    text-align: center;
-    padding:10px;
-  }
-  
-  .hthree {
-    padding-bottom: 2rem;
-    color: #000105;
-    font-size: 1.8rem;
-  }
-  
-  .btn {
-    padding: 16px 8px;
-    width: 100%;
-    margin-top: 12px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: var(--main-color-purple);
-    color: #f8f8f8;
-  }
-  
-  .btnDisabled {
-    background-color: lightgray;
-    padding: 16px 8px;
-    width: 100%;
-    margin-top: 12px;
-    font-size: 1rem;
-    border-radius: 4px;
-    color: darkgray;
+  color: black;
+  text-align: center;
+  padding:10px;
+}
 
-  }
-  
-  .answerList {
-    list-style-type: none;
-    cursor: pointer;
-    margin: 9px 0;
-    padding: 16px 8px;
-    color: #000105;
-    border: 1px solid lightgray;
-  }
-  
-  .itemHover:hover {
-    background-color: #CCBFED;
-    columns: #fff;
-  }
-  
-  .itemSelected {
-    color: #fff;
-    background-color:#8E71D5;
-  }
+.hthree {
+  padding-bottom: 2rem;
+  color: #000105;
+  font-size: 1.8rem;
+}
 
-  .quizContainer {
-    background-color: #f8f8f8;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-  }
-  
-  .paragraph {
-    padding: 8px 0;
-  }
+.btn {
+  padding: 16px 8px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--main-color-purple);
+  color: #f8f8f8;
+}
+
+.btnDisabled {
+  background-color: lightgray;
+  padding: 16px 8px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  color: darkgray;
+
+}
+
+.answerList {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 9px 0;
+  padding: 16px 8px;
+  color: #000105;
+  border: 1px solid lightgray;
+}
+
+.itemHover:hover {
+  background-color: #CCBFED;
+  columns: #fff;
+}
+
+.itemSelected {
+  color: #fff;
+  background-color:#8E71D5;
+}
+
+.quizContainer {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+
+.paragraph {
+  padding: 8px 0;
+}

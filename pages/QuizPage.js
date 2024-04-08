@@ -3,7 +3,6 @@ import styles from "@/styles/QuizPage.module.css";
 import Link from "next/link";
 import Header from "@/Components/Header";
 import Button3 from "@/Components/Buttons/Button3"
-import Progress from "@/Components/Progress";
 import NavBar from "@/Components/Navbar";
 
 export default function QuizPage() {
