@@ -2,14 +2,18 @@
   position: fixed; 
   bottom: 0; 
   left: 0; 
-  max-width: 430px;
   width: 100%; 
   display: flex;
   flex-direction: row;
-  background-color:#8E71D5;
-  justify-content: center;
+  background-color:var(--main-color-lightpurple);
+  justify-content: space-around;
 }
 
+.navContainer{
+  position: relative;
+  justify-content: space-around;
+  width: 100%;
+}
 .buttonContainer{
   padding:10px;
 
@@ -19,7 +23,7 @@
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 10px;
   text-decoration: none;
 }
@@ -29,10 +33,12 @@
   border-radius: 10px;
   text-decoration: none;
   list-style: none;
+  position: relative;
+  justify-content: center;
 }
 
-.navLink:hover{
-  background-color: #CCBFED;
+.svg:hover{
+  background-color: #8b82a4;
 }
 
 .navText{
