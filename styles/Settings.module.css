@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20vh;
+  font-family: "Montserrat", "sans-serif";
+}
+.quote, .student, .name{
+  margin: 10px;
+  text-align: center;
+}
+
+.successText{
+  font-size: 24px;
+}
+
+.container{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height:100%;
+  margin-top: 1em;
+}
+
+.optionsContainer{
+  text-align: center;
+}
+
+
+.imageContainer{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 13em;
+  overflow: hidden;
+}
+.image{
+  padding-right: 10px;
+}
+.successContainer, .appContainer, .accountContainer{
+  display:flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.shape{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
