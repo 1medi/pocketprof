@@ -1,0 +1,11 @@
+.header {
+  background: linear-gradient(
+    to bottom right, 
+    var(--main-color-purple), 
+    var(--main-color-lightpurple), 
+    var(--secondary-color-lightblue), 
+    var(--secondary-color-blue)
+  );
+  max-width: 430px;
+  width: 100%;
+} 
