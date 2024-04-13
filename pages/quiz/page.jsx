@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google"
 import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar"
 
+
 const notoSans = Montserrat({ 
   subsets: ['latin'],
 });
@@ -73,7 +74,7 @@ export default function Page() {
 
   return (
     <>
-    <Header/>
+    <Header name="Quiz"/>
       <div className={`${styles.container}`}>
       <h1 className={styles.title}>Quiz Page</h1>
       <div>

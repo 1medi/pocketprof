@@ -14,7 +14,7 @@ export default function QuizPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header name="Quiz"/>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
           <h1 className={styles.title}>Quiz App</h1>

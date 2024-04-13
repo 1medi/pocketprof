@@ -1,0 +1,23 @@
+:root {
+background-color: white;
+align-content: center;
+--main-color-purple: #53239B;
+--main-color-lightpurple: #CCBFED;
+--secondary-color-blue: #9AB7F9;
+--secondary-color-lightblue: #CCE3FB;
+
+--main-font: "mont", sans-serif;
+
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }

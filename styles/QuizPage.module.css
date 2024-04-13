@@ -1,4 +1,5 @@
-.main {
+@media only screen and (max-width:430px) {
+  .main {
   overflow-x: hidden;
   justify-content: center;
   display: flex;
@@ -36,4 +37,5 @@
   z-index: 999;
   position: relative;
   bottom: 200px;
+}
 }

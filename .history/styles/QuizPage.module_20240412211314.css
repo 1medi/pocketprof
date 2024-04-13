@@ -1,0 +1,41 @@
+@media only screen and (max-width:430px) {
+  .main {
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  max-width: 400px;
+  max-height: 932px;
+  width: 100%;
+  background-color: #8CACF4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.title{
+  text-align: center;
+  padding:10px;
+}
+
+.descriptionContainer{
+  text-align: center;
+  padding:10px
+}
+
+.buttonContainer {
+  text-align: center;
+  padding: 10px;
+}
+
+.backgroundArt {
+  z-index: 999;
+  position: relative;
+  bottom: 200px;
+}
+}
