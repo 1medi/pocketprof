@@ -1,0 +1,30 @@
+.header{
+  max-height: 400;
+  height: 5rem;
+  position: relative;
+  padding: 1.3rem;
+  backdrop-filter: blur(10px);
+  }
+  
+  .header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-bottom: 3px solid transparent;
+    background: linear-gradient(140deg,  #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+
+.headerTitle{
+  text-align: center;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-top: 25px;
+  font-family: var(--headings);
+  font-size: var(--font-section-header);
+}
+
