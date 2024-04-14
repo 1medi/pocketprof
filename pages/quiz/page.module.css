@@ -11,14 +11,6 @@
 
 }
 
-.activeQ{
-  color: black;
-  text-align: center;
-  padding:10px;
-  font-family: var(--headings);
-
-}
-
 .question{
   font-family: var(--body-text);
   font-size: var(--font-body);
@@ -87,7 +79,17 @@
 }
 
 .activeQ{
-  margin: 1rem;
+  margin: 5rem 12rem;
+  position: absolute;
+  top: 50%; /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%); /* adjust precise centering */
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding:10px;
+  font-family: var(--headings);
+  font-size: var(--font-sub-header)
 }
 
 .itemHover:hover {
@@ -135,12 +137,16 @@
   margin-bottom: 2rem;
 }
 
-.oscar{
- 
+.oscarBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
 
-.oscarBox{
-  
+.oscar {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 }

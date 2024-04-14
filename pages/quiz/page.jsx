@@ -82,19 +82,18 @@ export default function Page() {
     <Image
       priority
       src="/img/oscar/oscar-main.svg"
-      width="200"
-      height="200"
+      width="100"
+      height="100"
       alt="oscar"
       className={styles.oscar}
     />
- 
-      {!showResult && (
-        <h2 className={styles.activeQ}>
-          Question {activeQuestion + 1}
-          <span>/{questions.length}</span>
-        </h2>
-      )}
-    </div>
+    {!showResult && (
+      <div className={styles.activeQ}>
+        Question {activeQuestion + 1}
+        <span>/{questions.length}</span>
+      </div>
+    )}
+  </div>
     </div>
       <div>
         {!showResult ? (

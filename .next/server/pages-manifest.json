@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Components": "pages/Components.js",
   "/QuizPage": "pages/QuizPage.js",
-  "/quiz/page": "pages/quiz/page.js"
+  "/quiz/page": "pages/quiz/page.js",
+  "/Components": "pages/Components.js"
 }
