@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .article {
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px;
+    width: 100%; /* Adjust width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth transform on hover */
+  }
+  
+  .article:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  }
+  
+  .article p {
+    margin: 10px 10rem; /* Spacing between paragraphs */
+  }
+  
+  .article a {
+    color: #0070f3; /* Next.js blue for links */
+    text-decoration: none; /* No underline */
+  }
+  
+  .article a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0070f3; /* Next.js blue */
+    color: white;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove focus outline */
+    transition: background-color 0.2s; /* Smooth color transition */
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .button:disabled {
+    background-color: #ccc; /* Disabled button color */
+    cursor: default; /* Default cursor for disabled state */
+  }
