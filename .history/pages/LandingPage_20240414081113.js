@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/LandingPage.module.css";
+import styles from "@/styles/Home.module.css";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
@@ -52,7 +52,7 @@ export default function LandingPage() {
             <div className={styles.author}><p>Author: {article.author}</p></div>
             <div className={styles.title}><p>Title: {article.title}</p></div>
             <div className={styles.content}><p>Content: {article.content}</p></div>
-            <div className={styles.url}></div><p>URL: <a href={article.urlToImage} target="_blank" rel="noopener noreferrer">Read more</a></p>
+            <div className={styles.url}></div><p>URL: <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a></p></div>
           </div>
         ))}
       </main>

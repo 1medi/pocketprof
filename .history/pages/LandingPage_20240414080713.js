@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/LandingPage.module.css";
+import styles from "@/styles/Home.module.css";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
@@ -12,15 +12,16 @@ export default function LandingPage() {
   var type = 'guitar';
   var sortBy = 'publishedAt';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
-  var date = '2024-04-13';
-  const url = `https://newsapi.org/v2/everything?q=${type}&from=${date}&sortBy=${sortBy}&apiKey=${apiKey}`;
+  var today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+
+  const url = `https://newsapi.org/v2/everything?q=${type}&from=${today}&sortBy=${sortBy}&apiKey=${apiKey}`;
 
   const grabNews = async () => {
     setIsLoading(true);
     try {
       const response = await axios.get(url);
       console.clear();
-      setData(response.data.articles); 
+      setData(response.data.articles); // Ensure you are setting the articles array
       console.log(response.data.articles);
     } catch (err) {
       console.error(err);
@@ -31,7 +32,7 @@ export default function LandingPage() {
   };
 
   useEffect(() => {
-    grabNews();
+    grabNews(); // Fetch news on component mount
   }, []);
 
   return (
@@ -49,10 +50,10 @@ export default function LandingPage() {
         {error && <p>{error}</p>}
         {data.map((article, index) => (
           <div key={index}>
-            <div className={styles.author}><p>Author: {article.author}</p></div>
-            <div className={styles.title}><p>Title: {article.title}</p></div>
-            <div className={styles.content}><p>Content: {article.content}</p></div>
-            <div className={styles.url}></div><p>URL: <a href={article.urlToImage} target="_blank" rel="noopener noreferrer">Read more</a></p>
+            <p>Author: {article.author}</p>
+            <p>Title: {article.title}</p>
+            <p>Content: {article.content}</p>
+            <p>URL: <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a></p>
           </div>
         ))}
       </main>
