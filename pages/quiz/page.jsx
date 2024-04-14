@@ -5,6 +5,7 @@ import styles from "./page.module.css"
 import { Montserrat } from "next/font/google"
 import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar"
+import Image from 'next/image';
 
 
 const notoSans = Montserrat({ 
@@ -86,11 +87,23 @@ export default function Page() {
           <div className={styles.step} style={{ opacity: progress >= 4 ? 1 : 0 }}><p className={styles.barText}>5</p></div>
         </div>
       <div>
-        <h2 className={styles.activeQ}>
-          Question {activeQuestion + 1}
-          <span>/{questions.length}</span>
-        </h2>
+      <div className={styles.oscarBox}>
+    <Image
+      priority
+      src="/img/oscar/oscar-main.svg"
+      width="100"
+      height="100"
+      alt="oscar"
+      className={styles.oscar}
+    />
+    {!showResult && (
+      <div className={styles.activeQ}>
+        Question {activeQuestion + 1}
+        <span>/{questions.length}</span>
       </div>
+    )}
+  </div>
+    </div>
       <div>
         {!showResult ? (
           <div className={styles.quizContainer}>
@@ -117,9 +130,10 @@ export default function Page() {
           </div>
         ) : (
           <div className={styles.quizContainer}>
-            <h3 className={styles.hthree}>Results</h3>
-            <h3 className={styles.hthree}>Overall {(result.score / (questions.length * 5)) * 100}%</h3>
-            <p className={styles.paragraph}>
+            <div className={styles.result}><h3 className={styles.hthree}>Results</h3></div>
+            <div><h2 className={styles.htwo}>Overall {(result.score / (questions.length * 5)) * 100}%</h2></div>
+            <div className={styles.resultBox}>
+              <p className={styles.paragraph}>
               Total Questions: <span>{questions.length}</span>
             </p>
             <p className={styles.paragraph}> 
@@ -131,11 +145,12 @@ export default function Page() {
             <p className={styles.paragraph}>
               Wrong Answers: <span>{result.wrongAnswers}</span>
             </p>
+            </div>
             <button className={styles.btn} onClick={() => window.location.reload()}>Restart</button>
           </div>
         )}
       </div>
-    </div>
+      </div>
     <NavBar/>
     </>
 

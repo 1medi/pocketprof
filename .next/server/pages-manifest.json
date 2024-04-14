@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/QuizPage": "pages/QuizPage.js",
-  "/Components": "pages/Components.js",
-  "/quiz/page": "pages/quiz/page.js"
+  "/quiz/page": "pages/quiz/page.js",
+  "/Components": "pages/Components.js"
 }

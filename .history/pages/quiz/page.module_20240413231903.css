@@ -1,0 +1,152 @@
+
+@media only screen and (max-width:431px) {
+  .container{
+  padding: 1rem 0;
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 10px;
+  font-size: var(--font-body);
+
+}
+
+.question{
+  font-family: var(--body-text);
+  font-size: var(--font-body);
+  margin: 20px 10px;
+
+}
+
+.htwo {
+  padding-bottom: 2rem;
+  color: #000105;
+  font-family: var(--headings);
+  font-size: var(--font-sub-header);
+}
+
+.hthree {
+  padding-bottom: 2rem;
+  color: #000105;
+  font-family: var(--headings);
+  font-size: var(--font-sub-header);
+  text-align: left;
+}
+
+.result{
+  left:0;
+  width:100%;
+  border-bottom: 0.5px solid black;
+  height: 40px;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  padding: 16px 8px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: var(--font-button);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--main-color-purple);
+  color: white;
+  font-family: var(--headings);
+  align-self: center;
+}
+
+.btnDisabled {
+  background-color: lightgray;
+  padding: 16px 8px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: var(--font-button);
+  border-radius: 4px;
+  color: darkgray;
+  font-family: var(--headings);
+}
+
+.answerList {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 10px 50px;
+  padding: 8px 15px;
+  color: #000105;
+  border: 1.5px solid lightgray;
+  background-color: white;
+  font-family: var(--body-text);
+  font-size: var(--font-secondary);
+  width: 70%;
+}
+
+.activeQ{
+  margin: 5rem 10rem;
+  position: absolute;
+  top: 50%; /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%); /* adjust precise centering */
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding:10px;
+  font-family: var(--headings);
+  font-size: var(--font-sub-header)
+}
+
+.itemHover:hover {
+  background-color: #CCBFED;
+  columns: #fff;
+}
+
+.itemSelected {
+  color: #474747;
+  background-color:#8E71D5;
+}
+
+.quizContainer {
+  background: linear-gradient(-10deg, #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%);
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.paragraph {
+  padding: 8px 0;
+  font-size: var(--font-body);
+  font-family: var(--body-text);
+  margin: 10px;
+  padding: 8px 50px 8px 10px;
+  color: #000105;
+  border-bottom: 1.5px solid lightgray;
+  background-color: white;
+  text-align: left;
+}
+
+.resultBox{
+  background-color: white;
+  padding: 2rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.oscarBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.oscar {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+}
