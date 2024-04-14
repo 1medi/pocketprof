@@ -89,4 +89,25 @@
   padding: 8px 0;
 }
 
+.progressBar{
+  display: flex;
+  flex: row;
+  border-radius: 5px;
+}
+
+.step{
+  background-color: purple;
+  transition: background-color 0.5s ease;
+  height:3em;
+  width: 10em;
+  margin-right:30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.barText{
+  color:white;
+}
+
+
 }

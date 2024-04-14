@@ -22,6 +22,7 @@ export default function Page() {
     correctAnswers: 0,
     wrongAnswers: 0,
   });
+  const [progress, setProgress] = useState(0);
 
   const nextButtonRef = useRef(null); 
 
@@ -51,6 +52,7 @@ export default function Page() {
   }, [checked]); 
 
   const nextQuestion = () => {
+    setProgress((prevProgress) => (prevProgress + 1) % 5); // Change 5 to the total number of nested divs
     setSelectedAnswerIndex(null);
     setResult((prev) =>
       selectedAnswer
@@ -76,6 +78,13 @@ export default function Page() {
     <>
     <Header name="Quiz"/>
       <div className={`${styles.container}`}>
+      <div className={styles.progressBar}>
+          <div className={styles.step} style={{ opacity: progress >= 0 ? 1 : 0 }}><p className={styles.barText}>1</p></div>
+          <div className={styles.step} style={{ opacity: progress >= 1 ? 1 : 0 }}><p className={styles.barText}>2</p></div>
+          <div className={styles.step} style={{ opacity: progress >= 2 ? 1 : 0 }}><p className={styles.barText}>3</p></div>
+          <div className={styles.step} style={{ opacity: progress >= 3 ? 1 : 0 }}><p className={styles.barText}>4</p></div>
+          <div className={styles.step} style={{ opacity: progress >= 4 ? 1 : 0 }}><p className={styles.barText}>5</p></div>
+        </div>
       <div>
         <h2 className={styles.activeQ}>
           Question {activeQuestion + 1}
