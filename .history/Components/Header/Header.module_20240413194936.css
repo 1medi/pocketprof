@@ -1,0 +1,15 @@
+.header{
+
+  max-height: 400;
+  height: 6em;
+}
+
+.headerTitle{
+  text-align: center;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 25px;
+}
+

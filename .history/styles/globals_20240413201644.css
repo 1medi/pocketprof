@@ -1,0 +1,31 @@
+:root {
+background-color: white;
+align-content: center;
+--main-color-purple: #53239B;
+--main-color-lightpurple: #CCBFED;
+--secondary-color-blue: #9AB7F9;
+--secondary-color-lightblue: #CCE3FB;
+
+--font-header: 34pt;
+--font-section-header: 28pt;
+--font-sub-header: 24pt;
+--font-button: 16pt;
+--font-body: 16pt;
+--font-secondary: 14pt;
+--font-tertiary:12pt;
+
+--headings: "mont", sans-serif;
+--body-text: "Noto Sans", sans-serif;
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }

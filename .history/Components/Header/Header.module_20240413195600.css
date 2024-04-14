@@ -1,0 +1,16 @@
+.header{
+  font-family: "Montserrat", "sans-serif";
+  max-height: 400;
+  height: 6em;
+}
+
+.headerTitle{
+  text-align: center;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-top: 25px;
+  font-family: montrasse;
+}
+
