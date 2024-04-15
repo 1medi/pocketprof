@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { quiz } from "../data"
+import { quiz } from "./data"
 import styles from "./page.module.css"
 import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar"
