@@ -1,8 +1,13 @@
-@media only screen and (max-width:430px) {
-  .main {
+.mobileContainer{
+  width: 430px; /* Hard-coded width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.main {
   overflow-x: hidden;
   justify-content: center;
   display: flex;
+  width: 100%;
 }
 
 .container {
@@ -38,5 +43,4 @@
   z-index: 999;
   position: relative;
   bottom: 200px;
-}
 }

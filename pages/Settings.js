@@ -20,7 +20,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${montserrat.main}`}>
+      <div className={styles.mobileContainer}>
+      <main className={`${styles.main} ${montserrat.className}`}>
         <div className={styles.container}>
             <div className={styles.imageContainer}>
               <Image
@@ -67,6 +68,8 @@ export default function Home() {
         </div>
       </main>
       <NavBar/>
+      </div>
+
     </>
   );
 }
