@@ -11,11 +11,10 @@ export default function LandingPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  var type = 'Artificial Intelligence';
-  var sortBy = 'publishedAt';
+  var type = 'Guitar';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
   var date = '2024-04-13';
-  const url = `https://newsapi.org/v2/everything?q=${type}&from=${date}&sortBy=${sortBy}&apiKey=${apiKey}`;
+  const url = `https://gnews.io/api/v4/search?q=${type}&apikey=${apiKey}`;
 
   const grabNews = async () => {
     setIsLoading(true);

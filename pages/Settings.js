@@ -67,8 +67,8 @@ export default function Home() {
             </div>
         </div>
       </main>
-      <NavBar/>
       </div>
+      <NavBar/>
 
     </>
   );
