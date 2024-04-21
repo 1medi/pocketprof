@@ -14,10 +14,10 @@ export default async function handler(req, res) {
     console.log(prompt);
     const response = await openai.images.generate({
       model: "dall-e-2",
+      prompt: "banana",
       n: 1,
       size: "256x256",
-    },
-    {role: "user", content: prompt});
+    });
     const imageUrl = response.data[0].url;
     return res.status(200).json({ message: "Success", imageUrl });
   } catch (error) {
