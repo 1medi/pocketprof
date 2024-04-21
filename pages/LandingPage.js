@@ -11,6 +11,7 @@ export default function LandingPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+
   var type = 'Guitar';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
   var date = '2024-04-13';
@@ -42,6 +43,10 @@ export default function LandingPage() {
       </Head>
       <div className={styles.mobileContainer}>
       <Header name={"Articles"}/>
+      <div className={styles.envContainer}>
+      {apiKey}
+      </div>
+      
       <main className={`${styles.main}`}>
         <button onClick={grabNews} disabled={isLoading} className={styles.button}>
           {isLoading ? 'Loading...' : 'Search'}

@@ -3,6 +3,10 @@
   margin: 0 auto; /* Center the container horizontally */
 }
 
+.envContainer{
+  text-align: center;
+}
+
 .main {
   display: flex;
   flex-direction: column;
