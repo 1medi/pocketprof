@@ -29,6 +29,7 @@ export default function Home() {
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.container}>
             <div className={styles.imageContainer}>
+            <Header name="Account"/>
               <Image
                 src={Image1}
                 width={150}

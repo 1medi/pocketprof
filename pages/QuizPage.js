@@ -27,7 +27,7 @@ export default function QuizPage() {
             <h3>ARE YOU READY TO WIN</h3>
           </div>
           <Link href='/quiz/page' className={styles.buttonContainer}>
-            <Button3 name={"Press To Start"} />
+            <Button3 name={"Start"} />
           </Link>
         </div>
         <div></div>
