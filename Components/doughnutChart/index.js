@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 )
 
-export default function PieChart(){
+export default function doughnutChart(){
   const [chartData, setChartData] = useState({
     datasets: []
   })
