@@ -7,6 +7,7 @@ import Image1 from "@/public/img/nature-4964153_1920.jpg"
 import Chart from "@/public/img/chart.png"
 import Profile from "@/public/img/user.png"
 import Settings from "@/public/img/settings.png"
+import Header from "@/Components/Header"
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${montserrat.main}`}>
         <div className={styles.container}>
+        <Header name="Account"/>
             <div className={styles.imageContainer}>
               <Image
               src={Image1}
