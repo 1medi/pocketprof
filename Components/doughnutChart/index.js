@@ -1,4 +1,4 @@
-import { Pie } from "react-chartjs-2"
+import { Doughnut } from "react-chartjs-2"
 
 import {
   Chart as ChartJS,
@@ -23,26 +23,25 @@ export default function PieChart(){
   const [chartData, setChartData] = useState({
     datasets: []
   })
-  const [chartOptions, setChartOptions] = useState({});
+  const [chartOptions, setChartOptions] = useState({
+    maintainAspectRatio: true,
+    responsive: false,
+    width: 10,
+    height: 10
+  });
 
   useEffect(() => {
     setChartData({
-      labels: ["Red", "Green", "Blue", "Porple", "Yellow"],
+      labels: [],
       datasets: [
         {
-          label: "# of Votes",
-          data: [10, 20, 30, 40, 50],
+          label: "Goals Completed",
+          data: [24, 6],
           borderColor: ['rgba(53, 162, 135, 0.4',
           'rgba(63, 62, 235, 0.4',
-          'rgba(83, 12, 235, 0.4',
-          'rgba(93, 102, 235, 0.4',
-          'rgba(103, 222, 235, 0.4'
         ],
           backgroundColor: ['#780000',
-          '#648767',
-          '#669BBC',
-          '#AB87FF',
-          '#ffba08'
+          '#648767'
         ],
         borderWidth: 1
         }
@@ -50,22 +49,15 @@ export default function PieChart(){
     })
 
     setChartOptions({
-      plugins: {
-        legend:{
-          position: 'top'
-        },
-        title: {
-          display: true,
-          text: "Different Colors of Pie"
-        }
-      },
       maintainAspectRatio: true,
-      responsive: true
+      responsive: false,
+      width: 5,
+      height: 5
     })
   }, [])
   return(
     <>
-    <Pie data={chartData} options={chartOptions} style={{width: "200px", height:"100px"}}/>
+    <Doughnut data={chartData} options={chartOptions}/>
     </>
   )
 }

@@ -5,7 +5,7 @@ import { Montserrat } from "next/font/google";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
 import HorizontalChart from "@/Components/horizontalChart";
-import PieChart from "@/Components/pieChart";
+import PieChart from "@/Components/doughnutChart";
 import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import Link from "next/link";
 const montserrat = Montserrat({ subsets: ['latin'] })
@@ -22,7 +22,7 @@ export default function Home() {
       <div className={styles.mobileContainer}>
         <Header name={"Success Dashboard"}/>
         <Link href={"Settings"}>
-        <ArrowLeft/>
+        <ArrowLeft top='60'/>
         </Link>
       <main className={`${styles.main} ${montserrat.className}`}>
         <HorizontalChart/>

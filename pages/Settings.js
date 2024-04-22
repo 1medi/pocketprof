@@ -8,6 +8,7 @@ import Chart from "@/public/img/chart.png"
 import Profile from "@/public/img/user.png"
 import Settings from "@/public/img/settings.png"
 import Link from "next/link";
+import Header from "@/Components/Header";
 const montserrat = Montserrat({
   subsets: ['latin'],
 });
@@ -40,7 +41,7 @@ export default function Home() {
             <h3 className={styles.quote}>"Banana"</h3>
             <h4 className={styles.student}>Student Level: NOOB</h4>
             <div className={styles.optionsContainer}>
-              <Link href={"SuccessDashboard"}>
+              <Link href={"SuccessDashboard/SuccessDashboard"}>
               <div className={styles.successContainer}>
                 <Image
                   className={styles.image}
