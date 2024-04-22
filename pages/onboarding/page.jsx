@@ -6,6 +6,8 @@ import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar"
 import Image from 'next/image';
 import { Montserrat } from "next/font/google";
+import Link from 'next/link';
+import Button3 from '@/Components/Buttons/Button3';
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -75,7 +77,6 @@ export default function Page() {
   return (
     <>
     <div className={styles.mobileContainer}>
-    <Header name="Quiz"/>
     <main className={`${styles.container} ${montserrat.className}`}>
     <div className={styles.oscarBox}>
     <Image
@@ -86,16 +87,16 @@ export default function Page() {
       alt="oscar"
       className={styles.oscar}
     />
-    {!showResult && (
-      <div className={styles.activeQ}>
-        Question {activeQuestion + 1}
-        <span>/{questions.length}</span>
-      </div>
-    )}
   </div>
       <div>
         {!showResult ? (
           <div className={styles.quizContainer}>
+            <div className={styles.quizInnerContainer}>
+            {!showResult && (
+            <div className={styles.activeQ}>
+              STEP {activeQuestion + 1}
+            </div>
+            )}
             <h3 className={styles.question}>{questions[activeQuestion].question}</h3>
             {answers.map((answer, idx) => (
               <li
@@ -116,12 +117,15 @@ export default function Page() {
               {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
             </button>
           </div>
+          </div>
         ) : (
           <div className={styles.quizContainer}>
+             <div className={styles.quizInnerContainer}>
             <div className={styles.result}><h3 className={styles.hthree}>Searching for a course</h3></div>
             <Link href='/OnboardingResult' className={styles.buttonContainer}>
-          <Button3 name={"Search"} />
-          </Link>
+            <Button3 name={"Search"} />
+            </Link>
+          </div>
           </div>
         )}
       </div>
@@ -133,8 +137,6 @@ export default function Page() {
           <div className={styles.step} style={{ opacity: progress >= 4 ? 1 : 0 }}><p className={styles.barText}></p></div>
       </div>
     </main>
-  
-    <NavBar/>
     </div>
  
     </>

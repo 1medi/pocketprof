@@ -50,7 +50,7 @@ export default function Page() {
   }, [checked]); 
 
   const nextQuestion = () => {
-    setProgress((prevProgress) => (prevProgress + 1) % 5); // Change 5 to the total number of nested divs
+    setProgress((prevProgress) => (prevProgress + 1) % 5);
     setSelectedAnswerIndex(null);
     setResult((prev) =>
       selectedAnswer

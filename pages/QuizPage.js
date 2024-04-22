@@ -30,7 +30,6 @@ export default function QuizPage() {
             <Button3 name={"Start"} />
           </Link>
         </div>
-        <div></div>
       </main>
       <NavBar />
       </div>
