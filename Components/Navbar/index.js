@@ -13,7 +13,7 @@ export default function NavBar() {
       <div className={styles.navContainer}>
         <ul className={styles.navOptions}>
           <li className={styles.navLink}>
-            <Link href={'/Home'} className={styles.navText}>
+            <Link href={'/'} className={styles.navText}>
               <Image
               className={styles.image}
               src={Home}
