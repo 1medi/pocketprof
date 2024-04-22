@@ -1,33 +1,31 @@
 import Head from "next/head";
 import styles from "@/styles/QuizPage.module.css";
 import Link from "next/link";
-import Header from "@/Components/Header";
-import Button3 from "@/Components/Buttons/Button3"
 import NavBar from "@/Components/Navbar";
 import { Montserrat } from "next/font/google";
+import Button3 from "@/Components/Buttons/Button3";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
-export default function QuizPage() {
+export default function Landing() {
   return (
     <>
       <Head>
-        <title>Quiz Page</title>
-        <meta name="description" content="Quiz section" />
+        <title>Landing Page</title>
+        <meta name="description" content="Sign in or sign up" />
         <meta name="viewport" content="width=430" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <Header name="Quiz"/>
       <main className={`${styles.main} ${montserrat.className}`}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Quiz App</h1>
+          <h1 className={styles.title}>Glad to Have you with us</h1>
           <div></div>
           <div className={styles.descriptionContainer}>
-            <h3>ARE YOU READY TO WIN</h3>
+            <h3>Let's explore together!</h3>
           </div>
           <Link href='/quiz/page' className={styles.buttonContainer}>
-            <Button3 name={"Start"} />
+            <Button3 name={"Press To Start"} />
           </Link>
         </div>
         <div></div>
