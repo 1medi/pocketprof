@@ -2,13 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
-import Oscar from "@/Components/Oscar"
-import Prompt from "@/Components/Prompt"
-import Images from "@/Components/images";
+import Header from "@/Components/Header";
+import NavBar from "@/Components/Navbar";
+import HorizontalChart from "@/Components/horizontalChart";
+import PieChart from "@/Components/pieChart";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
-export default function Home() {
 
+export default function Home() {
   return (
     <>
       <Head>
@@ -18,11 +19,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+        <Header name={"Success Dashboard"}/>
       <main className={`${styles.main} ${montserrat.className}`}>
-      <Oscar/>
-      <Prompt/>
-      <Images/>
+        <HorizontalChart/>
+        <PieChart/>
       </main> 
+        <NavBar/>
       </div>
 
     </>

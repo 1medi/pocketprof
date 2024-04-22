@@ -4,11 +4,9 @@ import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
 import Oscar from "@/Components/Oscar"
 import Prompt from "@/Components/Prompt"
-import Images from "@/Components/images";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -21,7 +19,6 @@ export default function Home() {
       <main className={`${styles.main} ${montserrat.className}`}>
       <Oscar/>
       <Prompt/>
-      <Images/>
       </main> 
       </div>
 

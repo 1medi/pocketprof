@@ -1,5 +1,8 @@
+.mobileContainer{
+  width: 430px; /* Hard-coded width */
+  margin: 0 auto; /* Center the container horizontally */
+}
 
-@media only screen and (max-width:431px) {
   .container{
   padding: 0;
   background-color: white;
@@ -104,13 +107,15 @@
 .quizContainer {
   background: linear-gradient(-10deg, #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%);
   padding: 1rem;
-  margin: 0 1rem 2rem 1rem;
+  margin: 0 5rem 1rem 5rem;
   border-radius: 4px;
   display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  position: relative;
+  z-index: 0;
+  margin-top:100px;
 }
 
 .paragraph {
@@ -137,26 +142,28 @@
 }
 
 .oscarBox {
+  display: flex;
   position: relative;
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 3em;
+  z-index: 99;
 }
 
 .oscar {
   display: block;
-  width: 50%;
-  height: auto;
-  margin-top:3rem;
+  width: 200px;
+  height: 200px;
   margin-bottom: -2rem;
+  transform: rotate(-15deg);
 }
 
 .progressBar{
   display: flex;
-  flex: row;
   border-radius: 5px;
   justify-content: space-evenly;
-  padding-left:20px;
-  padding-right:10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-top: 5em;
 }
 
 .step{
@@ -168,6 +175,3 @@
   border-radius: 8px;
 }
 
-
-
-}

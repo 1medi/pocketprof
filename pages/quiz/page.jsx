@@ -1,16 +1,13 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { quiz } from "../data"
+import { quiz } from "@/quizData/data"
 import styles from "./page.module.css"
-import { Montserrat } from "next/font/google"
 import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar"
 import Image from 'next/image';
+import { Montserrat } from "next/font/google";
 
-
-const notoSans = Montserrat({ 
-  subsets: ['latin'],
-});
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Page() {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -77,9 +74,10 @@ export default function Page() {
 
   return (
     <>
+    <div className={styles.mobileContainer}>
     <Header name="Quiz"/>
-      <div className={`${styles.container}`}>
-      <div className={styles.oscarBox}>
+    <main className={`${styles.container} ${montserrat.className}`}>
+    <div className={styles.oscarBox}>
     <Image
       priority
       src="/img/oscar/oscar-main.svg"
@@ -95,7 +93,6 @@ export default function Page() {
       </div>
     )}
   </div>
-    </div>
       <div>
         {!showResult ? (
           <div className={styles.quizContainer}>
@@ -149,7 +146,11 @@ export default function Page() {
           <div className={styles.step} style={{ opacity: progress >= 3 ? 1 : 0 }}><p className={styles.barText}></p></div>
           <div className={styles.step} style={{ opacity: progress >= 4 ? 1 : 0 }}><p className={styles.barText}></p></div>
       </div>
+    </main>
+  
     <NavBar/>
+    </div>
+ 
     </>
 
   );

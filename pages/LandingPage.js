@@ -3,17 +3,19 @@ import Image from "next/image";
 import styles from "@/styles/LandingPage.module.css";
 import axios from 'axios';
 import { useState } from "react";
+import Header from "@/Components/Header";
+import NavBar from "@/Components/Navbar";
 
 export default function LandingPage() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  var type = 'guitar';
-  var sortBy = 'publishedAt';
+
+  var type = 'Guitar';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
   var date = '2024-04-13';
-  const url = `https://newsapi.org/v2/everything?q=${type}&from=${date}&sortBy=${sortBy}&apiKey=${apiKey}`;
+  const url = `https://gnews.io/api/v4/search?q=${type}&apikey=${apiKey}`;
 
   const grabNews = async () => {
     setIsLoading(true);
@@ -39,6 +41,12 @@ export default function LandingPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.mobileContainer}>
+      <Header name={"Articles"}/>
+      <div className={styles.envContainer}>
+      {apiKey}
+      </div>
+      
       <main className={`${styles.main}`}>
         <button onClick={grabNews} disabled={isLoading} className={styles.button}>
           {isLoading ? 'Loading...' : 'Search'}
@@ -50,9 +58,11 @@ export default function LandingPage() {
             <div className={styles.title}><p>Title: {article.title}</p></div>
             <div className={styles.content}><p>Content: {article.content}</p></div>
             <div className={styles.url}></div><p>URL: <a href={article.url}>Read more</a></p></div>
-    
         ))}
       </main>
+      <NavBar/>
+      </div>
+
     </>
   );
 }

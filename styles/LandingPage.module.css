@@ -1,54 +1,63 @@
+.mobileContainer{
+  width: 430px; /* Hard-coded width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.envContainer{
+  text-align: center;
+}
+
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .article {
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
-    padding: 10px;
-    margin: 10px;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
-  .article:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
-  }
-  
-  .article p {
-    margin: 20px 0; 
-  }
-  
-  .article a {
-    color: var(--main-color-purple); 
-    text-decoration: none; 
-  }
-  
-  .article a:hover {
-    text-decoration: underline; 
-  }
+.article {
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s;
+}
 
-  .button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #0070f3; 
-    color: white;
-    border-radius: 5px; 
-    cursor: pointer;
-    outline: none; 
-    transition: background-color 0.2s; 
-  }
-  
-  .button:hover {
-    background-color: #0056b3;  
-  }
-  
-  .button:disabled {
-    background-color: #ccc;
-    cursor: default;
-  }
+.article:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.article p {
+  margin: 20px 0; 
+}
+
+.article a {
+  color: var(--main-color-purple); 
+  text-decoration: none; 
+}
+
+.article a:hover {
+  text-decoration: underline; 
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0070f3; 
+  color: white;
+  border-radius: 5px; 
+  cursor: pointer;
+  outline: none; 
+  transition: background-color 0.2s; 
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}

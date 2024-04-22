@@ -1,0 +1,4 @@
+.mobileContainer{
+  width: 430px; /* Hard-coded width */
+  margin: 0 auto; /* Center the container horizontally */
+}
