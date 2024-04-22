@@ -26,8 +26,8 @@ export default function Home() {
             <div className={styles.imageContainer}>
               <Image
               src={Image1}
-              width={275}
-              height={275}
+              width={150}
+              height={150}
               />
             </div>
             <h2 className={styles.name}>Name</h2>
@@ -38,8 +38,8 @@ export default function Home() {
               <Image
               className={styles.image}
               src={Chart}
-              width={48}
-              height={48}
+              width={38}
+              height={38}
               />
                 <h4 className={styles.successText}>Success Dashboard</h4>
               </div>
@@ -48,8 +48,8 @@ export default function Home() {
               <Image
               src={Profile}
               className={styles.image}
-              width={48}
-              height={48}
+              width={38}
+              height={38}
               />
               <h4 className={styles.successText}>Account Settings</h4>
               </div>
@@ -58,8 +58,8 @@ export default function Home() {
               <Image
               src={Settings}
               className={styles.image}
-              width={48}
-              height={48}
+              width={38}
+              height={38}
               />
               <h4 className={styles.successText}>App Settings</h4>
               </div>
@@ -67,8 +67,9 @@ export default function Home() {
             </div>
         </div>
       </main>
-      </div>
       <NavBar/>
+      </div>
+
 
     </>
   );
