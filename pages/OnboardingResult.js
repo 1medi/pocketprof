@@ -20,12 +20,12 @@ export default function Result() {
       <div className={styles.mobileContainer}>
       <main className={`${styles.main} ${montserrat.className}`}>
         <div className={styles.container}>
-          <h1 className={styles.title}>YOur best Match!</h1>
+          <h1 className={styles.title}>Your best Match!</h1>
           <div></div>
           <div className={styles.descriptionContainer}>
             <h3>ARE YOU READY TO WIN</h3>
           </div>
-          <Link href='/quiz/page' className={styles.buttonContainer}>
+          <Link href='/onboarding/page' className={styles.buttonContainer}>
             <Button3 name={"Start"} />
           </Link>
         </div>

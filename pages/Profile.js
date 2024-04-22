@@ -24,7 +24,6 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${montserrat.main}`}>
         <div className={styles.container}>
-        <Header name="Account"/>
             <div className={styles.imageContainer}>
               <Image
               src={Image1}
