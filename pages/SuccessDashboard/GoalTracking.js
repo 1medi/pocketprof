@@ -26,7 +26,7 @@ export default function Home() {
         </Link>
       <main className={`${styles.main} ${montserrat.className}`}>
         <HorizontalChart/>
-        <PieChart/>
+
       </main> 
         <NavBar/>
       </div>
