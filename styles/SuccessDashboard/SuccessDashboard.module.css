@@ -1,0 +1,79 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20vh;
+  font-family: "Montserrat", "sans-serif";
+}
+
+.mobileContainer{
+  width: 430px; 
+  margin: 0 auto; 
+}
+
+.cardOuterContainer{
+border: 1px solid var(--main-color-purple);
+border-radius: 10px;
+width: 100%;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+.innerContainer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.textContainer{
+  flex-direction: column;
+  display: flex;
+  padding-left: 10px;
+}
+
+.percent{
+  position: relative;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  z-index: -999;
+  font-weight: bold;
+  font-size: var(--font-body) ;
+}
+
+.chartContainer{
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.textContainer{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.description{
+  width: 80%;
+}
+
+
+.descriptionContainer{
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+}
+.imageContainer{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 13em;
+  overflow: hidden;
+}
+
+.chart{
+  width: 100px;
+}

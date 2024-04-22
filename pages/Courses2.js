@@ -4,9 +4,13 @@ import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
 import Oscar from "@/Components/Oscar"
 import Prompt from "@/Components/Prompt"
+import Images from "@/Components/images";
+import Header from "@/Components/Header";
+import NavBar from "@/Components/Navbar";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -17,8 +21,11 @@ export default function Home() {
       </Head>
       <div className={styles.mobileContainer}>
       <main className={`${styles.main} ${montserrat.className}`}>
+      <Header name="Ask"/>
       <Oscar/>
       <Prompt/>
+      <Images/>
+      <NavBar/>
       </main> 
       </div>
 

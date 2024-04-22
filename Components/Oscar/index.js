@@ -11,7 +11,7 @@ export default function Oscar() {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'ilovehao.json',
+      path: 'banana.json',
     });
   }, []);
 
