@@ -23,10 +23,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.backgroundCircles}>
-            <div className={`${styles.circle} ${styles.circle1}`}></div>
-            <div className={`${styles.circle} ${styles.circle2}`}></div>
-          </div>
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.container}>
             <div className={styles.imageContainer}>

@@ -60,7 +60,6 @@ export default function LandingPage() {
             <div className={styles.url}></div><p>URL: <a href={article.url}>Read more</a></p></div>
         ))}
       </main>
-      <NavBar/>
       </div>
 
     </>
