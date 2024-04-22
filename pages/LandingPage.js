@@ -17,7 +17,7 @@ export default function LandingPage() {
 
   const grabNews = async () => {
     setIsLoading(true);
-    setError(null); // Clear previous errors
+    setError(null); 
     try {
       const response = await axios.get(url);
       console.clear();
