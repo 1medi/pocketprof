@@ -25,9 +25,7 @@ export default function doughnutChart(){
   })
   const [chartOptions, setChartOptions] = useState({
     maintainAspectRatio: true,
-    responsive: false,
-    width: 10,
-    height: 10
+    responsive: true
   });
 
   useEffect(() => {
@@ -43,16 +41,14 @@ export default function doughnutChart(){
           backgroundColor: ['#780000',
           '#648767'
         ],
-        borderWidth: 1
+        borderWidth: .5
         }
       ]
     })
 
     setChartOptions({
       maintainAspectRatio: true,
-      responsive: false,
-      width: 5,
-      height: 5
+      responsive: true
     })
   }, [])
   return(
