@@ -14,29 +14,28 @@ const sendChat = async (prompt) => {
 
 export default function Chat() {
   const [imageUrls, setImageUrls] = useState();
-  
   const [messages, setMessages] = useState([]);
   const mutation = useMutation(sendChat);
 
   const handleFirstButtonClick = async () => {
-    const response = await mutation.mutateAsync("I want to learn how to play a guitar"); 
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Beginner Guitar Player)"); 
     setImageUrls({ ...imageUrls, first: "/pexels-nikolett-emmert-15665996.jpg" });
     setMessages([...messages, { message: prompt, response }]);
   }
   const handleSecondButtonClick = async () => {
-    const response = await mutation.mutateAsync("I wanna learn how to lose money");
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Intermediate Guitar Player)");
     setMessages([...messages, { message: "Second prompt", response }]);
     setImageUrls({ ...imageUrls, second: "url_for_second_image.jpg" });
   }
 
   const handleThirdButtonClick = async () => {
-    const response = await mutation.mutateAsync("How do I gamble");
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am an Expert Guitar Player)");
     setMessages([...messages, { message: "Third prompt", response }]);
     setImageUrls({ ...imageUrls, third: "url_for_third_image.jpg" }); 
   }
 
   const handleFourthButtonClick = async () => {
-    const response = await mutation.mutateAsync("What is the best way to order on Uber Eats");
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Master Guitar Player)");
     setMessages([...messages, { message: "Forth prompt", response }]);
     setImageUrls({ ...imageUrls, fourth: "url_for_fourth_image.jpg" });
   }
@@ -50,13 +49,13 @@ export default function Chat() {
       <div className={styles.container}>
         <div>
           <main>
-            <h1 className={styles.header}>Welcome To OSCAR</h1>
+            <h1 className={styles.header}>What is Your Current Skill Level of Guitar?</h1>
             <p className={styles.subHeader}>HELP US HELP YOU</p>
             <div className={styles.promptContainer}>
-              <button className={styles.prompt} onClick={handleFirstButtonClick}>I want to play Guitar!</button>
-              <button className={styles.prompt} onClick={handleSecondButtonClick}>I want to lose money fast!</button>
-              <button className={styles.prompt} onClick={handleThirdButtonClick}>I want to learn how to gamble!</button>
-              <button className={styles.prompt} onClick={handleFourthButtonClick}>I want the uber eats tech!</button>
+              <button className={styles.prompt} onClick={handleFirstButtonClick}>Basic</button>
+              <button className={styles.prompt} onClick={handleSecondButtonClick}>Intermediate</button>
+              <button className={styles.prompt} onClick={handleThirdButtonClick}>Expert</button>
+              <button className={styles.prompt} onClick={handleFourthButtonClick}>Master</button>
               <div>
 
                 {messages.map((message, index) => (

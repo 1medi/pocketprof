@@ -33,7 +33,7 @@ export default function NavBar() {
             </Link>
           </li>
           <li className={styles.navLink}>
-            <Link href={'/Profile'} className={styles.navText}>
+            <Link href={'/Settings'} className={styles.navText}>
               <Image
               className={styles.image}
               src={Profile}

@@ -1,6 +1,6 @@
 .header{
   max-height: 400;
-  height: 4rem;
+  height: 4em;
   position: relative;
   padding: 1.3rem;
   backdrop-filter: blur(10px);

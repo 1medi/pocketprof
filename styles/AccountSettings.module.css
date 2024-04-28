@@ -10,7 +10,7 @@
   min-height: 20vh;
   font-family: "Montserrat", "sans-serif";
 }
-.quote, .student, .name{
+.email, .number, .name{
   margin: 10px;
   text-align: center;
 }
@@ -85,6 +85,16 @@
   bottom:300px;
   justify-content: center;
   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.optionContainer{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.pencil{
+  padding:3px;
 }
 
 @keyframes slideInFromLeft {

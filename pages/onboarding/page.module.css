@@ -209,6 +209,7 @@
     font-family: var(--body-text);
     font-size: var(--font-secondary);
     width: 70%;
+<<<<<<< HEAD
   }
 
   .answerList:hover {
@@ -219,4 +220,6 @@
   .itemSelected {
     color: #474747;
     background-color:#8E71D5;
+=======
+>>>>>>> ee1a4d87075a236b4e3afc5ac6188422a91145cd
   }

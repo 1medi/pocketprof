@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20vh;
+  font-family: "Montserrat", "sans-serif";
+}
+
+.mobileContainer{
+  width: 430px; 
+  margin: 0 auto; 
+}
+
+.optionsContainer {
+  display: flex;
+  flex: row;
+  padding: 5px;
+}
+
+.optionsOuter{
+  padding:30px;
+}
+
+.description{
+  width: 10em;
+  padding-left: 5px;
+}

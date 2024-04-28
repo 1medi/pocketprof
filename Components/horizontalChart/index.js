@@ -30,26 +30,14 @@ export default function HorizontalChart(){
 
   useEffect(() => {
     setChartData({
-      labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       datasets: [
         {
-          label: "Data 1",
-          data: [10, 2, 30 ,50, 60],
+          label: "Goals Achieved",
+          data: [10, 2, 3 ,12, 15,1,3, 5 ,7 ,12 , 14, 12],
           borderColor: 'rgb(53, 162, 235, 0.4)',
           backgroundColor: 'rgba(0, 162, 235, 0.4'
         },
-        {
-          label: "Data 2",
-          data: [30, 10, 50 ,60, 20],
-          borderColor: 'rgb(53, 162, 235, 0.4)',
-          backgroundColor: 'rgba(255, 162, 235, 0.4'
-        },
-        {
-          label: "Data 3",
-          data: [50, 60, 10 ,30, 50],
-          borderColor: 'rgb(53, 162, 235, 0.4)',
-          backgroundColor: 'rgba(100, 162, 235, 0.4'
-        }
       ]
     })
 
@@ -70,7 +58,7 @@ export default function HorizontalChart(){
   }, [])
   return(
     <>
-    <Bar data={chartData} options={chartOptions} style={{width: "300px", height:"200px"}}/>
+    <Bar data={chartData} options={chartOptions} style={{width: "300px", height:"400px"}}/>
     </>
   )
 }

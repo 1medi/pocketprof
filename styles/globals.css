@@ -3,6 +3,7 @@ background-color: white;
 align-content: center;
 --main-color-purple: #53239B;
 --main-color-lightpurple: #CCBFED;
+--main-color-lightpurple-transparent: rgba(204, 191, 237, 0.85);
 --secondary-color-blue: #9AB7F9;
 --secondary-color-lightblue: #CCE3FB;
 
@@ -19,13 +20,14 @@ align-content: center;
 
 }
 
-
-* {
-    padding: 0;
-    margin: 0;
-  }
-
-  ol,
-  ul {
-    list-style: none;
-  }
+  
+  
+  * {
+      padding: 0;
+      margin: 0;
+    }
+  
+    ol,
+    ul {
+      list-style: none;
+    }

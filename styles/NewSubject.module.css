@@ -1,0 +1,52 @@
+/**
+BACKGROUND CIRCLES
+**/
+
+.background__circle {
+    position: fixed;
+    top: -16rem;
+    left: -8rem; 
+    width: 50rem; 
+    height: 400px; 
+    background-color: var(--main-color-purple); 
+    border-radius: 50%;
+    z-index: -1; 
+  }
+  
+  .background__circle2 {
+    position: fixed;
+    top: -5.5rem;
+    left: -9rem; 
+    width: 15rem; 
+    height: 15rem; 
+    background-color: var(--main-color-lightpurple); 
+    border-radius: 50%;
+    z-index: -2; 
+  }
+
+  /**
+  PAGE CSS
+  **/
+
+  .heading__section {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .heading__container{
+    display: flex;
+    align-items: flex-end;
+    size: 36px;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    width: 65%;
+    text-align: right;
+    color: white;
+  }
+
+  .subhead{
+    padding: 1rem;
+    padding-top: 2.5rem;
+    color: var(--main-color-purple);
+  }
