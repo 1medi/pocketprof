@@ -432,3 +432,7 @@
     font-size: var(--font-secondary);
     width: 70%;
   }
+
+  .card{
+    padding:10px;
+  }
