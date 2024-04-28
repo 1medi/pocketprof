@@ -1,12 +1,13 @@
+import React, { useState, useRef } from 'react';
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/LandingPage.module.css";
+import styles from "./article.module.css";
 import axios from 'axios';
-import { useState } from "react";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
 
-export default function LandingPage() {
+
+export default function Artarticles() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -36,7 +37,7 @@ export default function LandingPage() {
   return (
     <>
       <Head>
-        <title>Landing page</title>
+        <title>Articles</title>
         <meta name="description" content="On-boarding Process" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -59,6 +60,8 @@ export default function LandingPage() {
             <div className={styles.content}><p>Content: {article.content}</p></div>
             <div className={styles.url}></div><p>URL: <a href={article.url}>Read more</a></p></div>
         ))}
+
+      <NavBar/>
       </main>
       </div>
 
