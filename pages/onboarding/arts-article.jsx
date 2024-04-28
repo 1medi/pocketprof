@@ -7,16 +7,16 @@ import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
 
 
-export default function Artarticles() {
+export default function artArticles() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
 
-  var type = 'Guitar';
+  var type = 'How_To_Play_Guitar';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
   var date = '2024-04-13';
-  const url = `https://gnews.io/api/v4/search?q=${type}&apikey=${apiKey}`;
+  const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
 
   const grabNews = async () => {
     setIsLoading(true);
@@ -24,8 +24,8 @@ export default function Artarticles() {
     try {
       const response = await axios.get(url);
       console.clear();
-      setData(response.data.articles); 
-      console.log(response.data.articles);
+      setData(response.data.posts); 
+      console.log(response.data.posts);
     } catch (err) {
       console.error(err);
       setError('Failed to fetch data');
@@ -45,7 +45,6 @@ export default function Artarticles() {
       <div className={styles.mobileContainer}>
       <Header name={"Articles"}/>
       <div className={styles.envContainer}>
-      {apiKey}
       </div>
       
       <main className={`${styles.main}`}>
@@ -53,12 +52,12 @@ export default function Artarticles() {
           {isLoading ? 'Loading...' : 'Search'}
         </button>
         {error && <p>{error}</p>}
-        {data.map((article, index) => (
+        {data.map((posts, index) => (
           <div key={index} className={styles.article}>
-            <div className={styles.author}><p>Author: {article.author}</p></div>
-            <div className={styles.title}><p>Title: {article.title}</p></div>
-            <div className={styles.content}><p>Content: {article.content}</p></div>
-            <div className={styles.url}></div><p>URL: <a href={article.url}>Read more</a></p></div>
+            <div className={styles.author}><p>Website: {posts.site_full}</p></div>
+            <div className={styles.title}><p>Title: {posts.title}</p></div>
+            <div className={styles.content}><p>Content: {posts.main_image}</p></div>
+            <div className={styles.url}></div><p>URL: <a href={posts.url}>Read more</a></p></div>
         ))}
 
       <NavBar/>
