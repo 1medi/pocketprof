@@ -1,11 +1,13 @@
 :root {
-background-color: white;
+
 align-content: center;
 --main-color-purple: #53239B;
 --main-color-lightpurple: #CCBFED;
 --main-color-lightpurple-transparent: rgba(204, 191, 237, 0.85);
 --secondary-color-blue: #9AB7F9;
 --secondary-color-lightblue: #CCE3FB;
+--offest-of-whites: #F3F3F6;
+background-color: var(--offest-of-whites);
 
 --font-header: 34pt ;
 --font-section-header: 28pt;
@@ -17,6 +19,7 @@ align-content: center;
 
 --headings: "Montserrat", "sans-serif";
 --body-text: "Noto Sans", sans-serif;
+
 
 }
 

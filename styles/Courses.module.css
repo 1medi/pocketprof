@@ -1,3 +1,17 @@
+.main {
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;
+  background-color: var(--lightpurple-background);
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 60vh;
+  font-family: "Montserrat", "sans-serif";
+}
+
 .mobileContainer{
   width: 430px; /* Hard-coded width */
   margin: 0 auto; /* Center the container horizontally */

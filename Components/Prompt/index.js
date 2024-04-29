@@ -15,12 +15,19 @@ const sendChat = async (prompt) => {
 export default function Chat() {
   const [imageUrls, setImageUrls] = useState();
   const [messages, setMessages] = useState([]);
+  const [showMessage, setShowMessage] = useState(false)
   const mutation = useMutation(sendChat);
 
   const handleFirstButtonClick = async () => {
+    setShowMessage(true)
     const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Beginner Guitar Player)"); 
     setImageUrls({ ...imageUrls, first: "/pexels-nikolett-emmert-15665996.jpg" });
     setMessages([...messages, { message: prompt, response }]);
+
+
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 1000);
   }
   const handleSecondButtonClick = async () => {
     const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Intermediate Guitar Player)");
@@ -49,15 +56,17 @@ export default function Chat() {
       <div className={styles.container}>
         <div>
           <main>
-            <h1 className={styles.header}>What is Your Current Skill Level of Guitar?</h1>
+            <div className={styles.textContainer}>
+            <h2 className={styles.header}>What is Your Current Skill Level of Guitar?</h2>
             <p className={styles.subHeader}>HELP US HELP YOU</p>
+            </div>
+
             <div className={styles.promptContainer}>
               <button className={styles.prompt} onClick={handleFirstButtonClick}>Basic</button>
               <button className={styles.prompt} onClick={handleSecondButtonClick}>Intermediate</button>
               <button className={styles.prompt} onClick={handleThirdButtonClick}>Expert</button>
               <button className={styles.prompt} onClick={handleFourthButtonClick}>Master</button>
               <div>
-
                 {messages.map((message, index) => (
                   <div className={styles.responseContainer}key={index}>
                     <p className={styles.response}>{message.response}</p>
@@ -66,7 +75,7 @@ export default function Chat() {
               </div>
 
               {messages.length > 0 && (
-                <ul className={styles.overlay}>
+                <ul className={styles.buttonOptions}>
                   <li>
                   <button onClick={clearPrompt}>Clear</button>                    
                   </li>
@@ -79,7 +88,11 @@ export default function Chat() {
 
             )}
             </div>
-            
+            {showMessage && (
+                <div className={styles.overlay}>
+                  <p>Message or Overlay Content</p>
+                </div>
+              )}
           </main>
         </div>
       </div>

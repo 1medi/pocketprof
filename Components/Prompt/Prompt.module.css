@@ -1,7 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  min-height: 20vh;
+}
 
 .promptContainer{
   display: flex;
   flex-direction: column;
+  margin: .2em;
 }
 .prompt{
   padding:10px;
@@ -22,12 +31,28 @@ border-radius: 20px;
 }
 
 .responseContainer{
-  animation: slideInFromLeft
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  margin:2em;
+
 }
 
 .overlay{
   display: flex;
   flex-direction: row;
+}
+
+.overlay{
+  background-color: var(--lightpurple-background);
+  z-index: 999;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position:relative;
+  display: flex;
+}
+
+.textContainer{
+  text-align: center;
 }
 
 @keyframes slideInFromLeft {

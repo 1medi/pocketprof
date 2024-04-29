@@ -23,7 +23,7 @@ export default function NavBar() {
             </Link>
           </li>
           <li className={styles.navLink}>
-            <Link href={'/Courses'} className={styles.navText}>
+            <Link href={'/NewSubject'} className={styles.navText}>
               <Image
               className={styles.image}
               src={Learn}

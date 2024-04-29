@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import styles from "./page.module.css";
+import SimpleButton from '@/Components/Buttons/simpleButton';
+import Link from 'next/link';
 
 const YOUTUBE_PLAYLIST__ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
 
@@ -17,7 +19,7 @@ console.log('data', data)
   return (
     <div className={styles.mobileContainer}>
       <main className={styles.container}>
-       health videos
+       <h1 className={styles.header}>Take a look at our recommended videos!</h1>
        <ul className={styles.grid}>
         {data.items.map((item) => {
           console.log(item);
@@ -27,10 +29,12 @@ console.log('data', data)
           return (
             <li key = {id} className={styles.card}>
               <a className={styles.imageContainer} href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-              <p >
+                <div className={styles.innerContainer}>
+                <p>
                 <img width={medium.width} height={medium.height} src={medium.url} alt=""></img>
               </p>
-              <h3 className={styles.cardTitle}>{ title }</h3>
+                <h3 className={styles.cardTitle}>{ title }</h3>
+                </div>
               </a>
             </li>
           )
@@ -38,6 +42,18 @@ console.log('data', data)
         <li>
         </li>
        </ul>
+       <div className={styles.break}>
+       </div>
+       <div className={styles.textContainer}>
+        <h3>Or you can choose to</h3>
+       </div>
+       <div className={styles.buttonContainer}>
+        <Link href={'/NewSubject'}>
+        <SimpleButton name={"Go Home"}/>
+        </Link>
+
+       </div>
+
       </main>
     </div>
   );
