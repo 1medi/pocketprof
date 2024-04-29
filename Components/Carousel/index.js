@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
 import ArrowLeft from '../Shapes/Arrows/ArrowLeft';
 import ArrowRight from '../Shapes/Arrows/ArrowRight';
+import Link from 'next/link';
 
 export default function Carousel() {
   const [curSlide, setCurSlide] = useState(0);
@@ -31,7 +32,9 @@ export default function Carousel() {
         <img className={styles.image} src="https://image.hurimg.com/i/hurriyet/75/0x0/59c7165145d2a027e83a35dd.jpg" alt="" />
       </div>
       <div className={styles.slide}>
-        <img className={styles.image} src="https://cdn.mos.cms.futurecdn.net/TKLDtTBhLsBKwcUxTySmK5.jpg" alt="" />
+      <Link href={'/Courses'}>   
+      <img className={styles.image} src="https://cdn.mos.cms.futurecdn.net/TKLDtTBhLsBKwcUxTySmK5.jpg" alt="" />              
+      </Link>
       </div>
       <div className={styles.slide}>
         <img className={styles.image} src="https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg" alt="" />

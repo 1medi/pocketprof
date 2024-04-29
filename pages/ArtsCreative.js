@@ -32,9 +32,7 @@ export default function Home() {
                     <h2 className={styles.subhead}>
                         Music
                     </h2>
-                    <Link href={'/Courses'}>
                     <Carousel/>                   
-                    </Link>
                 </div>
             </div>
             <div className={styles.subheading__section}>
