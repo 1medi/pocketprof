@@ -1,7 +1,7 @@
 import { OpenAI } from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_KEY // This is also the default, can be omitted
+  apiKey: process.env.OPENAI_KEY
 });
 
 export default async function handler(req, res) {

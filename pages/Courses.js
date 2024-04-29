@@ -22,7 +22,9 @@ export default function Home() {
       <div className={styles.mobileContainer}>
       <main className={`${styles.main} ${montserrat.className}`}>
       <Header name="Ask"/>
+      <div className={styles.oscarContainer}>
       <Oscar/>
+      </div>
       <Prompt/>
       <Images/>
       <NavBar/>

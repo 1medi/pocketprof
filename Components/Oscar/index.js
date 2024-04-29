@@ -17,7 +17,7 @@ export default function Oscar() {
 
   return (
     <>
-        <div className={styles.container} style={{ height: '300px', width: '300px' }}ref={animationContainer}></div>
+        <div className={styles.container} style={{ height: '200px', width: '200px' }}ref={animationContainer}></div>
     </>
   );
 }
