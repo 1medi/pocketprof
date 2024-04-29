@@ -13,7 +13,7 @@ export default function artArticles() {
   const [error, setError] = useState(null);
 
 
-  var type = 'How_To_Play_Guitar';
+  var type = 'Learn_about_artistic_techniques';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
   var date = '2024-04-13';
   const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
@@ -44,13 +44,12 @@ export default function artArticles() {
       </Head>
       <div className={styles.mobileContainer}>
       <Header name={"Articles"}/>
-      <div className={styles.envContainer}>
-      </div>
       
       <main className={`${styles.main}`}>
         <button onClick={grabNews} disabled={isLoading} className={styles.button}>
           {isLoading ? 'Loading...' : 'Search'}
         </button>
+        <div className={styles.background}>
         {error && <p>{error}</p>}
         {data.map((posts, index) => (
           <div key={index} className={styles.article}>
@@ -59,6 +58,7 @@ export default function artArticles() {
             <div className={styles.content}><p>Content: {posts.main_image}</p></div>
             <div className={styles.url}></div><p>URL: <a href={posts.url}>Read more</a></p></div>
         ))}
+         </div>
 
       <NavBar/>
       </main>
