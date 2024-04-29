@@ -1,17 +1,4 @@
 import React, { useState, useRef } from 'react';
-import styles from "./page.module.css";
-
-export default function Page() {
-
-  return (
-    <div className={styles.mobileContainer}>
-      <main className={styles.container}>
-       health article
-      </main>
-    </div>
-  );
-}
-import React, { useState, useRef } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./article.module.css";
