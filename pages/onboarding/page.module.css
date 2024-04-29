@@ -7,7 +7,7 @@
     overflow-x: hidden;
     justify-content: center;
     display: flex;
-    background-color: var(--lightpurple-background);
+    background-color: var(--background-color);
     height: 100vh;
     align-items: center;
     flex-direction: column;
@@ -215,11 +215,22 @@
     background-color: #CCBFED;
     columns: #fff;
   }
+
+  .itemHover:hover {
+    background-color: #CCBFED;
+    columns: #fff;
+  }
   
   .itemSelected {
     color: #474747;
     background-color:#8E71D5;
   }
+  
+  .itemSelected {
+    color: #474747;
+    background-color:#8E71D5;
+  }
+
 .main {
     overflow-x: hidden;
     justify-content: center;

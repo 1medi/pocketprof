@@ -17,7 +17,6 @@ export default function QuizPage() {
       <Header name="Quiz"/>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Quiz App</h1>
           <div className={styles.descriptionContainer}>
             <h3>ARE YOU READY TO WIN</h3>
           </div>

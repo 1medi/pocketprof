@@ -53,11 +53,14 @@ export default function artArticles() {
         </button>
         {error && <p>{error}</p>}
         {data.map((posts, index) => (
-          <div key={index} className={styles.article}>
-            <div className={styles.author}><p>Website: {posts.site_full}</p></div>
-            <div className={styles.title}><p>Title: {posts.title}</p></div>
-            <div className={styles.content}><p>Content: {posts.main_image}</p></div>
-            <div className={styles.url}></div><p>URL: <a href={posts.url}>Read more</a></p></div>
+         <div key={index} className={styles.article}>
+         <div className={styles.articleInnerContainer}>
+         <div className={styles.category}><p>Category: <br/> {posts.section_title}</p></div>
+         <div className={styles.category}><p>Title: <br/> {posts.title}</p></div>
+         <div className={styles.category}><p>Author: <br/>{posts.author}</p></div>
+         <div className={styles.category}><p> <br/><a href={posts.url}>Read more</a></p></div>
+         </div>
+         </div>
         ))}
 
       <NavBar/>

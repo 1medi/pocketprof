@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { onboarding } from "@/quizData/onboarding";
 import styles from "./page.module.css";
@@ -9,7 +9,8 @@ export default function Page() {
   const [responses, setResponses] = useState([]); 
   const [showResult, setShowResult] = useState(false);
   const router = useRouter();
-
+  const [checked, setChecked] = useState(false);
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
 
   const routeMap = {
     'arts': {
@@ -26,30 +27,43 @@ export default function Page() {
     }
   };
 
-  const onAnswerSelected = (answer) => {
-    setResponses(prev => [...prev, answer]); 
-  };
+  const onAnswerSelected = (answer, idx, event = null) => {
+    if (event && event.type === 'keydown' && (event.key !== 'Enter' && event.key !== ' ')) {
+      return;
+    }
+    setChecked(true);
+    setResponses(prev => [...prev, answer]);
+    setSelectedAnswerIndex(idx); 
+  }
 
   const nextQuestion = () => {
     const newQuestionIndex = activeQuestion + 1;
     setActiveQuestion(newQuestionIndex);
-    
-    // Check if all questions have been answered
+    setSelectedAnswerIndex(null);
     if (newQuestionIndex >= onboarding.totalQuestions) {
-      setShowResult(true);  // Prepare to show result page
-      routeToResult();       // Route based on responses to questions 1 and 3
+      setShowResult(true); 
+      routeToResult();      
     }
+    setChecked(false);
   };
 
   const routeToResult = () => {
     if (responses.length >= 3) {
-      const interest = responses[0].value; // response to first question
-      const learningStyle = responses[2].value; // response to third question
+      const interest = responses[0].value; 
+      const learningStyle = responses[2].value; 
       const route = routeMap[interest][learningStyle];
       router.push(route);
     }
   };
 
+  const nextButtonRef = useRef(null);
+
+  useEffect(() => {
+    if (checked && nextButtonRef.current) {
+      nextButtonRef.current.focus();
+    }
+  }, [checked]);
+  
   return (
     <div className={styles.mobileContainer}>
       <main className={styles.container}>
@@ -59,14 +73,19 @@ export default function Page() {
               <h3 className={styles.question}>{onboarding.questions[activeQuestion].question}</h3>
               {onboarding.questions[activeQuestion].answers.map((answer, idx) => (
                 <li key={idx}
-                    onClick={() => onAnswerSelected(answer)}
-                    className={styles.answerList}
+                    onClick={() => onAnswerSelected(answer, idx)}
+                    onKeyDown={(event) => onAnswerSelected(answer, idx, event)}
+                    className={`${styles.answerList} ${selectedAnswerIndex === idx ? styles.itemSelected : styles.itemHover}`}
                     tabIndex={0}>
                   {answer.text}
                 </li>
               ))}
-              <button onClick={nextQuestion}
-                      className={styles.btn}>
+              <button
+              ref={nextButtonRef} 
+              onClick={nextQuestion}
+              className={checked ? styles.btn : styles.btnDisabled}
+              disabled={!checked}
+              tabIndex={2}>
                 {activeQuestion === onboarding.totalQuestions - 1 ? 'Finish' : 'Next'}
               </button>
             </div>
@@ -74,7 +93,7 @@ export default function Page() {
         ) : (
           <div className={styles.result}>
             <h3>Quiz Completed</h3>
-            <Button3 name="Finish" onClick={() => setShowResult(false)} />
+            <Button3 name="Home" onClick={() => setShowResult(false)} />
           </div>
         )}
       </main>

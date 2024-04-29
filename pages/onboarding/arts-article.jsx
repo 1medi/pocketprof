@@ -5,13 +5,14 @@ import styles from "./article.module.css";
 import axios from 'axios';
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
-
+import Button3 from '@/Components/Buttons/Button3';
+import { useRouter } from 'next/router'; 
 
 export default function artArticles() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
+  const router = useRouter();
 
   var type = 'Learn_about_artistic_techniques';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
@@ -34,6 +35,10 @@ export default function artArticles() {
     }
   };
 
+  const navigateToAnotherPage = () => {
+    router.push('/Home'); 
+  };
+
   return (
     <>
       <Head>
@@ -46,19 +51,26 @@ export default function artArticles() {
       <Header name={"Articles"}/>
       
       <main className={`${styles.main}`}>
-        <button onClick={grabNews} disabled={isLoading} className={styles.button}>
-          {isLoading ? 'Loading...' : 'Search'}
-        </button>
-        <div className={styles.background}>
+        {data.length === 0 ? (
+          <button onClick={grabNews} disabled={isLoading} className={styles.button}>
+            {isLoading ? 'Loading...' : 'Search'}
+          </button>
+        ) : (
+          <button onClick={navigateToAnotherPage} className={styles.button}>
+            Home
+          </button>
+        )}
         {error && <p>{error}</p>}
         {data.map((posts, index) => (
           <div key={index} className={styles.article}>
-            <div className={styles.author}><p>Website: {posts.site_full}</p></div>
-            <div className={styles.title}><p>Title: {posts.title}</p></div>
-            <div className={styles.content}><p>Content: {posts.main_image}</p></div>
-            <div className={styles.url}></div><p>URL: <a href={posts.url}>Read more</a></p></div>
+            <div className={styles.articleInnerContainer}>
+            <div className={styles.category}><p>Category: <br/> {posts.section_title}</p></div>
+            <div className={styles.category}><p>Title: <br/> {posts.title}</p></div>
+            <div className={styles.category}><p>Author: <br/>{posts.author}</p></div>
+            <div className={styles.category}><p> <br/><a href={posts.url}>Read more</a></p></div>
+            </div>
+            </div>
         ))}
-         </div>
 
       <NavBar/>
       </main>

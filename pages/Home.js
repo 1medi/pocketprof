@@ -16,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
+      <div className={styles.mobileContainer}>
       <Header name="Home"/>
         <Carousel />
         <Link href={'/Components'}>Components </Link>
@@ -25,6 +26,7 @@ export default function Home() {
         <Link href={'/Settings'}>Settings</Link>
         <Link href={'/Subjects'}>Subjects</Link>
         <NavBar/>
+       </div>
       </main>
     </>
   );
