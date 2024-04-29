@@ -10,7 +10,7 @@ export default function Page() {
   const [showResult, setShowResult] = useState(false);
   const router = useRouter();
 
-  // Routing map based on interest area and learning style
+
   const routeMap = {
     'arts': {
       'video': 'arts-video',
