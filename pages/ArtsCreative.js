@@ -3,8 +3,12 @@ import NavBar from "@/Components/Navbar";
 import Image from "next/image";
 import styles from "@/styles/NewSubject.module.css";
 import { Montserrat } from "next/font/google";
-import Carousel from "@/Components/Carousel";
+import Carousel from "@/Components/MusicCarousel";
 import Link from "next/link";
+import Circles from "@/Components/Shapes/Circles";
+import WritingCarousel from "@/Components/WritingCarousel"
+import ArtCarousel from "@/Components/ArtCarousel"
+import MusicCarousel from "@/Components/MusicCarousel"
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
@@ -16,35 +20,38 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <div className={styles.mobileContainer}>
-        <div className={`${styles.background__circle}`}></div>
-        <div className={`${styles.background__circle2}`}></div>
+      <div className={styles.mobileContainer}>
+      <Circles
+      title="ARTS / CREATIVE"
+      />
         <main className={`${styles.main} ${montserrat.className}`}>
-            <div className={styles.heading__section}>
-                <div className={styles.heading__container}>
-                    <h1 className={styles.heading}>
-                        ARTS / CREATIVE
-                    </h1>
-                </div>
+            <div className={styles.subheading__section}>
+              <div className={styles.subheading__container}>
+                <h2 className={styles.subhead}>
+                  Music
+                </h2>
+                <MusicCarousel />
+              </div>
             </div>
             <div className={styles.subheading__section}>
-                <div className={styles.subheading__container}>
-                    <h2 className={styles.subhead}>
-                        Music
-                    </h2>
-                    <Carousel/>                   
-                </div>
+              <div className={styles.subheading__container}>
+                <h2 className={styles.subhead}>
+                  Art Design
+                </h2>
+                <ArtCarousel />
+              </div>
             </div>
             <div className={styles.subheading__section}>
-                <div className={styles.subheading__container}>
-                    <h2 className={styles.subhead}>
-                        Art Design
-                    </h2>
-                    <Carousel/>                   
-                </div>
+              <div className={styles.subheading__container}>
+                <h2 className={styles.subhead}>
+                  Writing
+                </h2>
+                <WritingCarousel />
+              </div>
             </div>
-        <NavBar/>
-      </main>  
+            <div className={styles.lmao}></div>
+          <NavBar />
+        </main>
       </div>
 
     </>

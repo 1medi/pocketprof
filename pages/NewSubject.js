@@ -5,6 +5,8 @@ import styles from "@/styles/NewSubject.module.css";
 import { Montserrat } from "next/font/google";
 import CategoryButton from "@/Components/Buttons/CategoriesButton";
 import Link from "next/link";
+import Circles from "@/Components/Shapes/Circles";
+import Header from "@/Components/Header";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
@@ -17,17 +19,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-
+        <Circles title={"Learn Something New"}/>
         <main className={`${styles.main} ${montserrat.className}`}>
-          <div className={styles.heading__section}>
-          <div className={`${styles.background__circle}`}></div>
-          <div className={`${styles.background__circle2}`}></div>
-            <div className={styles.heading__container}>
-              <h1 className={styles.heading}>
-                Learn Something New
-              </h1>
-            </div>
-          </div>
           <div className={styles.subheading__section}>
             <div className={styles.subheading__container}>
               <h2 className={styles.subhead}>

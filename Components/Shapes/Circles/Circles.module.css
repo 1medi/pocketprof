@@ -1,0 +1,39 @@
+.background__circle {
+  position: fixed;
+  top: -16.5rem;
+  width: 50rem; 
+  height: 400px; 
+  background-color: var(--main-color-purple); 
+  border-radius: 50%;
+  z-index: 2; 
+}
+
+.background__circle2 {
+  position: fixed;
+  top: -8.5rem;
+  width: 15rem; 
+  height: 15rem; 
+  background-color: var(--main-color-lightpurple); 
+  border-radius: 50%;
+  z-index: 1; 
+}
+
+.heading__section, .heading {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 4;
+}
+
+.heading__container{
+  display: flex;
+  justify-content: flex-end;
+  size: 36px;
+  padding-top: 3em;
+  right: 32em;
+  width: 65%;
+  text-align: right;
+  color: white;
+  z-index: 3;
+  position: fixed;
+}

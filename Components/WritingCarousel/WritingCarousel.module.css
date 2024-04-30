@@ -57,3 +57,16 @@
     background-color: #fff;
     font-size: 18px;
   }
+
+  .captionContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2.75em;
+    background-color:var(--main-color-purple);
+  }
+  
+  .caption{
+    color: var(--offest-of-whites)
+  }

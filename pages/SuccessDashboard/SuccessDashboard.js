@@ -7,7 +7,7 @@ import NavBar from "@/Components/Navbar";
 import DoughnutChart from "@/Components/doughnutChart";
 import Oscar from "@/Components/Oscar";
 import Image1 from "@/public/img/nature-4964153_1920.jpg"
-import Carousel from "@/Components/Carousel";
+import Carousel from "@/Components/MusicCarousel";
 import Link from "next/link";
 
 const montserrat = Montserrat({ subsets: ['latin'] })

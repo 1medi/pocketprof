@@ -81,7 +81,7 @@ export default function Chat() {
                   </li>
                   <li>
                     <button>
-                    <Link href="/Courses2">Next Page</Link>
+                    <Link href="/Goals">Next Page</Link>
                     </button>
                   </li>              
                 </ul>

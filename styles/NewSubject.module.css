@@ -8,6 +8,7 @@ BACKGROUND CIRCLES
   align-items: center;
   flex-direction: column;
   align-items: center;
+  padding-top: 5em;
   min-height: 60vh;
   font-family: "Montserrat", "sans-serif";
 }
@@ -15,25 +16,7 @@ BACKGROUND CIRCLES
   width: 430px; 
   margin: 0 auto; 
 }
-.background__circle {
-    position: fixed;
-    top: -16.5rem;
-    width: 50rem; 
-    height: 400px; 
-    background-color: var(--main-color-purple); 
-    border-radius: 50%;
-    z-index: 2; 
-  }
-  
-  .background__circle2 {
-    position: fixed;
-    top: -8.5rem;
-    width: 15rem; 
-    height: 15rem; 
-    background-color: var(--main-color-lightpurple); 
-    border-radius: 50%;
-    z-index: 1; 
-  }
+
 
   /**
   PAGE CSS
@@ -61,8 +44,17 @@ BACKGROUND CIRCLES
     padding: 1rem;
     padding-top: 2.5rem;
     color: var(--main-color-purple);
+    margin-left: 20px;
   }
 
 .subheading__section{
-  margin-right: 20px;
+  margin-right: 0;
+  justify-content: center;
+  position: relative;
+  right: 20px;
+}
+
+
+.lmao {
+  margin:10em;
 }
