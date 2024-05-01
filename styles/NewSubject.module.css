@@ -22,13 +22,20 @@ BACKGROUND CIRCLES
   PAGE CSS
   **/
 
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    width: 
+  }
+
   .heading__section {
     display: flex;
     justify-content: center;
+    width: 100vw;
   }
 
   .oscaar__container {
-    
+    width: 
   }
 
   .heading__container{
@@ -63,7 +70,6 @@ BACKGROUND CIRCLES
   right: 20px;
 }
 
-
-.lmao {
-  margin:10em;
+.category__section__container {
+  display: flex;
 }

@@ -7,6 +7,7 @@ import CategoryButton from "@/Components/Buttons/CategoriesButton";
 import Link from "next/link";
 import Circles from "@/Components/Shapes/Circles";
 import Header from "@/Components/Header";
+import OscarHome from "@/Components/OscarHome";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
@@ -21,16 +22,15 @@ export default function Home() {
       <div className={styles.mobileContainer}>
         <Circles title={"Learn Something New"}/>
         <main className={`${styles.main} ${montserrat.className}`}>
-<<<<<<< Updated upstream
-=======
           <div className={styles.heading__section}>
           <div className={`${styles.background__circle}`}></div>
           <div className={`${styles.background__circle2}`}></div>
-          <div className={styles.oscaar__container}>
-            <div className={styles.oscaar}>
-              
+          <div className={styles.oscar__container}>
+            <div className={styles.oscar}>
+              <OscarHome/>
             </div>
           </div>
+          <div className={styles.banner__content}>
             <div className={styles.heading__container}>
               <h1 className={styles.heading}>
                   Explore Your Potential
@@ -40,12 +40,14 @@ export default function Home() {
               </h2>
             </div>
           </div>
->>>>>>> Stashed changes
           <div className={styles.subheading__section}>
             <div className={styles.subheading__container}>
-              <h2 className={styles.subhead}>
-                Categories
-              </h2>
+              </div>
+              <div className={styles.categories__section__container}>
+                <h2 className={styles.subhead}>
+                  Categories
+                </h2>
+              </div>
             </div>
           </div>
           <div className={styles.category__button__container}>
