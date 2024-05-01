@@ -21,6 +21,26 @@ export default function Home() {
       <div className={styles.mobileContainer}>
         <Circles title={"Learn Something New"}/>
         <main className={`${styles.main} ${montserrat.className}`}>
+<<<<<<< Updated upstream
+=======
+          <div className={styles.heading__section}>
+          <div className={`${styles.background__circle}`}></div>
+          <div className={`${styles.background__circle2}`}></div>
+          <div className={styles.oscaar__container}>
+            <div className={styles.oscaar}>
+              
+            </div>
+          </div>
+            <div className={styles.heading__container}>
+              <h1 className={styles.heading}>
+                  Explore Your Potential
+              </h1>
+              <h2 className={styles.heading__second__line}>
+                  One step at a time
+              </h2>
+            </div>
+          </div>
+>>>>>>> Stashed changes
           <div className={styles.subheading__section}>
             <div className={styles.subheading__container}>
               <h2 className={styles.subhead}>

@@ -24,20 +24,29 @@ BACKGROUND CIRCLES
 
   .heading__section {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+  }
+
+  .oscaar__container {
+    
   }
 
   .heading__container{
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
     size: 36px;
     padding: 1rem;
     padding-top: 1.5rem;
     padding-right: 1.5rem;
-    width: 65%;
+    width: 100%;
     text-align: right;
     color: white;
     z-index: 3;
+  }
+
+  .heading__container > h2{
+    size: 10px;
   }
 
   .subhead{
