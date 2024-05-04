@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/Components/Header";
 import Button3 from "@/Components/Buttons/Button3"
 import NavBar from "@/Components/Navbar";
+import Image from "next/image";
 
 export default function QuizPage() {
   return (
@@ -18,8 +19,16 @@ export default function QuizPage() {
       <div className={styles.mobileContainer}>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
+        <Image
+          priority
+          src="/img/oscar/oscar-main-smiling.svg"
+          width="200"
+          height="200"
+          alt="oscar"
+          className={styles.oscar}
+        />
           <div className={styles.descriptionContainer}>
-            <h3>ARE YOU READY TO WIN</h3>
+            <h3 className={styles.title}>ARE YOU READY TO WIN?</h3>
           </div>
           <Link href='/quiz/page' className={styles.buttonContainer}>
             <Button3 name={"Press To Start"} />

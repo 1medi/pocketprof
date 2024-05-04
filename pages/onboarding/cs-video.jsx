@@ -1,7 +1,10 @@
 import React from 'react';
-import styles from "./page.module.css";
+import styles from "./video.module.css";
 import Head from 'next/head';
 import Header from '@/Components/Header';
+import Button3 from '@/Components/Buttons/Button3';
+import Link from 'next/link';
+
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 export async function getServerSideProps() {
@@ -53,13 +56,18 @@ export default function Page({ data, error }) {
             return (
               <li key={id} className={styles.card}>
                 <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-                  <img width={medium.width} height={medium.height} src={medium.url} alt={`Thumbnail for ${title}`}></img>
+                  <img className={styles.thumbnail} width={medium.width} height={medium.height} src={medium.url} alt={`Thumbnail for ${title}`}></img>
                   <h3 className={styles.cardTitle}>{title}</h3>
                 </a>
               </li>
             );
           })}
         </ul>
+        <div className={styles.buttonContainer}>
+            <Link href="/NewSubject">
+                <Button3 name="Go Home" />
+            </Link>
+          </div>
       </main>
     </div>
     </>

@@ -1,0 +1,107 @@
+.mobileContainer{
+    width: 430px; 
+    margin: 0 auto; 
+  }
+
+  .container{
+    height: 80vh;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+  .card {
+    position: relative; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 10px;
+    margin: 1rem 0;
+    width: 85%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    --_i: 100%;
+    transition: .3s, background-size .3s .3s;
+  }
+  
+
+  .card a {
+    color: var(--secondary-color-lightblue); 
+    text-decoration: none; 
+  }
+  
+  .card a:hover {
+    text-decoration: underline; 
+  }
+  
+  .card {
+    --c: var(--secondary-color-blue); 
+    --b: 5px;  
+    --g: 5px;   
+    
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%,var(--c) 0;
+    background: 
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+       var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+      conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+       0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .3s, background-position .3s .3s;
+    cursor: pointer;
+  }
+
+  .cardTitle {
+    color: black;
+    text-decoration: none;
+    font-family: var(--body-text);
+    font-size: var(--font-body);
+    font-weight: bold;
+  }
+
+  .break {
+    border-bottom: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    width: 100%;
+  }
+
+  .buttonContainer{
+    padding: 10px;
+  }
+
+  .textContainer{
+    padding:10px;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

@@ -222,14 +222,15 @@
   }
   
   .itemSelected {
-    color: #474747;
-    background-color:#8E71D5;
+    color: #FFFFFF; 
+    background-color: #5A33A2; 
+    font-weight: bold;
+    border: 2px solid #333333; 
   }
   
-  .itemSelected {
-    color: #474747;
-    background-color:#8E71D5;
-  }
+  .answerList {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and color changes */
+}
 
 .main {
     overflow-x: hidden;

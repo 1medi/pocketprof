@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Onboarding.module.css";
 import Link from "next/link";
-import NavBar from "@/Components/Navbar";
 import { Montserrat } from "next/font/google";
 import Button3 from "@/Components/Buttons/Button3";
 import Image from "next/image";

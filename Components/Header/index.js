@@ -1,5 +1,4 @@
 import styles from "@/Components/Header/Header.module.css"
-import Link from "next/link"
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ['latin'] })

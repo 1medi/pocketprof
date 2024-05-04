@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
-import styles from "./page.module.css";
-import SimpleButton from '@/Components/Buttons/simpleButton';
+import React from 'react';
+import styles from "./video.module.css";
+import Button3 from '@/Components/Buttons/Button3';
 import Link from 'next/link';
 import Head from 'next/head';
 import Header from '@/Components/Header';
@@ -29,7 +29,6 @@ export default function Page({ data }) {
       <div className={styles.mobileContainer}>
         <Header name="Videos" />
         <main className={styles.container}>
-          <h1 className={styles.header}>Take a look at our recommended videos!</h1>
           <ul className={styles.grid}>
             {data.items.map((item) => {
               console.log(item);
@@ -38,25 +37,17 @@ export default function Page({ data }) {
               const { medium = {} } = thumbnails;
               return (
                 <li key={id} className={styles.card}>
-                  <a className={styles.imageContainer} href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-                    <div className={styles.innerContainer}>
+                  <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
                       <img width={medium.width} height={medium.height} src={medium.url} alt={title} />
                       <h3 className={styles.cardTitle}>{title}</h3>
-                    </div>
                   </a>
                 </li>
               );
             })}
           </ul>
-          <div className={styles.break}></div>
-          <div className={styles.textContainer}>
-            <h3>Or you can choose to</h3>
-          </div>
           <div className={styles.buttonContainer}>
             <Link href="/NewSubject">
-
-                <SimpleButton name="Go Home" />
-
+                <Button3 name="Go Home" />
             </Link>
           </div>
         </main>

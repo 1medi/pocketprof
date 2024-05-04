@@ -54,8 +54,8 @@
 .title{
   text-align: center;
   padding:10px;
-  font-family: var(--body-text);
-  font-size: var(--font-body);
+  font-family: "Montserrat", "sans-serif";
+  font-size: 2var(--font-sub-header);
 }
 
 

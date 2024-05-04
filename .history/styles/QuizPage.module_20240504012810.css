@@ -54,10 +54,13 @@
 .title{
   text-align: center;
   padding:10px;
-  font-family: var(--body-text);
-  font-size: var(--font-body);
+  font-family: "Montserrat", "sans-serif";
 }
 
+.descriptionContainer{
+  text-align: center;
+  padding:10px
+}
 
 .buttonContainer {
   text-align: center;

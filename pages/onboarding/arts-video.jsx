@@ -1,7 +1,9 @@
-import React, { useState, useRef } from 'react';
-import styles from "./page.module.css";
+import React from 'react';
+import styles from "./video.module.css";
 import Head from 'next/head';
 import Header from '@/Components/Header';
+import Button3 from '@/Components/Buttons/Button3';
+import Link from 'next/link';
 
 const YOUTUBE_PLAYLIST__ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
 
@@ -33,7 +35,7 @@ console.log('data', data)
                 const { id, snippet = {} } = item;
                 const { title, thumbnails = {}, resourceId } = snippet;
                 const { medium = {} } = thumbnails;
-  
+
                 return (
                   <li key={id} className={styles.card}>
                     <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
@@ -44,6 +46,11 @@ console.log('data', data)
                 );
               })}
             </ul>
+            <div className={styles.buttonContainer}>
+            <Link href="/NewSubject">
+                <Button3 name="Go Home" />
+            </Link>
+          </div>
           </main>
         </div>
       </>

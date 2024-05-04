@@ -16,6 +16,19 @@
   font-family: "Montserrat", "sans-serif";
 }
 
+/* .container {
+  max-width: 400px;
+  max-height: 932px;
+  width: 100%;
+  background-color: #8CACF4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  border-radius: 10px;
+  z-index: 1;
+} */
+
 .container {
   background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
  animation: morph 8s ease-in-out infinite;
@@ -29,8 +42,6 @@
  display: flex;
  flex-direction: column;
  margin-top: 100px;
- align-items: center;
- justify-content: center;
 }
 
 @keyframes morph {
@@ -41,7 +52,7 @@
  
  50% {
      border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-     background: linear-gradient(45deg, var(--main-color-purple) 5%, var(--main-color-lightpurple) 100%);
+     background: linear-gradient(45deg, var(--secondary-color-blue) 0%, var(--main-color-lightpurple) 100%);
  }
  
  100% {
@@ -54,10 +65,13 @@
 .title{
   text-align: center;
   padding:10px;
-  font-family: var(--body-text);
-  font-size: var(--font-body);
+  font-family: "Montserrat", "sans-serif";
 }
 
+.descriptionContainer{
+  text-align: center;
+  padding:10px
+}
 
 .buttonContainer {
   text-align: center;
