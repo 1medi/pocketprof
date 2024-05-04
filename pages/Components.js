@@ -6,7 +6,7 @@ import Header from "@/Components/Header"
 import Button1 from "@/Components/Buttons/Oscar"
 import Button2 from "@/Components/Buttons/Button2"
 import Button3 from "@/Components/Buttons/Button3";
-import Carousel from "@/Components/Carousel";
+import Carousel from "@/Components/MusicCarousel";
 import Button4 from "@/Components/Buttons/Button4";
 import Link from 'next/link'
 

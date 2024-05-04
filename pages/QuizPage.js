@@ -15,6 +15,7 @@ export default function QuizPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header name="Quiz"/>
+      <div className={styles.mobileContainer}>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
           <div className={styles.descriptionContainer}>
@@ -26,6 +27,8 @@ export default function QuizPage() {
         </div>
       </main>
       <NavBar />
+      </div>
+
     </>
   );
 }

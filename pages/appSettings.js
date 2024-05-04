@@ -8,6 +8,7 @@ import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import Link from "next/link";
 import Image1 from "@/public/img/nature-4964153_1920.jpg";
 import ArrowRight from "@/Components/Shapes/Arrows/ArrowRight";
+import Pencil from "@/public/img/pencil.png"
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -30,8 +31,8 @@ export default function Home() {
             <Image
               className={styles.image}
               src={Image1}
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             />
             <h5>Drake Williams</h5>
             <p>drake@gmail.com</p>
@@ -40,17 +41,17 @@ export default function Home() {
           <div className={styles.optionsOuter}>
             <h4>Account</h4>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Edit Name</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Edit Email</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Edit Phone Number</p>
               <ArrowRight />
             </div>
@@ -58,32 +59,32 @@ export default function Home() {
           <h4>Accessibility</h4>
           <div className={styles.optionsOuter}>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Dark Mode</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Font Options</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil}width={25} height={25} />
               <p className={styles.description}>Color Blindness</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Language</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Narrator / Voice</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src="" width={25} height={25} />
+              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Privacy</p>
               <ArrowRight />
             </div>
@@ -91,17 +92,17 @@ export default function Home() {
           <h4>General</h4>
           <div className={styles.optionsOuter}>
           <div className={styles.optionsContainer}>
-            <Image src="" width={25} height={25} />
+            <Image src={Pencil} width={25} height={25} />
             <p className={styles.description}>Get Help</p>
             <ArrowRight />
           </div>
           <div className={styles.optionsContainer}>
-            <Image src="" width={25} height={25} />
+            <Image src={Pencil}width={25} height={25} />
             <p className={styles.description}>Rate The App</p>
             <ArrowRight />
           </div>
           <div className={styles.optionsContainer}>
-            <Image src="" width={25} height={25} />
+            <Image src={Pencil} width={25} height={25} />
             <p className={styles.description}>Log Out</p>
             <ArrowRight />
           </div>

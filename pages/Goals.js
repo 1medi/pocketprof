@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
 import Oscar from "@/Components/Oscar"
-import Prompt from "@/Components/Prompt"
+import Goals from "@/Components/Goals"
 import Images from "@/Components/images";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
@@ -23,8 +23,7 @@ export default function Home() {
       <main className={`${styles.main} ${montserrat.className}`}>
       <Header name="Ask"/>
       <Oscar/>
-      <Prompt/>
-      <Images/>
+      <Goals/>
       <NavBar/>
       </main> 
       </div>
