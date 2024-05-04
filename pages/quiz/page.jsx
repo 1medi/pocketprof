@@ -146,12 +146,9 @@ export default function Page() {
           <div className={styles.step} style={{ opacity: progress >= 3 ? 1 : 0 }}><p className={styles.barText}></p></div>
           <div className={styles.step} style={{ opacity: progress >= 4 ? 1 : 0 }}><p className={styles.barText}></p></div>
       </div>
+      <NavBar/>
     </main>
-  
-    <NavBar/>
     </div>
- 
     </>
-
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./page.module.css";
-
+import Head from 'next/head';
+import Header from '@/Components/Header';
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 export async function getServerSideProps() {
@@ -33,9 +34,16 @@ export default function Page({ data, error }) {
 
   console.log('data', data);
   return (
-    <div className={styles.mobileContainer}>
+    <>
+    <Head>
+    <title>Videos</title>
+    <meta name="description" content="On-boarding Process" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+  </Head>
+  <div className={styles.mobileContainer}>
+     <Header name="Videos" />
       <main className={styles.container}>
-        Health videos
         <ul className={styles.grid}>
           {data && data.items && data.items.map((item) => {
             console.log(item);
@@ -54,5 +62,6 @@ export default function Page({ data, error }) {
         </ul>
       </main>
     </div>
+    </>
   );
 }

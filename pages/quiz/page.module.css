@@ -1,7 +1,22 @@
 .mobileContainer{
-  width: 430px; /* Hard-coded width */
-  margin: 0 auto; /* Center the container horizontally */
+  width: 430px; 
+  margin: 0 auto; 
 }
+
+.main {
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;
+  background-color: var(--background-color);
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
 
   .container{
   padding: 0;
