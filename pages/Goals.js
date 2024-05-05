@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
 import Oscar from "@/Components/Oscar"
-import Goals from "@/Components/Goals"
+import Goals from "@/Components/GoalStuff/Goals"
 import Images from "@/Components/images";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";

@@ -33,8 +33,15 @@ border-radius: 20px;
 
 .responseContainer{
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  margin:2em;
+  margin: 2em;
+  width: 300px;
+  position: relative;
+  display: flex;
+}
 
+.gptContainer{
+  border: 1px solid black;
+  width: 100%;
 }
 
 .overlay{
@@ -58,6 +65,10 @@ border-radius: 20px;
 
 .buttonOptions {
   padding:5em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
 }
 
 @keyframes slideInFromLeft {

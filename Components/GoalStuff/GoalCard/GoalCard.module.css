@@ -1,0 +1,60 @@
+.goalCard {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.description, .number {
+    font-size: var(--font-body);
+}
+
+.number{
+    padding: 10px;
+}
+
+.plus{
+    display:flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.alert{
+    width: 430px;
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 466px;
+    flex-direction: column;
+    text-align: center;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    background-color: var(--offest-of-whites);
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+.oscarContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.button {
+    width: 100px;
+    margin: auto;
+}
+
+.buttonContainer{
+    padding:10px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

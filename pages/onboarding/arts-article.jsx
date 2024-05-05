@@ -14,7 +14,7 @@ export default function artArticles() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-  var type = 'Learn_about_artistic_techniques';
+  var type = 'Learn-about-artistic-techniques';
   var apiKey = process.env.NEXT_PUBLIC_API_KEY;
   var date = '2024-04-13';
   const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;

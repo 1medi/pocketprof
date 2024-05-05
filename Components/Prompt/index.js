@@ -21,31 +21,19 @@ export default function Chat() {
   const handleFirstButtonClick = async () => {
     setShowMessage(true)
     const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Beginner Guitar Player)"); 
-    setImageUrls({ ...imageUrls, first: "/pexels-nikolett-emmert-15665996.jpg" });
     setMessages([...messages, { message: prompt, response }]);
 
-
-    setTimeout(() => {
-      setShowMessage(false);
-    }, 1000);
   }
   const handleSecondButtonClick = async () => {
     const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Intermediate Guitar Player)");
     setMessages([...messages, { message: "Second prompt", response }]);
-    setImageUrls({ ...imageUrls, second: "url_for_second_image.jpg" });
   }
 
   const handleThirdButtonClick = async () => {
     const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am an Expert Guitar Player)");
     setMessages([...messages, { message: "Third prompt", response }]);
-    setImageUrls({ ...imageUrls, third: "url_for_third_image.jpg" }); 
   }
 
-  const handleFourthButtonClick = async () => {
-    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Master Guitar Player)");
-    setMessages([...messages, { message: "Forth prompt", response }]);
-    setImageUrls({ ...imageUrls, fourth: "url_for_fourth_image.jpg" });
-  }
 
   const clearPrompt= async => {
     setMessages([]);
@@ -65,8 +53,7 @@ export default function Chat() {
               <button className={styles.prompt} onClick={handleFirstButtonClick}>Basic</button>
               <button className={styles.prompt} onClick={handleSecondButtonClick}>Intermediate</button>
               <button className={styles.prompt} onClick={handleThirdButtonClick}>Expert</button>
-              <button className={styles.prompt} onClick={handleFourthButtonClick}>Master</button>
-              <div>
+              <div className={styles.gptContainer}>
                 {messages.map((message, index) => (
                   <div className={styles.responseContainer}key={index}>
                     <p className={styles.response}>{message.response}</p>
@@ -81,18 +68,12 @@ export default function Chat() {
                   </li>
                   <li>
                     <button>
-                    <Link href="/Goals">Next Page</Link>
+                    <Link href="/AddAGoal">Generate Goals</Link>
                     </button>
                   </li>              
                 </ul>
-
             )}
             </div>
-            {showMessage && (
-                <div className={styles.overlay}>
-                  <p>Message or Overlay Content</p>
-                </div>
-              )}
           </main>
         </div>
       </div>
