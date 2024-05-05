@@ -25,20 +25,23 @@ BACKGROUND CIRCLES
   .banner__content {
     display: flex;
     flex-direction: column;
-    width: 
+    width: 430px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .heading__section {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 430px;
+    flex-direction: column;
+    margin: auto;
   }
 
-  .oscaar__container {
-    width: 
-  }
 
-  .heading__container{
+  .heading_container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,4 +75,19 @@ BACKGROUND CIRCLES
 
 .category__section__container {
   display: flex;
+}
+
+.category__button__container{
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.questionContainer{
+  position: relative;
+  margin-top: 50px;
+}
+
+.oscar{
+  position: relative;
+  margin: auto;
 }

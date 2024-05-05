@@ -6,6 +6,8 @@ import Oscar from "@/Components/Oscar"
 import CourseQuestions from "@/Components/CourseQuestions"
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
+import Circles from "@/Components/Shapes/Circles";
+import QuestionMark from "@/Components/Shapes/Tooltips/QuestionMark";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
@@ -19,8 +21,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <Circles
+        title="Ask"
+        />
       <main className={`${styles.main} ${montserrat.className}`}>
-      <Header name="Ask"/>
+      <div className={styles.questionContainer}>
+        <QuestionMark
+        tip={"Click the level that best describes you skill level in this subject"}
+        />
+        </div>
       <div className={styles.oscarContainer}>
       <Oscar/>
       </div>

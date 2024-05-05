@@ -20,20 +20,22 @@
 
 .heading__section, .heading {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   position: fixed;
   z-index: 4;
+  margin: auto;
 }
 
 .heading__container{
   display: flex;
   justify-content: flex-end;
-  size: 36px;
-  padding-top: 3em;
-  right: 32em;
-  width: 65%;
-  text-align: right;
+  padding-top: 1em;
+  width: 430px;
   color: white;
   z-index: 3;
   position: fixed;
+}
+
+.containerOfCircles{
+  width: 100vw;
 }

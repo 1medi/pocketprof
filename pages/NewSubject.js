@@ -20,7 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Circles title={"Learn Something New"}/>
+        <Circles 
+        title={"Learn Something New"}
+        fontSize={"var(--font-sub-header)"}
+        />
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.heading__section}>
           <div className={`${styles.background__circle}`}></div>

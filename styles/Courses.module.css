@@ -41,3 +41,8 @@
   font-size: var(--font-body);
   text-align: center;
 }
+
+.questionContainer{
+  position: relative;
+  margin-top: 180px;
+}

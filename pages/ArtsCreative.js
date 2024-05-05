@@ -3,12 +3,12 @@ import NavBar from "@/Components/Navbar";
 import Image from "next/image";
 import styles from "@/styles/NewSubject.module.css";
 import { Montserrat } from "next/font/google";
-import Carousel from "@/Components/MusicCarousel";
 import Link from "next/link";
 import Circles from "@/Components/Shapes/Circles";
 import WritingCarousel from "@/Components/WritingCarousel"
 import ArtCarousel from "@/Components/ArtCarousel"
 import MusicCarousel from "@/Components/MusicCarousel"
+import QuestionMark from "@/Components/Shapes/Tooltips/QuestionMark";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
@@ -25,6 +25,11 @@ export default function Home() {
       title="ARTS / CREATIVE"
       />
         <main className={`${styles.main} ${montserrat.className}`}>
+        <div className={styles.questionContainer}>
+      <QuestionMark
+      tip={"CLICK A COURSE PLEASE"}
+      />         
+        </div>
             <div className={styles.subheading__section}>
               <div className={styles.subheading__container}>
                 <h2 className={styles.subhead}>
