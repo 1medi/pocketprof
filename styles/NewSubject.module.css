@@ -25,17 +25,12 @@ BACKGROUND CIRCLES
   .banner__content {
     display: flex;
     flex-direction: column;
-    width: 
   }
 
   .heading__section {
     display: flex;
     justify-content: center;
     width: 100vw;
-  }
-
-  .oscaar__container {
-    width: 
   }
 
   .heading__container{
