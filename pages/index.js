@@ -35,7 +35,7 @@ export default function Landing() {
           <Link href='/onboarding/page' className={styles.buttonContainer}>
             <Button3 name={"Start"}/>
           </Link>
-          <Link href='/Home' className={styles.buttonContainer}>
+          <Link href='/NewSubject' className={styles.buttonContainer}>
           <Button3 name={"Skip"} />
           </Link>
         </div>
