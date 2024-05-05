@@ -99,9 +99,9 @@
 .activeQ{
   margin: 0 6.5rem;
   position: absolute;
-  top: 50%; /* center vertically */
-  left: 50%; /* center horizontally */
-  transform: translate(-50%, -50%); /* adjust precise centering */
+  margin-top: 3em;
+  left: 5.5em;
+  transform: translate(-50%, -50%); 
   width: 100%;
   color: black;
   text-align: center;
@@ -178,7 +178,6 @@
   justify-content: space-evenly;
   padding-left: 20px;
   padding-right: 10px;
-  margin-top: 5em;
 }
 
 .step{

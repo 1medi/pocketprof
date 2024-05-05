@@ -5,6 +5,7 @@ import Header from "@/Components/Header";
 import Button3 from "@/Components/Buttons/Button3"
 import NavBar from "@/Components/Navbar";
 import Image from "next/image";
+import Circles from "@/Components/Shapes/Circles";
 
 export default function QuizPage() {
   return (
@@ -15,8 +16,8 @@ export default function QuizPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header name="Quiz"/>
       <div className={styles.mobileContainer}>
+      <Circles title="Quiz"/>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
         <Image

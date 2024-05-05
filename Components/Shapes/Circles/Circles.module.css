@@ -26,6 +26,10 @@
   margin: auto;
 }
 
+.heading{
+  padding-right: 10px;
+}
+
 .heading__container{
   display: flex;
   justify-content: flex-end;

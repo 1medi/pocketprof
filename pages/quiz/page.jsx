@@ -6,6 +6,7 @@ import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar"
 import Image from 'next/image';
 import { Montserrat } from "next/font/google";
+import Circles from '@/Components/Shapes/Circles';
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Page() {
     wrongAnswers: 0,
   });
   const [progress, setProgress] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   const nextButtonRef = useRef(null); 
 
@@ -50,7 +52,11 @@ export default function Page() {
   }, [checked]); 
 
   const nextQuestion = () => {
-    setProgress((prevProgress) => (prevProgress + 1) % 5); 
+    if (progress < 4) {
+      setProgress((prevProgress) => (prevProgress + 1) % 5); 
+    } else {
+      setVisible(false);
+    }
     setSelectedAnswerIndex(null);
     setResult((prev) =>
       selectedAnswer
@@ -75,7 +81,7 @@ export default function Page() {
   return (
     <>
     <div className={styles.mobileContainer}>
-    <Header name="Quiz"/>
+    <Circles title="Quiz"/>
     <main className={`${styles.container} ${montserrat.className}`}>
     <div className={styles.oscarBox}>
     <Image
@@ -91,6 +97,7 @@ export default function Page() {
         Question {activeQuestion + 1}
         <span>/{questions.length}</span>
       </div>
+      
     )}
   </div>
       <div>
@@ -117,6 +124,7 @@ export default function Page() {
               {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
             </button>
           </div>
+          
         ) : (
           <div className={styles.quizContainer}>
             <div className={styles.result}><h3 className={styles.hthree}>Results</h3></div>
@@ -139,13 +147,15 @@ export default function Page() {
           </div>
         )}
       </div>
-      <div className={styles.progressBar}>
+      {visible && (
+        <div className={styles.progressBar}>
           <div className={styles.step} style={{ opacity: progress >= 0 ? 1 : 0 }}><p className={styles.barText}></p></div>
           <div className={styles.step} style={{ opacity: progress >= 1 ? 1 : 0 }}><p className={styles.barText}></p></div>
           <div className={styles.step} style={{ opacity: progress >= 2 ? 1 : 0 }}><p className={styles.barText}></p></div>
           <div className={styles.step} style={{ opacity: progress >= 3 ? 1 : 0 }}><p className={styles.barText}></p></div>
           <div className={styles.step} style={{ opacity: progress >= 4 ? 1 : 0 }}><p className={styles.barText}></p></div>
-      </div>
+        </div>
+      )}
       <NavBar/>
     </main>
     </div>
