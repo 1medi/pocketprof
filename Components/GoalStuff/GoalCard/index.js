@@ -4,7 +4,6 @@ import styles from "./GoalCard.module.css"
 import Modal from "react-modal";
 import { useState } from "react";
 import Oscar from "@/Components/Oscar";
-import Button3 from "@/Components/Buttons/Button3";
 
 export default function goalCard({
     number,

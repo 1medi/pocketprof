@@ -29,6 +29,17 @@ export default function Chat() {
     setMessages([...messages, { message: prompt, response }]);
     setIsOpen(true)
   }
+  const handleSecondButtonClick = async () => {
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Intermediate Guitar Player)");
+    setMessages([...messages, { message: "Second prompt", response }]);
+  }
+
+  const handleThirdButtonClick = async () => {
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am an Expert Guitar Player)");
+    setMessages([...messages, { message: "Third prompt", response }]);
+  }
+
+
   const clearPrompt = async => {
     setMessages([]);
   }
@@ -37,28 +48,31 @@ export default function Chat() {
     <>
       <div className={styles.container}>
         <div>
-          <main className={styles.main}>
+          <main>
             <div className={styles.textContainer}>
-              <h2 className={styles.header}>Oscar is ready to find some learning resources for you</h2>
+              <h2 className={styles.header}>What is Your Current Skill Level of Guitar?</h2>
+              <p className={styles.subHeader}>HELP US HELP YOU</p>
             </div>
 
             <div className={styles.promptContainer}>
-              <button className={styles.prompt} onClick={handleFirstButtonClick}>Get Resources</button>
-              <section className={styles.gptContainer}>
+              <button className={styles.prompt} onClick={handleFirstButtonClick}>Basic</button>
+              <button className={styles.prompt} onClick={handleSecondButtonClick}>Intermediate</button>
+              <button className={styles.prompt} onClick={handleThirdButtonClick}>Expert</button>
+              <div className={styles.gptContainer}>
                 {messages.map((message, index) => (
                   <div className={styles.responseContainer} key={index}>
                     <p className={styles.response}>{message.response}</p>
                   </div>
                 ))}
-              </section>
+              </div>
               <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
                 <div className={styles.oscarContainer}>
                   <Oscar />
                 </div>
-                <h1>Oscar is searching for resources!</h1>
+                <h1>Oscar is ready to find some learning resources for you</h1>
                 <div className={styles.buttonContainer}>
                   <Link
-                    href={"#label"}> 
+                    href={"/ShowResources"}>
                     <button
                       className={styles.button}
                       onClick={() => setIsOpen(false)}
@@ -70,7 +84,6 @@ export default function Chat() {
 
               </Modal>
               {messages.length > 0 && (
-                <section id="label">
                 <ul className={styles.buttonOptions}>
                   <li>
                     <button onClick={clearPrompt}>Clear</button>
@@ -81,7 +94,6 @@ export default function Chat() {
                     </button>
                   </li>
                 </ul>
-                </section>
               )}
             </div>
           </main>
