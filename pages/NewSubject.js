@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.banner__content}>
-            <div className={styles.heading__container}>
+            <div className={styles.heading_container}>
               <h1 className={styles.heading}>
                   Explore Your Potential
               </h1>
