@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/Settings.module.css";
+import styles from "@/styles/AppSettings.module.css";
 import NavBar from "@/Components/Navbar";
 import { Montserrat } from "next/font/google"
 import Image1 from "@/public/img/nature-4964153_1920.jpg"
