@@ -3,12 +3,12 @@ import Image from "next/image";
 import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
 import Oscar from "@/Components/Oscar"
-import CourseQuestions from "@/Components/CourseQuestions"
+import Prompt from "@/Components/Prompt"
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
-export default function Home() {
+export default function ShowResources() {
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function Home() {
       <div className={styles.oscarContainer}>
       <Oscar/>
       </div>
-      <CourseQuestions/>
+      <Prompt/>
       <NavBar/>
       </main> 
       </div>

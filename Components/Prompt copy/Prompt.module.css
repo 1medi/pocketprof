@@ -10,7 +10,7 @@
 .promptContainer{
   display: flex;
   flex-direction: column;
-  margin: .5em;
+  margin: .2em;
   padding: 3em;
 }
 .prompt{
@@ -61,8 +61,6 @@ border-radius: 20px;
 
 .textContainer{
   text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 .buttonOptions {
