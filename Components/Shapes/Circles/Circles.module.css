@@ -28,6 +28,7 @@
 
 .heading{
   padding-right: 10px;
+  font-family: var(--headings);
 }
 
 .heading__container{

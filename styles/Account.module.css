@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 60vh;
+  min-height: 100vh;
   font-family: "Montserrat", "sans-serif";
   background-color: var(--background-color);
 }
@@ -28,20 +28,23 @@
   font-size: 24px;
 }
 
-.outerContainer {
-
-}
-
 .optionsContainer {
   text-align: center;
 }
 
-
-.imageContainer {
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 13em;
+.imageContainer{
+margin-left:auto;
+margin-right: auto;
+margin-top:20px;
   overflow: hidden;
+  border-radius: 100px;
+  object-fit: cover;
+  width: 150px; 
+  height: 150px;
+}
+
+.profileImg{
+  object-fit: cover;
 }
 
 .image {
@@ -54,17 +57,24 @@
   display: flex;
   flex-direction: row;
   padding: 30px;
+  align-items: center;
 }
 
 .shape {
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(45, 45, 45, 0.3);
 }
 
 .successText {
   font-size: var(--font-body);
+  text-decoration: none;
+  color: black;
+}
+
+.successText:hover{
+  color: var(--main-color-purple)
 }
 
 .circle {
@@ -106,4 +116,16 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.quote{
+  font-family: var(--body-text);
+  font-size: var(--font-secondary);
+  font-weight: 400;
+}
+
+.student{
+  font-family: var(--body-text);
+  font-size: var(--font-secondary);
+  font-weight: 400;
 }

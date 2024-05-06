@@ -23,7 +23,7 @@ export default function Account() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className={styles.mobileContainer}>
       <Header name="Account"/>
         <main className={`${styles.main} ${montserrat.className}`}>
@@ -33,13 +33,14 @@ export default function Account() {
                 src={Image1}
                 width={150}
                 height={150}
+                className={styles.profileImg}
               />
             </div>
-            <h2 className={styles.name}>Name</h2>
-            <h3 className={styles.quote}>"Banana"</h3>
+            <h2 className={styles.name}>Drake Williams</h2>
             <h4 className={styles.student}>Student Level: NOOB</h4>
+            <h3 className={styles.quote}>“Keke do you love me....."</h3>
             <div className={styles.optionsContainer}>
-              <Link href={"SuccessDashboard/SuccessDashboard"}>
+              <Link href={"SuccessDashboard/SuccessDashboard"} style={{ textDecoration: 'none' }}>
                 <div className={styles.successContainer}>
                   <Image
                     className={styles.image}
@@ -47,11 +48,11 @@ export default function Account() {
                     width={38}
                     height={38}
                   />
-                  <h4 className={styles.successText}>Success Dashboard</h4>
+                  <h4 className={styles.successText} tabIndex={1}>Success Dashboard</h4>
                 </div>
               </Link>
               <hr className={styles.shape} />
-              <Link href={"AccountSettings"}>
+              <Link href={"AccountSettings"} style={{ textDecoration: 'none' }}>
                 <div className={styles.accountContainer}>
                   <Image
                     src={Profile}
@@ -59,12 +60,12 @@ export default function Account() {
                     width={38}
                     height={38}
                   />
-                  <h4 className={styles.successText}>Account Settings</h4>
+                  <h4 className={styles.successText} tabIndex={2}>Account Settings</h4>
                 </div>
               </Link>
               <hr className={styles.shape} />
 
-              <Link href={"AppSettings"}>
+              <Link href={"AppSettings"} style={{ textDecoration: 'none' }}>
                 <div className={styles.appContainer}>
                   <Image
                     src={Settings}
@@ -72,7 +73,7 @@ export default function Account() {
                     width={38}
                     height={38}
                   />
-                  <h4 className={styles.successText}>App Settings</h4>
+                  <h4 className={styles.successText} tabIndex={3}>App Settings</h4>
                 </div>
               </Link>
               <hr className={styles.shape} />
