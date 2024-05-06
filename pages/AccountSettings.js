@@ -6,7 +6,7 @@ import Popup from "@/Components/Popup";
 import React, { useState } from 'react';
 import Image1 from "@/public/img/nature-4964153_1920.jpg"
 import Pencil from "@/public/img/pencil.svg"
-import BackButton from "@/Components/Buttons/BackButton";
+import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 
 export default function AccountSettings() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function AccountSettings() {
       <div className={styles.mobileContainer}>
         <main className={styles.main}>
           <div className={styles.container}>
-          <BackButton/>
+          <ArrowLeft/>
             <div className={styles.imageContainer}>
               <Image
                 src={Image1}

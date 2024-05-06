@@ -27,9 +27,9 @@ export default function Landing() {
           alt="oscar"
           className={styles.oscar}
         />
-          <div className={styles.titleBox}><h1 className={styles.title}>Glad to <br/>Have you with us</h1></div>
+          <div className={styles.titleBox}><h1 className={styles.title}>Welcome to <br/>Poket Prof.</h1></div>
           <div className={styles.descriptionContainer}>
-            <h3>Let's explore together!</h3>
+            <h3>Let's dig in your interest together!</h3>
           </div>
           <div className={styles.containerContainer}>
           <Link href='/onboarding/page' className={styles.buttonContainer}>

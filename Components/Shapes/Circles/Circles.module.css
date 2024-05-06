@@ -1,3 +1,9 @@
+.mobileContainer{
+  width: 430px; 
+  margin: 0 auto;
+  background-color: var(--background-color); 
+}
+
 .background__circle {
   position: fixed;
   top: -16.5rem;
@@ -39,8 +45,4 @@
   color: white;
   z-index: 3;
   position: fixed;
-}
-
-.containerOfCircles{
-  width: 100vw;
 }

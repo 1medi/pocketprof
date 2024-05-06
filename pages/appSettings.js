@@ -22,9 +22,6 @@ export default function Home() {
       </Head>
       <div className={styles.mobileContainer}>
         <Header name={"App Settings"} />
-        <Link href="/">
-          <ArrowLeft bottom="55px" />
-        </Link>
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.optionsOuter}>
           <h4 className={styles.subHeading}>Accessibility</h4>
