@@ -7,7 +7,7 @@ import NavBar from "@/Components/Navbar";
 import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import Link from "next/link";
 import ArrowRight from "@/Components/Shapes/Arrows/ArrowRight";
-import Pencil from "@/public/img/pencil.png"
+
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 

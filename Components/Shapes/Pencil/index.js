@@ -4,9 +4,9 @@ export default function Pencil(){
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={pencil}
-        fill="black"
-        viewBox="0 0 24 24"
+        className={styles.pencil}
+        fill="none"
+        viewBox="0 0 512 512"
         stroke="currentColor"
       >
         <path

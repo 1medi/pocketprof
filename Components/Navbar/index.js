@@ -14,11 +14,7 @@ export default function NavBar() {
       <div className={styles.navContainer}>
         <ul className={styles.navOptions}>
           <li className={styles.navLink}>
-<<<<<<< Updated upstream
-            <Link href={'/appSettings'} className={styles.navText}>
-=======
             <Link href={'/Account'} className={styles.navText}>
->>>>>>> Stashed changes
               <Image
               className={styles.image}
               src={Profile}
