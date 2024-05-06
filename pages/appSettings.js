@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/AppSettings.module.css";
 import { Montserrat } from "next/font/google";
 import Header from "@/Components/Header";
