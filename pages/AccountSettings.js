@@ -8,6 +8,7 @@ import Image1 from "@/public/img/nature-4964153_1920.jpg"
 import Pencil from "@/public/img/pencil.svg"
 import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import { Montserrat } from "next/font/google";
+import Circles from "@/Components/Shapes/Circles";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -31,9 +32,9 @@ export default function AccountSettings() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <Circles title="Account Settings"/>
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.container}>
-          <ArrowLeft/>
             <div className={styles.imageContainer}>
               <Image
                 src={Image1}

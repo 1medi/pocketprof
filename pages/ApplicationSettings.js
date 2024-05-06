@@ -3,9 +3,9 @@ import styles from "@/styles/AppSettings.module.css";
 import { Montserrat } from "next/font/google";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
-import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import Link from "next/link";
 import ArrowRight from "@/Components/Shapes/Arrows/ArrowRight";
+import Circles from "@/Components/Shapes/Circles";
 
 
 const montserrat = Montserrat({ subsets: ['latin'] });
@@ -20,8 +20,9 @@ export default function AppSettings() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Header name={"App Settings"} />
+      <Circles title="App Settings"/>
         <main className={`${styles.main} ${montserrat.className}`}>
+          <div className={styles.outerContainer}>
           <div className={styles.optionsOuter}>
           <h4 className={styles.subHeading}>Accessibility</h4>
             <div className={styles.optionsContainer}>
@@ -66,6 +67,7 @@ export default function AppSettings() {
           </div>
           </div>
           <NavBar/>
+          </div>
         </main>
       </div>
     </>

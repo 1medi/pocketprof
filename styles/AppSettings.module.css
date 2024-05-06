@@ -33,12 +33,12 @@
 .description{
   width: auto;
   font-family: var(--body-text);
-  font-size: var(--font-body);
+  font-size: var(--font-secondary);
 }
 
 .subHeading{
   font-family: var(--headings);
-  font-size: var(--font-sub-header);
+  font-size: var(--font-body);
   margin:20px;
   width: fit-content;
 }
@@ -46,4 +46,8 @@
 .horizontal{
   margin-top: 20px;
   border-bottom: 0.7px solid var(--main-color-purple);
+}
+
+.outerContainer{
+  margin-top:5rem;
 }
