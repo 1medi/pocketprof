@@ -1,14 +1,14 @@
 .main {
   overflow-x: hidden;
-  justify-content: center;
   display: flex;
   background-color: var(--lightpurple-background);
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60vh;
+  min-height: 100vh;
   font-family: "Montserrat", "sans-serif";
+  background-color: var(--background-color);
+  padding-top:0;
+  align-items: flex-start;
 }
 
 .mobileContainer{
@@ -18,15 +18,32 @@
 
 .optionsContainer {
   display: flex;
-  flex: row;
-  padding: 5px;
+  flex-direction: row;
+  height: 25px;
+  align-items: center;
+  width: auto;
+  justify-content: space-between;
+  padding: 10px 30px;
 }
 
 .optionsOuter{
-  padding:30px;
+  width: 430px;
 }
 
 .description{
-  width: 10em;
-  padding-left: 5px;
+  width: auto;
+  font-family: var(--body-text);
+  font-size: var(--font-body);
+}
+
+.subHeading{
+  font-family: var(--headings);
+  font-size: var(--font-sub-header);
+  margin:20px;
+  width: fit-content;
+}
+
+.horizontal{
+  margin-top: 20px;
+  border-bottom: 0.7px solid var(--main-color-purple);
 }

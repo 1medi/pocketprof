@@ -26,61 +26,51 @@ export default function Home() {
           <ArrowLeft bottom="55px" />
         </Link>
         <main className={`${styles.main} ${montserrat.className}`}>
-          <div className={styles.container}>
           <div className={styles.optionsOuter}>
           <h4 className={styles.subHeading}>Accessibility</h4>
             <div className={styles.optionsContainer}>
-              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Dark Mode</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Font Options</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src={Pencil}width={25} height={25} />
               <p className={styles.description}>Color Blindness</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Language</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Narrator / Voice</p>
               <ArrowRight />
             </div>
             <div className={styles.optionsContainer}>
-              <Image src={Pencil} width={25} height={25} />
               <p className={styles.description}>Privacy</p>
               <ArrowRight />
             </div>
+          <div className={styles.horizontal}></div>
           </div>
           <div className={styles.optionsOuter}>
           <h4 className={styles.subHeading}>General</h4>
           <div className={styles.optionsContainer}>
-            <Image src={Pencil} width={25} height={25} />
             <p className={styles.description}>Get Help</p>
             <ArrowRight />
           </div>
           <div className={styles.optionsContainer}>
-            <Image src={Pencil}width={25} height={25} />
             <p className={styles.description}>Rate The App</p>
             <ArrowRight />
           </div>
           <div className={styles.optionsContainer}>
-            <Image src={Pencil} width={25} height={25} />
             <p className={styles.description}>Log Out</p>
             <ArrowRight />
           </div>
           </div>
-          </div>
+          <NavBar/>
         </main>
-        <NavBar/>
       </div>
     </>
   );
