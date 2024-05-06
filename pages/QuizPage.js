@@ -17,26 +17,38 @@ export default function QuizPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <Circles title="Quiz"/>
-      <main className={`${styles.main}`}>
-        <div className={styles.container}>
-        <Image
-          priority
-          src="/img/oscar/oscar-main-smiling.svg"
-          width="200"
-          height="200"
-          alt="oscar"
-          className={styles.oscar}
-        />
-          <div className={styles.descriptionContainer}>
-            <h3 className={styles.title}>ARE YOU READY TO WIN?</h3>
+        <Circles title="Quiz" />
+        <main className={`${styles.main}`}>
+          <div className={styles.container}>
+            <Image
+              priority
+              src="/img/oscar/oscar-main-smiling.svg"
+              width="200"
+              height="200"
+              alt="oscar"
+              className={styles.oscar}
+            />
+            <div className={styles.descriptionContainer}>
+              <h3 className={styles.title}>ARE YOU READY TO WIN?</h3>
+            </div>
+            <Link href='/quiz/page' className={styles.buttonContainer}>
+              <Button3 name={"Press To Start"} />
+            </Link>
           </div>
-          <Link href='/quiz/page' className={styles.buttonContainer}>
-            <Button3 name={"Press To Start"} />
-          </Link>
-        </div>
-      </main>
-      <NavBar />
+          <div className={styles.divider}>
+          </div>
+          <div className={styles.onboardingContainer}>
+            <p className={styles.onboardingLink}>Looking for the  
+              <Link
+              href={'/'}
+              >
+              <h3>Onboarding Quiz?</h3>
+              </Link> 
+            </p>
+          </div>
+
+        </main>
+        <NavBar />
       </div>
 
     </>
