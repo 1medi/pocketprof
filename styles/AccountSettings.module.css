@@ -1,7 +1,9 @@
 .mobileContainer{
   width: 430px; 
-  margin: 0 auto; 
+  margin: 0 auto;
+  background-color: var(--background-color); 
 }
+
 .main {
   overflow-x: hidden;
   justify-content: center;
@@ -11,16 +13,22 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 60vh;
+  min-height: 100vh;
   font-family: "Montserrat", "sans-serif";
+  background-color: var(--background-color);
 }
-.email, .number, .name{
+
+.name{
+  font-size: var(--font-sub-header);
   margin: 10px;
   text-align: center;
 }
 
-.successText{
-  font-size: 24px;
+.email, .number{
+  font-size: var(--font-secondary);
+  font-family: var(--body-text);
+  margin: 5px;
+  text-align: center;
 }
 
 .container{
@@ -34,7 +42,6 @@
 .optionsContainer{
   text-align: center;
 }
-
 
 .imageContainer{
   margin-left: auto;
@@ -95,11 +102,32 @@
   display: flex;
   flex-direction: row;
   padding: 10px;
+  align-items: center;
+}
+
+.editOptions{
+  margin-top: 2rem;
 }
 
 .pencil{
-  padding:3px;
+  padding:5px;
+  margin-right: 10px; 
 }
+
+.pencil:hover{
+  fill: var(--main-color-lightpurple)
+}
+
+.title{
+  font-size: var(--font-secondary);
+  margin-right: 10px;
+}
+
+.content{
+  font-size: var(--font-secondary);
+  font-family: var(--body-text);
+}
+
 
 @keyframes slideInFromLeft {
   0% {
