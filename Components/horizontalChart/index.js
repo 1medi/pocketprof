@@ -35,8 +35,8 @@ export default function HorizontalChart(){
         {
           label: "Goals Achieved",
           data: [10, 2, 3 ,12, 15,1,3, 5 ,7 ,12 , 14, 12],
-          borderColor: 'rgb(53, 162, 235, 0.4)',
-          backgroundColor: 'rgba(0, 162, 235, 0.4'
+          borderColor: 'rgba(53, 162, 135, 0.4',
+          backgroundColor: '#53239B'
         },
       ]
     })
