@@ -24,8 +24,6 @@ export default function Home() {
         <HomePageCircles/>
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.heading__section}>
-          <div className={`${styles.background__circle}`}></div>
-          <div className={`${styles.background__circle2}`}></div>
           <div className={styles.oscar__container}>
             <div className={styles.oscar}>
               <OscarHome/>
