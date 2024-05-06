@@ -1,8 +1,9 @@
-.mobileContainer{
-  width: 430px; 
-  margin: 0 auto;
-  background-color: var(--background-color); 
+.header {
+  max-height: 400;
+  height: 4em;
+  position: relative;
 }
+
 
 .background__circle {
   position: fixed;

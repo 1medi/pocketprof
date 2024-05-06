@@ -7,7 +7,7 @@ export default function Circles({
 }) {
   return (
     <>
-      <div className={styles.mobileContainer}>
+      <header className={styles.header}>
         <div className={styles.containerOfCircles}>
           <ArrowLeft />
           <div className={`${styles.background__circle}`}></div>
@@ -18,7 +18,7 @@ export default function Circles({
             </h1>
           </div>
         </div>
-      </div>
+      </header>
     </>
   )
 }
