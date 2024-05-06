@@ -28,7 +28,7 @@
  position: relative;
  display: flex;
  flex-direction: column;
- margin-top: 180px;
+ margin-top: 130px;
  align-items: center;
  justify-content: center;
 }
@@ -83,4 +83,8 @@
   z-index: 999;
   position: relative;
   bottom: 200px;
+}
+
+.onboardingLink{
+  font-family: var(--body-text);
 }

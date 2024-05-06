@@ -8,7 +8,7 @@ import Chart from "@/public/img/chart.png"
 import Profile from "@/public/img/user.png"
 import Settings from "@/public/img/settings.png"
 import Link from "next/link";
-import Header from "@/Components/Header";
+import Circles from "@/Components/Shapes/Circles";
 const montserrat = Montserrat({
   subsets: ['latin'],
 });
@@ -18,14 +18,14 @@ export default function Account() {
   return (
     <>
       <Head>
-        <title>Account page</title>
+        <title>User Account</title>
         <meta name="description" content="Information and settings on user account" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={styles.mobileContainer}>
-      <Header name="Account"/>
+      <Circles title="Account Profile"/>
         <main className={`${styles.main} ${montserrat.className}`}>
         <div className={styles.outerContainer}>
             <div className={styles.imageContainer}>

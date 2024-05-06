@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/QuizPage.module.css";
 import Link from "next/link";
-import Header from "@/Components/Header";
 import Button3 from "@/Components/Buttons/Button3"
 import NavBar from "@/Components/Navbar";
 import Image from "next/image";
@@ -38,11 +37,9 @@ export default function QuizPage() {
           <div className={styles.divider}>
           </div>
           <div className={styles.onboardingContainer}>
-            <p className={styles.onboardingLink}>Looking for the  
-              <Link
-              href={'/'}
-              >
-              <h3>Onboarding Quiz?</h3>
+            <p className={styles.onboardingLink}>You haven't find your interest yet? 
+              <Link href={'/'}>
+              <h3>Let's find it out!</h3>
               </Link> 
             </p>
           </div>
