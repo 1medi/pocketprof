@@ -1,0 +1,26 @@
+@keyframes fall {
+  0% {
+      transform: translateY(-100vh) translateX(0) rotateZ(0deg);
+  }
+  100% {
+      transform: translateY(100vh) translateX(calc(100vw - 10px)) rotateZ(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(calc((100vw - 10px) * random()), calc(100vh * random()));
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px; 
+  transform-origin: center bottom;
+  animation: fall 4s linear infinite, move 4s linear infinite alternate;
+}
+

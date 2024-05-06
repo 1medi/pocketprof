@@ -8,9 +8,6 @@ export default function GoalCheck({
     return(
         <>
         <div className={styles.goalContainer}>
-            <div className={styles.goalChart}>
-            <DoughnutChart/>
-            </div>
         <label className={styles.label} for="Goal">{description}</label>
         </div>
         </>

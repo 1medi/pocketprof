@@ -27,6 +27,7 @@
 .goalContainer{
   display: flex;
   flex-direction: row;
+  padding: 10px;
 }
 
 .doughnutContainer{
@@ -34,4 +35,12 @@
 }
 
 .jumboContainer{
+}
+
+.goalText{
+  margin: auto;
+}
+
+.buttonContainer{
+  margin: auto;
 }

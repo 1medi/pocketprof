@@ -14,11 +14,15 @@ import GoalChart1 from "@/Components/GoalStuff/GoalCharts/GoalChart1";
 import GoalChart2 from "@/Components/GoalStuff/GoalCharts/GoalChart2";
 import GoalChart3 from "@/Components/GoalStuff/GoalCharts/GoalChart3";
 import GoalChart4 from "@/Components/GoalStuff/GoalCharts/GoalChart4";
+import Button3 from "@/Components/Buttons/Button3";
+import ConfettiButton from "@/Components/Buttons/ConfettiButton";
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Home() {
-
-
+const [data,setData] = useState();
+  const parentToChild = () => {
+    setData("Play the guitar at least once a week")
+  }
 
   return (
     <>
@@ -45,27 +49,35 @@ export default function Home() {
             <div className={styles.doughnutContainer}>
             <GoalChart1/>
             </div>
-          <p>Play the guitar once a day for a week!</p>
+          <p className={styles.goalText}>Play the guitar once a day for a week!</p>
+          <Link
+           href="/SuccessDashboard/GoalEditor"
+          >
+          <Button3
+          name="See More"
+          />          
+          </Link>
           </li>
           <li className={styles.goalContainer}>
             <div className={styles.doughnutContainer}>
             <GoalChart2/>
             </div>
-          <p>Learn at LEAST 3 chords</p>
+          <p className={styles.goalText}>Learn at LEAST 3 chords</p>
           </li>
           <li className={styles.goalContainer}>
             <div className={styles.doughnutContainer}>
             <GoalChart3/>
             </div>
-          <p></p>
+          <p className={styles.goalText}>Learn More Guitar Stuff</p>
           </li>
           <li className={styles.goalContainer}>
             <div className={styles.doughnutContainer}>
             <GoalChart4/>
             </div>
-          <p>hue</p>
+          <p className={styles.goalText}>The more you learn the more you earn</p>
           </li>
           </ul>
+          <ConfettiButton/>
         </main>
         <NavBar />
       </div>
