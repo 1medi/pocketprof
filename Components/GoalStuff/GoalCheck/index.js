@@ -1,4 +1,5 @@
 import styles from "./GoalCheck.module.css"
+import DoughnutChart from "@/Components/doughnutChart"
 
 export default function GoalCheck({
     description,
@@ -7,7 +8,9 @@ export default function GoalCheck({
     return(
         <>
         <div className={styles.goalContainer}>
-        <input className={styles.checkbox} type="checkbox" id="checkbox" name={name} value="Goal"/>
+            <div className={styles.goalChart}>
+            <DoughnutChart/>
+            </div>
         <label className={styles.label} for="Goal">{description}</label>
         </div>
         </>

@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 )
 
-export default function doughnutChart(){
+export default function GoalChart1(){
   const [chartData, setChartData] = useState({
     datasets: []
   })
@@ -33,7 +33,7 @@ export default function doughnutChart(){
       labels: ["Completed", "In Progress"],
       datasets: [
         {
-          data: [24, 6],
+          data: [11, 2],
           borderColor: ['rgba(53, 162, 135, 0.4',
           'rgba(63, 62, 235, 0.4',
         ],

@@ -5,13 +5,21 @@ import { Montserrat } from "next/font/google";
 import Circles from "@/Components/Shapes/Circles";
 import NavBar from "@/Components/Navbar";
 import HorizontalChart from "@/Components/horizontalChart";
-import PieChart from "@/Components/doughnutChart";
+import Doughnut from "@/Components/doughnutChart";
 import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import Link from "next/link";
 import GoalCheck from "@/Components/GoalStuff/GoalCheck";
+import { useState } from "react";
+import GoalChart1 from "@/Components/GoalStuff/GoalCharts/GoalChart1";
+import GoalChart2 from "@/Components/GoalStuff/GoalCharts/GoalChart2";
+import GoalChart3 from "@/Components/GoalStuff/GoalCharts/GoalChart3";
+import GoalChart4 from "@/Components/GoalStuff/GoalCharts/GoalChart4";
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Home() {
+
+
+
   return (
     <>
       <Head>
@@ -31,24 +39,32 @@ export default function Home() {
           <div className={styles.chartContainer}>
           <HorizontalChart />
           </div>
-
-          <h4>Active Goals</h4>
-          <ul>
-            <GoalCheck
-              description={"HUEHUEUEUEUEUEUEEU"}
-            />
-            <GoalCheck
-              description={"HUEHUEUEUEUEUEUEEU"}
-            />
-            <GoalCheck
-              description={"HUEHUEUEUEUEUEUEEU"}
-            />
-            <GoalCheck
-              description={"HUEHUEUEUEUEUEUEEU"}
-            />
-            <GoalCheck
-              description={"HUEHUEUEUEUEUEUEEU"}
-            />
+          <ul className={styles.jumboContainer}>
+            <label>Active Goals</label>
+          <li className={styles.goalContainer}>
+            <div className={styles.doughnutContainer}>
+            <GoalChart1/>
+            </div>
+          <p>Play the guitar once a day for a week!</p>
+          </li>
+          <li className={styles.goalContainer}>
+            <div className={styles.doughnutContainer}>
+            <GoalChart2/>
+            </div>
+          <p>Learn at LEAST 3 chords</p>
+          </li>
+          <li className={styles.goalContainer}>
+            <div className={styles.doughnutContainer}>
+            <GoalChart3/>
+            </div>
+          <p></p>
+          </li>
+          <li className={styles.goalContainer}>
+            <div className={styles.doughnutContainer}>
+            <GoalChart4/>
+            </div>
+          <p>hue</p>
+          </li>
           </ul>
         </main>
         <NavBar />

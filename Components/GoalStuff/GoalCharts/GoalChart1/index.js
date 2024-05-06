@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 )
 
-export default function doughnutChart(){
+export default function GoalChart1(){
   const [chartData, setChartData] = useState({
     datasets: []
   })

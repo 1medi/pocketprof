@@ -23,3 +23,15 @@
 .chartContainer{
   padding-top:100px;
 }
+
+.goalContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.doughnutContainer{
+  width: 100px;
+}
+
+.jumboContainer{
+}
