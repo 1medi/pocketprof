@@ -8,7 +8,9 @@ import DoughnutChart from "@/Components/doughnutChart";
 import Oscar from "@/Components/Oscar";
 import Image1 from "@/public/img/nature-4964153_1920.jpg"
 import Carousel from "@/Components/MusicCarousel";
-import Link from "next/link";
+import Link from "next/link"
+import Circles from "@/Components/Shapes/Circles";
+
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
@@ -21,14 +23,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Header name={"Success Dashboard"} />
+        <Circles title={"Success Dashboard"} />
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.imageContainer}>
             <Image
+              className={styles.image}
               src={Image1}
               width={150}
               height={150}
             />
+            <div className={styles.nameContainer}>
+              <h3>Drake Williams</h3>
+              <p>Beginner Student</p>
+            </div>
           </div>
           <div className={styles.cardOuterContainer}>
             <div className={styles.innerContainer}>

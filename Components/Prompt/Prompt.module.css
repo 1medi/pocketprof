@@ -25,9 +25,9 @@
 
 .response{
 padding:3em;
-background-color: purple;
+background-color: var(--main-color-lightpurple);
 margin:10px;
-color:white;
+color:var(--black);
 border-radius: 20px;
 }
 
@@ -75,6 +75,7 @@ border-radius: 20px;
 
 .alert{
   width: 430px;
+  height: 600px;
   position: relative;
   display: flex;
   margin-left: auto;

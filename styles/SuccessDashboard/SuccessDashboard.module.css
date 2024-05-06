@@ -1,12 +1,12 @@
 .main {
   overflow-x: hidden;
-  justify-content: center;
   display: flex;
   background-color: var(--lightpurple-background);
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 4rem;
   min-height: 60vh;
   font-family: "Montserrat", "sans-serif";
 }
@@ -42,6 +42,7 @@ display: flex;
   display: flex;
   padding: 0;
   margin: 0;
+  top: 85px;
   z-index: -999;
   font-weight: bold;
   font-size: var(--font-body) ;
@@ -74,10 +75,28 @@ display: flex;
 .imageContainer{
   margin-left: auto;
   margin-right: auto;
-  border-radius: 13em;
-  overflow: hidden;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
 }
 
+.image {
+  border-radius: 300px;
+  border: 3px solid var(--main-color-lightpurple)
+}
+
+.tracked{
+  font-size: var(--font-secondary);
+}
+.goal{
+  color:var(--main-color-purple);
+  font-size: var(--font-body);
+}
+.nameContainer{
+  margin: auto;
+  padding-left: 15px;
+}
 .chart{
   width: 140px;
 }

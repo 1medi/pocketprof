@@ -6,7 +6,8 @@ import Oscar from "@/Components/Oscar"
 import Prompt from "@/Components/Prompt"
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
-
+import QuestionMark from "@/Components/Shapes/Tooltips/QuestionMark";
+import Circles from "@/Components/Shapes/Circles";
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function ShowResources() {
 
@@ -19,8 +20,14 @@ export default function ShowResources() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <Circles title="Show Resources"/>
       <main className={`${styles.main} ${montserrat.className}`}>
-      <Header name="Ask"/>
+      <div className={styles.questionContainer}>
+        <QuestionMark
+        tip={"Clicking on get resources will display results based on your selected skill level"}
+        />
+        </div>
+
       <div className={styles.oscarContainer}>
       <Oscar/>
       </div>
