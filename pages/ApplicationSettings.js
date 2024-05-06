@@ -10,7 +10,7 @@ import ArrowRight from "@/Components/Shapes/Arrows/ArrowRight";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-export default function Home() {
+export default function AppSettings() {
   return (
     <>
       <Head>

@@ -65,7 +65,7 @@ export default function Account() {
               </Link>
               <hr className={styles.shape} />
 
-              <Link href={"/AppSettings"} style={{ textDecoration: 'none' }}>
+              <Link href={"ApplicationSettings"} style={{ textDecoration: 'none' }}>
                 <div className={styles.appContainer}>
                   <Image
                     src={Settings}
