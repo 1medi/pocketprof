@@ -44,11 +44,18 @@
 }
 
 .imageContainer{
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 13em;
+  align-self: center;
   overflow: hidden;
+  border-radius: 100px;
+  object-fit: cover;
+  width: 150px; 
+  height: 150px;
 }
+
+.profileImg{
+  object-fit: cover;
+}
+
 .image{
   padding-right: 10px;
 }
@@ -136,4 +143,13 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.pencil:hover{
+  filter: 
+  invert(0.5)
+  sepia(1)
+  hue-rotate(200deg)
+  saturate(4)
+  brightness(1);
 }

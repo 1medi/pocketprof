@@ -1,0 +1,40 @@
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    content: "";
+    inset: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(140deg, #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite:inherit;
+  }
+  
+  .closeButton {
+    position:relative;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .content {
+    /* Styles for popup content */
+  }
+
+  
+  
