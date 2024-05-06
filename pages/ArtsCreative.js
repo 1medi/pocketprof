@@ -27,6 +27,7 @@ export default function Home() {
         <main className={`${styles.main} ${montserrat.className}`}>
         <div className={styles.questionContainer}>
       <QuestionMark
+      tabindex={1}
       tip={"CLICK A COURSE PLEASE"}
       />         
         </div>
@@ -35,7 +36,9 @@ export default function Home() {
                 <h2 className={styles.subhead}>
                   Music
                 </h2>
-                <MusicCarousel />
+                <MusicCarousel 
+                      tabindex={2}
+                />
               </div>
             </div>
             <div className={styles.subheading__section}>
@@ -43,7 +46,8 @@ export default function Home() {
                 <h2 className={styles.subhead}>
                   Art Design
                 </h2>
-                <ArtCarousel />
+                <ArtCarousel
+                tabindex={3} />
               </div>
             </div>
             <div className={styles.subheading__section}>
@@ -51,11 +55,15 @@ export default function Home() {
                 <h2 className={styles.subhead}>
                   Writing
                 </h2>
-                <WritingCarousel />
+                <WritingCarousel
+                tabindex={4}
+                 />
               </div>
             </div>
             <div className={styles.lmao}></div>
-          <NavBar />
+          <NavBar
+          tabindex={5}
+          />
         </main>
       </div>
 

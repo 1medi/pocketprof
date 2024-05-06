@@ -7,7 +7,8 @@ import Button3 from "@/Components/Buttons/Button3";
 import Images from "@/Components/images";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
-
+import Link from "next/link";
+import Circles from "@/Components/Shapes/Circles";
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
 
@@ -20,8 +21,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <Circles title="Ask" />
         <main className={`${styles.main} ${montserrat.className}`}>
-          <Header name="Ask" />
+
           <Oscar />
           <div className={styles.textContainer}>
             <h1 className={styles.header}>Huzzah!</h1>
@@ -32,9 +34,14 @@ export default function Home() {
               from your profile.</p>
           </div>
           <div className={styles.buttonContainer}>
+            <Link
+            href={'/SuccessDashboard/SuccessDashboard'}
+            >
           <Button3
           name={"Track"}
-          />           
+          />              
+            </Link>
+         
           </div>
           <NavBar />
         </main>

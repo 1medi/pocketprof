@@ -38,8 +38,8 @@ export default function doughnutChart(){
           borderColor: ['rgba(53, 162, 135, 0.4',
           'rgba(63, 62, 235, 0.4',
         ],
-          backgroundColor: ['#780000',
-          '#648767'
+          backgroundColor: ['#53239B',
+          '#CCE3FB'
         ],
         borderWidth: .5
         }

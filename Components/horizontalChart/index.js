@@ -49,7 +49,8 @@ export default function HorizontalChart(){
         },
         title: {
           display: true,
-          text: "Daily Revenue"
+          text: ["Goal Report","Intermediate Violin"],
+          align: 'start'
         }
       },
       maintainAspectRatio: true,

@@ -20,9 +20,10 @@
 }
 /* top part of tooltip container */
 .tooltip_text{
-  background: #0070f3;
+  background-color: var( --main-color-purple);
   border-radius: 3px;
   padding: 4px;
+  width: 200px;
   display: flex;
   justify-content: center;
 }
