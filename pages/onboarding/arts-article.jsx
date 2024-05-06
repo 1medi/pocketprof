@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./article.module.css";
 import axios from 'axios';
-import Header from "@/Components/Header";
+import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 import Button3 from '@/Components/Buttons/Button3';
 import { useRouter } from 'next/router'; 
@@ -48,19 +48,23 @@ export default function artArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <Header name={"Articles"}/>
+      <Circles title={"Articles"}/>
       
       <main className={`${styles.main}`}>
         {data.length === 0 ? (
+          <div className={styles.buttonContainer}>
           <button onClick={grabNews} disabled={isLoading} className={styles.button}>
             {isLoading ? 'Loading...' : 'Search'}
           </button>
+          </div>
+
         ) : (
           <button onClick={navigateToAnotherPage} className={styles.button}>
             Home
           </button>
         )}
         {error && <p>{error}</p>}
+        <div className={styles.articleContainer}>
         {data.map((posts, index) => (
           <div key={index} className={styles.article}>
             <div className={styles.articleInnerContainer}>
@@ -71,6 +75,8 @@ export default function artArticles() {
             </div>
             </div>
         ))}
+        </div>
+
 
       <NavBar/>
       </main>

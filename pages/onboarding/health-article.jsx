@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./article.module.css";
 import axios from 'axios';
-import Header from "@/Components/Header";
+import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 
 
@@ -43,14 +43,15 @@ export default function artArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <Header name={"Articles"}/>
-      <div className={styles.envContainer}>
-      </div>
+      <Circles title={"Articles"}/>
       
       <main className={`${styles.main}`}>
+        <div className={styles.buttonContainer}>
         <button onClick={grabNews} disabled={isLoading} className={styles.button}>
           {isLoading ? 'Loading...' : 'Search'}
         </button>
+        </div>
+
         {error && <p>{error}</p>}
         {data.map((posts, index) => (
           <div key={index} className={styles.article}>
