@@ -10,7 +10,7 @@ BACKGROUND CIRCLES
   align-items: center;
   padding-top: 5em;
   min-height: 60vh;
-  font-family: "Montserrat", "sans-serif";
+  /*font-family: "Montserrat", "sans-serif";*/
 }
 .mobileContainer{
   width: 430px; 
@@ -40,42 +40,66 @@ BACKGROUND CIRCLES
     margin: auto;
   }
 
+  .heading__section {
+    display: flex;
+    justify-content: center;
+  }
 
-  .heading_container{
+  .oscar__container {
+    display: flex;
+    z-index: 1;
+  }
+
+  .heading__container{
     display: flex;
     flex-direction: column;
+    gap: 0rem;
     justify-content: center;
+    align-items: center;
     size: 36px;
     padding: 1rem;
     padding-top: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 0.8rem;
     width: 100%;
     text-align: right;
     color: white;
     z-index: 3;
+    color: var(--main-color-purple);
+    font-family: var(--headings);
   }
 
-  .heading__container > h2{
-    size: 10px;
+  .heading__container2 {
+    display: flex;
+    margin-top: -1rem;
+    color: var(--secondary-color-blue);
+    font-size: var(--font-body);
+    font-weight: medium;
   }
 
-  .subhead{
+  .description {
+    margin-top: 1rem;
+    font-family: var(--body-text);
+    font-weight: medium;
+  }
+
+  .subheading__container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--headings);
+    font-size: var(--font-body);
+    width: 19rem;
+    font-weight: bold;
+    padding-top: 0.8rem;
+  }
+
+  .categories__heading{
     padding: 1rem;
     padding-top: 2.5rem;
     color: var(--main-color-purple);
     margin-left: 20px;
   }
 
-.subheading__section{
-  margin-right: 0;
-  justify-content: center;
-  position: relative;
-  right: 20px;
-}
-
-.category__section__container {
-  display: flex;
-}
 
 .category__button__container{
   position: relative;
@@ -90,4 +114,30 @@ BACKGROUND CIRCLES
 .oscar{
   position: relative;
   margin: auto;
+}
+
+.divider__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories__heading__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories__heading {
+  text-align: center;
+  width: 65%;
+  margin-bottom: -0.8rem;
+}
+
+.divider {
+  background: linear-gradient(140deg,  #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%) border-box;;
+  width: 24rem;
+  height: 0.15rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }

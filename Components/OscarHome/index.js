@@ -9,7 +9,7 @@ export default function OscarHome() {
     lottie.loadAnimation({
       container: animationContainer.current,
       renderer: 'svg',
-      loop: true,
+      loop: false,
       autoplay: true,
       path: 'HOMEPAGE_OSCAR.json',
     });

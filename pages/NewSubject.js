@@ -3,9 +3,10 @@ import NavBar from "@/Components/Navbar";
 import Image from "next/image";
 import styles from "@/styles/NewSubject.module.css";
 import { Montserrat } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import CategoryButton from "@/Components/Buttons/CategoriesButton";
 import Link from "next/link";
-import Circles from "@/Components/Shapes/Circles";
+import HomePageCircles from "@/Components/HomePageCircles";
 import Header from "@/Components/Header";
 import OscarHome from "@/Components/OscarHome";
 
@@ -20,10 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Circles 
-        title={"Learn Something New"}
-        fontSize={"var(--font-sub-header)"}
-        />
+        <HomePageCircles/>
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.heading__section}>
           <div className={`${styles.background__circle}`}></div>
@@ -34,23 +32,29 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.banner__content}>
-            <div className={styles.heading_container}>
+            <div className={styles.heading__container}>
               <h1 className={styles.heading}>
                   Explore Your Potential
               </h1>
-              <h2 className={styles.heading__second__line}>
-                  One step at a time
-              </h2>
             </div>
-          </div>
-          <div className={styles.subheading__section}>
+            <div className={styles.heading__container2}>
+              <p className={styles.heading2}>
+                One step at a time
+              </p>
+            </div>
+            <div className={styles.description__container}>
+              <p className={styles.description}>
+                Learn the skills your desire, at your own pace
+              </p>
+            </div>
+            <div className={styles.divider}>
+            </div>
             <div className={styles.subheading__container}>
-              </div>
-              <div className={styles.categories__section__container}>
-                <h2 className={styles.subhead}>
-                  Categories
-                </h2>
-              </div>
+              <p className={styles.subheading}>
+                Explore popular categories and begin your next learning journey
+              </p>
+            </div>
+            <div className={styles.divider}>
             </div>
           </div>
           <div className={styles.category__button__container}>
@@ -59,11 +63,12 @@ export default function Home() {
             </Link>
             <CategoryButton title="Technical" backgroundImage="/img/technicalz.jpg" />
             <CategoryButton title="Fitness / Lifestyle" backgroundImage="/img/gym.jpg" />
+            </div>
           </div>
           <NavBar />
         </main>
       </div>
 
-    </>
-  );
+  </>
+  )
 }
