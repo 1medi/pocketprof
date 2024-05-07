@@ -26,6 +26,7 @@
 }
 
 .response{
+  width:430px;
 }
 
 .message{
@@ -44,6 +45,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
 }
 
 .gptContainer{
