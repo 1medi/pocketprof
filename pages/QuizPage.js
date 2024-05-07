@@ -37,9 +37,9 @@ export default function QuizPage() {
           <div className={styles.divider}>
           </div>
           <div className={styles.onboardingContainer}>
-            <p className={styles.onboardingLink}>You haven't find your interest yet? 
+            <p className={styles.onboardingLink}>Haven't found your interest yet? 
               <Link href={'/'}>
-              <h3>Let's find it out!</h3>
+              <h3>Find out here!</h3>
               </Link> 
             </p>
           </div>

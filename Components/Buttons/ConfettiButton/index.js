@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from "./ConfettiButton.module.css"; // Import CSS module
+import Button3 from '../Button3';
 
 const SHAPES = ['square', 'triangle'];
 const COLOR_DIGIT = "ABCDEF1234567890";
@@ -58,7 +59,7 @@ const ConfettiButton = () => {
 
     return (
         <div>
-            <button className='font-bold text-xl' onClick={handleClick}>Click for Confetti</button>
+            <Button3 name={"Finish"} className='font-bold text-xl' onClick={handleClick}/>
             <div className={styles.confettiContainer} ref={containerRef} id="confetti-container"></div>
         </div>
     );

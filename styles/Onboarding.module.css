@@ -1,6 +1,7 @@
 .mobileContainer{
     width: 430px; 
     margin: 0 auto; 
+    background-color: var(--main-color-lightpurple) ;
 }
   
 .main {
@@ -23,7 +24,7 @@
 .container{
     display: flex;
     justify-content: center;
-    margin: 0 2rem;
+    margin: auto;
     flex-direction: column;
     align-content: center;
 }

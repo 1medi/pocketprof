@@ -31,7 +31,10 @@ export default function ShowResources() {
       <div className={styles.oscarContainer}>
       <Oscar/>
       </div>
+      <div className={styles.promptContainer}>
       <Prompt/>
+      </div>
+      <div className={styles.padding}></div>
       <NavBar/>
       </main> 
       </div>

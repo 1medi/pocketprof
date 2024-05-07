@@ -17,30 +17,30 @@ export default function Landing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <main className={`${styles.main} ${montserrat.className}`}>
-        <div className={styles.container}>
-        <Image
-          priority
-          src="/img/oscar/oscar-main.svg"
-          width="300"
-          height="300"
-          alt="oscar"
-          className={styles.oscar}
-        />
-          <div className={styles.titleBox}><h1 className={styles.title}>Welcome to <br/>Pocket Prof.</h1></div>
-          <div className={styles.descriptionContainer}>
-            <h3>Let's dig in your interest together!</h3>
+        <main className={`${styles.main} ${montserrat.className}`}>
+          <div className={styles.container}>
+            <Image
+              priority
+              src="/img/oscar/oscar-main.svg"
+              width="300"
+              height="300"
+              alt="oscar"
+              className={styles.oscar}
+            />
+            <div className={styles.titleBox}><h1 className={styles.title}>Welcome to <br />Pocket Prof.</h1></div>
+            <div className={styles.descriptionContainer}>
+              <h3>Let's dig in your interest together!</h3>
+            </div>
+            <div className={styles.containerContainer}>
+              <Link href='/onboarding/page' className={styles.buttonContainer}>
+                <Button3 name={"Start"} />
+              </Link>
+              <Link href='/NewSubject' className={styles.buttonContainer}>
+                <Button3 name={"Skip"} />
+              </Link>
+            </div>
           </div>
-          <div className={styles.containerContainer}>
-          <Link href='/onboarding/page' className={styles.buttonContainer}>
-            <Button3 name={"Start"}/>
-          </Link>
-          <Link href='/NewSubject' className={styles.buttonContainer}>
-          <Button3 name={"Skip"} />
-          </Link>
-        </div>
-        </div>
-      </main>
+        </main>
       </div>
     </>
   );

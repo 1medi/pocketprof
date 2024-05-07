@@ -4,17 +4,14 @@
 }
   
 .main {
-    overflow-x: hidden;
-    justify-content: center;
-    display: flex;
-    background-color: var(--background-color);
-    height: 100vh;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;  
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20vh;
 }
 
 .container{

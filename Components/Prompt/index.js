@@ -17,6 +17,7 @@ const sendChat = async (prompt) => {
 export default function Chat() {
   const [imageUrls, setImageUrls] = useState();
   const [messages, setMessages] = useState([]);
+  const [message,setMessage] = useState("")
   const [showMessage, setShowMessage] = useState(false)
   const mutation = useMutation(sendChat);
   const [isOpen, setIsOpen] = useState(false)
@@ -29,24 +30,39 @@ export default function Chat() {
     setMessages([...messages, { message: prompt, response }]);
     setIsOpen(true)
   }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await mutation.mutateAsync(message)
+    setMessages([...messages, {message:message, response: response}])
+    setMessage("")
+  }
   const clearPrompt = async => {
     setMessages([]);
   }
 
   return (
     <>
-      <div className={styles.container}>
-        <div>
-          <main className={styles.main}>
             <div className={styles.textContainer}>
-              <h2 className={styles.header}>Oscar is ready to find some learning resources for you</h2>
+              <h3 className={styles.header}>Oscar is ready to find some learning resources for you</h3>
             </div>
 
             <div className={styles.promptContainer}>
               <button className={styles.prompt} onClick={handleFirstButtonClick}>Get Resources</button>
+              <form className={styles.formContainer}onSubmit={handleSubmit} >
+              <input 
+              onChange={(e) => setMessage(e.target.value)}
+              type="text" 
+              placeholder="Have Another Question?"/>
+              <button
+              type="submit"
+              >Send
+              </button>
+              </form>
               <section className={styles.gptContainer}>
                 {messages.map((message, index) => (
                   <div className={styles.responseContainer} key={index}>
+                    <p className={styles.message}>{message.message}</p>
                     <p className={styles.response}>{message.response}</p>
                   </div>
                 ))}
@@ -84,9 +100,6 @@ export default function Chat() {
                 </section>
               )}
             </div>
-          </main>
-        </div>
-      </div>
     </>
   )
 }
