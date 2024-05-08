@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from "./Popup.module.css";
-import Button3 from '../Buttons/Button3';
+import styles from "./AccountName.module.css";
+import Button3 from '../../Buttons/Button3';
 
-export default function Popup({ onClose, onSave }) {
+export default function AccountName({ onClose, onSave }) {
     const [accountName, setAccountName] = useState("");
 
     const handleChange = (event) => {
@@ -23,10 +23,10 @@ export default function Popup({ onClose, onSave }) {
     }
 
     return (
-        <div className={styles.overlay} tabIndex={-1}>
+        <div className={styles.overlay} tabIndex={0}>
             <div className={styles.popupContainer}>
                 <div className={styles.popup}>
-                    <form onSubmit={(e) => e.preventDefault()} tabIndex={0}>
+                    <form onSubmit={(e) => e.preventDefault()} tabIndex={1}>
                         <div className={styles.form}>
                             <div className={styles.innerBox}>
                                 <div>
@@ -38,7 +38,7 @@ export default function Popup({ onClose, onSave }) {
                                     size="40"
                                     value={accountName}
                                     onChange={handleChange}
-                                    tabIndex={1} 
+                                    tabIndex={2} 
                                 />
                             </div>
                         </div>

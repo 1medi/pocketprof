@@ -1,0 +1,45 @@
+import React, { useState } from 'react';
+import styles from "./ColorMode.module.css";
+import Button3 from '../../Buttons/Button3';
+import RadioButton from '@/Components/Buttons/RadioButton';
+
+const options = [
+    { label: 'Light Mode', value: 'option1', color:'black' },
+    { label: 'Dark Mode', value: 'option2', color:'black' },
+];
+
+export default function ColorMode({ onClose, onSave }) {
+
+    const [selectedOption, setSelectedOption] = useState('option1');
+
+    const handleOptionSelect = (value) => {
+        setSelectedOption(value);
+    };
+    const handleSubmit = () => {
+        if (selectedOption) {
+          onSave(selectedOption);
+        } else {
+          alert("Please select an option.");
+        }
+      };
+
+    return (
+        <div className={styles.overlay} tabIndex={0}>
+            <div className={styles.popupContainer}>
+                <div className={styles.popup}>
+                    <div>
+                        <h1 className={styles.title}>Color Mode</h1>
+                        <RadioButton options={options} onSelect={handleOptionSelect} />
+                    </div>
+                    <div className={styles.buttonInnerContainer}>
+                        <div className={styles.buttonContainer}>
+                            <Button3 className={styles.closeButton} name={"Save"} onClick={handleSubmit} tabIndex={2}>
+                                Save
+                            </Button3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};

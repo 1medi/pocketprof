@@ -2,11 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/AccountSettings.module.css";
 import NavBar from "@/Components/Navbar";
-import Popup from "@/Components/Popup";
+import AccountName from "@/Components/Popup/AccountName/AccountName";
 import React, { useState } from 'react';
 import Image1 from "@/public/img/nature-4964153_1920.jpg"
 import Pencil from "@/public/img/pencil.svg"
-import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import { Montserrat } from "next/font/google";
 import Circles from "@/Components/Shapes/Circles";
 
@@ -42,6 +41,7 @@ export default function AccountSettings() {
                 height={150}
                 className={styles.profileImg}
                 tabIndex={1}
+                alt={"User Profile Image"}
               />
             </div>
             <h2 className={styles.name}>{accountName}</h2>
@@ -58,7 +58,7 @@ export default function AccountSettings() {
                   tabIndex={2}
                   className={styles.pencil}
                 />
-                {isPopupOpen && <Popup onClose={togglePopup} onSave={handleSaveNewName} />}
+                {isPopupOpen && <AccountName onClose={togglePopup} onSave={handleSaveNewName} />}
                 <h4 className={styles.title}>Account Name: </h4>
                 <p className={styles.content}>{accountName}</p>
               </div>
