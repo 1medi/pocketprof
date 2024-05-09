@@ -11,7 +11,7 @@
       }
 
       .cls-4 {
-        fill: #ccbfed;
+        fill: transparent;
         stroke: #000;
         stroke-miterlimit: 10;
         stroke-width: 8px;

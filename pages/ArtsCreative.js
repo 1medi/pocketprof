@@ -12,6 +12,8 @@ import QuestionMark from "@/Components/Shapes/Tooltips/QuestionMark";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
+
+  
   return (
     <>
       <Head>

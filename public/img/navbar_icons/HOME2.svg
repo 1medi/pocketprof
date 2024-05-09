@@ -19,7 +19,7 @@
       }
 
       .cls-4 {
-        fill: #ccbfed;
+        fill: transparent;
       }
 
       .cls-5 {
@@ -32,7 +32,7 @@
 
       .cls-7 {
         fill: #494170;
-      }
+      }s
 
       .cls-8 {
         fill: #656386;

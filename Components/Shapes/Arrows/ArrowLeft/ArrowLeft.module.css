@@ -4,7 +4,7 @@
   border: 5px solid #000000;
   border-left: 0;
   border-top: 0;
-  position: relative;
+  position: fixed;
   transform: rotate(135deg);
   top: 30px;
   left: 30px;

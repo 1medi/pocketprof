@@ -1,20 +1,17 @@
 import styles from "./Navbar.module.css"
-import Oscar from "@/Components/Buttons/Oscar"
 import Link from "next/link"
-import Home from "@/public/img/navbar_icons/HOME.svg"
 import Home2 from "@/public/img/navbar_icons/HOME2.svg"
 import Image from "next/image"
-import Learn from "@/public/img/learn.png"
 import Profile from "@/public/img/navbar_icons/PROFILE.svg"
 import Quiz from "@/public/img/navbar_icons/QUIZ.svg"
 
-export default function NavBar() {
+export default function NavBar({style}) {
   return (
     <nav className={styles.nav}>
-      <div className={styles.navContainer}>
+      <div className={styles.navContainer} style={style}>
         <ul className={styles.navOptions}>
-          <li className={styles.navLink}>
-            <Link href={'/Account'} className={styles.navText}>
+          <li className={styles.navLink} style={style}>
+            <Link href={'/Account'} className={styles.navText} style={style}>
               <Image
               className={styles.image}
               src={Profile}
