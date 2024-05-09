@@ -5,9 +5,11 @@ import Button3 from '../Button3';
 const SHAPES = ['square', 'triangle'];
 const COLOR_DIGIT = "ABCDEF1234567890";
 
+
 const ConfettiButton = () => {
     const [isConfettiActive, setConfettiActive] = useState(false);
     const containerRef = useRef(null);
+    const [isOpen,setIsOpen] = useState(false);
 
     useEffect(() => {
         if (isConfettiActive) {

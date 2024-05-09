@@ -44,6 +44,8 @@ export default function QuizPage() {
             </p>
           </div>
 
+          <div className={styles.bottom}></div>
+
         </main>
         <NavBar />
       </div>

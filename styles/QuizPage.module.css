@@ -89,3 +89,7 @@
 .onboardingLink{
   font-family: var(--body-text);
 }
+
+.bottom{
+  padding-bottom: 10em;
+}

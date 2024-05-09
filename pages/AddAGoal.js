@@ -64,7 +64,7 @@ export default function Home() {
               />
             </Link>
           </div>
-
+          <div className={styles.goalSpacing}></div>
           <NavBar />
         </main>
       </div>

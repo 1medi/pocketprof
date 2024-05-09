@@ -1,0 +1,58 @@
+.mobileContainer{
+  width: 430px;
+  margin: 0 auto;
+}
+
+.main {
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.goalEditor{
+  position: relative;
+  justify-content: center;
+  margin-top: 80px;
+  background-color: var( --main-color-lightpurple);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.editContainer{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em;
+
+}
+
+.label{
+  padding: 10px;
+}
+
+.submit{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.alert{
+  width: 430px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  text-align: center;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  background-color: var(--offest-of-whites);
+  border-radius: 10px;
+  border: 1px solid black
+}

@@ -5,20 +5,14 @@ import { useMutation } from "react-query";
 import Link from "next/link";
 import Modal from "react-modal";
 import Oscar from "../Oscar";
+import AskOscar from "../AskOscar";
+import Button3 from "../Buttons/Button3";
 
 // Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/chat", { prompt });
   console.log('sendChat response', data);
   return data.data;
-}
-
-
-const formatResponse = (response) => {
-  let formattedResponse = response.replace(/##(.*?)##/g, '<strong>$1</strong>');
-  formattedResponse = formattedResponse.replace(/#(.*?)#/g, '<strong>$1</strong>');
-
-  return formattedResponse;
 }
 export default function Chat() {
   const [imageUrls, setImageUrls] = useState();
@@ -30,7 +24,6 @@ export default function Chat() {
 
   Modal.setAppElement('body');
 
-
   const formatResponse = (response) => {
     let formattedResponse = '';
   
@@ -39,16 +32,14 @@ export default function Chat() {
       const imageUrl = response.substring(response.indexOf("(") + 1, response.lastIndexOf(")"));
       formattedResponse += `<img src="${imageUrl}" alt="Image" />`;
     }
-  
-    // Apply regular formatting to the rest of the response
     formattedResponse += response.replace(/##(.*?)##/g, '<strong>$1</strong>');
     formattedResponse = formattedResponse.replace(/#(.*?)#/g, '<strong>$1</strong>');
-  
+    
     return formattedResponse;
   }
   const handleFirstButtonClick = async () => {
     setShowMessage(true)
-    const response = await mutation.mutateAsync("I want to learn how to play a guitar (I am a Beginner Guitar Player)");
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar. Give me a list of 3 goals(I am a Beginner Guitar Player)");
     setMessages([...messages, { message: prompt, response }]);
     setIsOpen(true)
   }
@@ -71,22 +62,15 @@ export default function Chat() {
       </div>
 
       <div className={styles.promptContainer}>
-        <button className={styles.prompt} onClick={handleFirstButtonClick}>Get Resources</button>
-        <form className={styles.formContainer} onSubmit={handleSubmit} >
-          <input
-            onChange={(e) => setMessage(e.target.value)}
-            type="text"
-            placeholder="Have Another Question?" />
-          <button
-            type="submit"
-          >Send
-          </button>
-        </form>
+        <div className={styles.resourceContainer}>
+        <Button3 name={"Get Resources"} className={styles.prompt} onClick={handleFirstButtonClick}/>
+        </div>
+        
         <section className={styles.gptContainer}>
           {messages.map((message, index) => (
             <div className={styles.responseContainer} key={index}>
               <p className={styles.message}>{message.message}</p>
-              <p className={styles.response} dangerouslySetInnerHTML={{ __html: formatResponse(message.response) }} />
+              <p id="label" className={styles.response} dangerouslySetInnerHTML={{ __html: formatResponse(message.response) }} />
             </div>
           ))}
         </section>
@@ -98,26 +82,25 @@ export default function Chat() {
           <div className={styles.buttonContainer}>
             <Link
               href={"#label"}>
-              <button
+              <Button3
+              name={"Reveal Resources"}
                 className={styles.button}
                 onClick={() => setIsOpen(false)}
-                ariaHideApp={false}>
-                Show Resources
-              </button>
+                ariaHideApp={false}/>
             </Link>
           </div>
 
         </Modal>
         {messages.length > 0 && (
-          <section id="label">
+          <section>
             <ul className={styles.buttonOptions}>
-              <li>
-                <button onClick={clearPrompt}>Clear</button>
+              <li className={styles.button_container}>
+                <Button3 name={"Clear"}onClick={clearPrompt}/>
               </li>
-              <li>
-                <button>
-                  <Link href="/AddAGoal">Generate Goals</Link>
-                </button>
+              <li className={styles.button_container}>
+              <Link href="/AddAGoal">
+                <Button3 name={"Generate Goals"}/>
+                </Link>
               </li>
             </ul>
           </section>
