@@ -17,7 +17,10 @@ export default function OscarHome() {
 
   return (
     <>
-        <div className={styles.container} style={{ height: '200px', width: '200px' }}ref={animationContainer}></div>
+    <div className={styles.lottieContainer}>
+    <div className={styles.container}ref={animationContainer}></div>
+    </div>
+
     </>
   );
 }
