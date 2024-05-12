@@ -102,6 +102,12 @@ margin:auto;
   margin: 10px;
 }
 
+.oscarContainer{
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
