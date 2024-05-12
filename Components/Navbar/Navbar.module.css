@@ -42,6 +42,7 @@
 
 .image:hover{
   background-color: #8b82a4;
+  border-radius: 10px;
 }
 
 .navText{

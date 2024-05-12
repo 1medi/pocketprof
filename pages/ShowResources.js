@@ -20,6 +20,8 @@ export default function ShowResources() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <div className={styles.leftDiv}></div>
+      <div className={styles.rightDiv}></div>
       <Circles title="Show Resources"/>
       <main className={`${styles.main} ${montserrat.className}`}>
       <div className={styles.questionContainer}>

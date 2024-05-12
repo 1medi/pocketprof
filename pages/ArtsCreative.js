@@ -23,6 +23,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <div className={styles.leftDiv}></div>
+      <div className={styles.rightDiv}></div>
       <Circles
       title="ARTS / CREATIVE"
       />

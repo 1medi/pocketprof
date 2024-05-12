@@ -33,6 +33,8 @@ const [data,setData] = useState();
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <div className={styles.leftDiv}></div>
+      <div className={styles.rightDiv}></div>
         <Circles title={"Goal Tracking"} />
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.backContainer}>

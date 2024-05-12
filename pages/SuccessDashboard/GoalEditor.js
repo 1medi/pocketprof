@@ -42,6 +42,8 @@ export default function GoalEditor() {
   return (
     <>
       <div className={styles.mobileContainer}>
+      <div className={styles.leftDiv}></div>
+      <div className={styles.rightDiv}></div>
         <Circles title={"Goal Editor"} />
         <main className={styles.main}>
           <form className={styles.goalEditor} onSubmit={handleSubmit}>

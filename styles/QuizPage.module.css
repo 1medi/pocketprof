@@ -14,7 +14,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60vh;
-  font-family: "Montserrat", "sans-serif";
 }
 
 .container {
@@ -92,4 +91,22 @@
 
 .bottom{
   padding-bottom: 10em;
+}
+.leftDiv{
+  width: 745px;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  right: 950px;
+}
+
+.rightDiv{
+  width: 745px;
+  height: 1000px;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  right: -225px;
+  bottom: 100px;
 }

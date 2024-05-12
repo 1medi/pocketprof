@@ -10,7 +10,6 @@ BACKGROUND CIRCLES
   align-items: center;
   padding-top: 5em;
   min-height: 60vh;
-  /*font-family: "Montserrat", "sans-serif";*/
 }
 .mobileContainer{
   width: 430px; 
@@ -140,4 +139,22 @@ BACKGROUND CIRCLES
   height: 0.15rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.leftDiv{
+  width: 745px;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  right: 950px;
+}
+
+.rightDiv{
+  width: 745px;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  right: -225px;
 }

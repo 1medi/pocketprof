@@ -2,15 +2,12 @@ import Head from "next/head";
 import NavBar from "@/Components/Navbar";
 import Image from "next/image";
 import styles from "@/styles/NewSubject.module.css";
-import { Montserrat } from "next/font/google";
-import { Noto_Sans } from "next/font/google";
 import CategoryButton from "@/Components/Buttons/CategoriesButton";
 import Link from "next/link";
 import HomePageCircles from "@/Components/HomePageCircles";
 import Header from "@/Components/Header";
 import OscarHome from "@/Components/OscarHome";
 
-const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
@@ -21,8 +18,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
+      <div className={styles.leftDiv}></div>
+      <div className={styles.rightDiv}></div>
         <HomePageCircles/>
-        <main className={`${styles.main} ${montserrat.className}`}>
+        <main className={styles.main}>
           <div className={styles.heading__section}>
           <div className={styles.oscar__container}>
             <div className={styles.oscar}>

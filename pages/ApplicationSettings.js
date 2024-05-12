@@ -54,6 +54,8 @@ export default function AppSettings() {
       className={styles.mobileContainer}
       style={{ backgroundColor: backgroundColor, color: textColor }}
       >
+              <div className={styles.leftDiv}></div>
+      <div className={styles.rightDiv}></div>
         <Circles 
         title="App Settings" 
         style={{ backgroundColor: circlesColor, color: backgroundColor }}/>
