@@ -75,9 +75,7 @@ export default function Chat() {
           ))}
         </section>
         <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
-          <div className={styles.oscarContainer}>
             <Oscar />
-          </div>
           <h1>Oscar is searching for resources!</h1>
           <div className={styles.buttonContainer}>
             <Link
