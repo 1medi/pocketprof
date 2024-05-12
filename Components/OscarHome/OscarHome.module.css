@@ -10,4 +10,6 @@
   .lottieContainer{
     width: 400px;
     height: 200px;
+    position: relative;
+    bottom: 20px;
   }
