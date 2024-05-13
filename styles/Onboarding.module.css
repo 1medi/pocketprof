@@ -40,6 +40,14 @@
 .descriptionContainer{
     text-align: center;
     padding: 2rem 0;
+    font-size: 15pt;
+    font-weight: 400;
 }
 
-
+.name{
+    font-size: var(--font-body-large);
+    color: var(--main-color-purple);
+    font-weight: 600;
+    margin-top:1rem;
+    text-align: center;
+}

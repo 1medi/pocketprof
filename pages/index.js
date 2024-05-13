@@ -41,10 +41,10 @@ export default function Landing() {
               <>
                 <div className={styles.titleBox}>
                   <h1 className={styles.title}>Welcome to <br />Pocket Prof.</h1>
-                  <p>{username}!</p>
+                  <p className={styles.name}>{username}!</p>
                 </div>
                 <div className={styles.descriptionContainer}>
-                  <h3>Let's dig into your interests together!</h3>
+                  <h3>Let's dig into <br/>your interests together!</h3>
                 </div>
                 <div className={styles.containerContainer}>
                   <Link href='/onboarding/page' className={styles.buttonContainer}>
