@@ -1,9 +1,11 @@
 import Image from "next/image"
 import Plus from "@/public/img/add.png"
+import PlusHover from "@/public/img/addHover.png" 
 import styles from "./GoalCard.module.css"
 import Modal from "react-modal";
 import { useState } from "react";
 import Oscar from "@/Components/Oscar";
+import { useRouter } from "next/router";
 
 export default function goalCard({
     number,
@@ -12,19 +14,30 @@ export default function goalCard({
     const [isOpen, setIsOpen] = useState(false)
     Modal.setAppElement('body');
 
+    const router = useRouter(); // Initialize useRouter
 
+    // Function to prefetch the hover state image
+    const handleMouseEnter = () => {
+        router.prefetch(PlusHover);
+    };
     return (
         <>
             <div className={styles.goalCard}>
                 <h3 className={styles.number}>{number}</h3>
                 <p className={styles.description}>{description}</p>
-                <Image
-                    onClick={() => setIsOpen(true)}
-                    className={styles.plus}
-                    src={Plus}
-                    width={35}
-                    height={35}
-                />
+                <div className={styles.imageContainer}>
+                    <Image
+                        className={styles.image}
+                        src={Plus}
+                        onMouseEnter={handleMouseEnter} // Call handleMouseEnter on mouse enter
+                        onClick={() => setIsOpen(true)}
+                    />
+                    <Image
+                        className={styles.hoverImage}
+                        src={PlusHover}
+                        onClick={() => setIsOpen(true)}
+                    />
+                </div>
                 <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
                     <div className={styles.oscarContainer}>
                         <Oscar />
