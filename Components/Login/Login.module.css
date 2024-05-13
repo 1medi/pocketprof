@@ -1,0 +1,4 @@
+.greeting{
+    color: black;
+    font-size: var(--font-headings);
+}
