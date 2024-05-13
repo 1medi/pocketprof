@@ -17,6 +17,7 @@ export default function AppSettings() {
   const [borderColor, setborderColor] = useState('black')
   const [circlesColor, setCirclesColor] = useState('var(--main-color-purple)')
   const [circleColor, setCircleColor] = useState('var(--main-color-lightpurple)')
+  const [titleColor, setTitleColor] = useState('black');
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -30,6 +31,7 @@ export default function AppSettings() {
       setborderColor('black');
       setCirclesColor('var(--main-color-purple)');
       setCircleColor('var(--main-color-lightpurple)');
+      setTitleColor('white');
     } else if (mode === 'option2') {
       setBackgroundColor('#2b2b2b'); 
       setTextColor('white'); 
@@ -37,6 +39,7 @@ export default function AppSettings() {
       setborderColor('white')
       setCirclesColor('var(--secondary-color-lightblue)');
       setCircleColor('var(--main-color-blue)');
+      setTitleColor('black')
     }
     togglePopup();
   };
@@ -56,7 +59,7 @@ export default function AppSettings() {
       >
         <Circles 
         title="App Settings" 
-        style={{ backgroundColor: circlesColor, color: backgroundColor }}/>
+        style={{ backgroundColor: circlesColor, color: titleColor }}/>
         <main 
         className={`${styles.main} ${montserrat.className}`}
         style={{ backgroundColor: backgroundColor , color: textColor}}
