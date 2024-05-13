@@ -8,17 +8,19 @@ import Oscar from "@/Components/Oscar";
 import Link from "next/link";
 import ConfettiButton from "@/Components/Buttons/ConfettiButton";
 import Head from "next/head";
+import GoalTracking from "@/pages/SuccessDashboard/GoalTracking"
+import { useRouter } from "next/router";
 export default function GoalEditor() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false)
   const [data, setData] = useState([]);
+  const { goalName } = router.query;
+  const [formData, setFormData] = useState({
+    goalName: goalName || "", // Set the initial value of the goal name input field
+    // Other form data properties
+  });
 
   Modal.setAppElement("body");
-  const [formData, setFormData] = useState({
-    goalName: "",
-    goalDescription: "",
-    goalDuration: "",
-    favoriteColor: "#ff0000", // default value for the color input
-  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,24 +35,42 @@ export default function GoalEditor() {
     setIsOpen(true);
     setData([...data, formData]);
     console.log(formData);
+
+    // Update goalData state with the edited form data
+    setGoalData(formData);
+
+    // Navigate to the previous page with updated goal data
+    router.push({
+      pathname: "/SuccessDashboard/GoalTracking",
+      query: { updatedGoalData: JSON.stringify(formData) }
+    });
   };
 
-  const handleCloseModal = () => {
-    setIsOpen(false);
-    setData([]); // Clear data array when modal is closed
+  // Move GoalEditorPage outside of the GoalEditor component
+  const GoalEditorPage = () => {
+    const router = useRouter();
+    const [formData, setFormData] = useState({});
+
+    useEffect(() => {
+      if (router.query.goalData) {
+        setFormData(JSON.parse(router.query.goalData));
+      }
+    }, [router.query]);
+
+    // Remaining code for form handling and submission
   };
 
   return (
     <>
-    <Head>
-    <title>Goal Editor</title>
+      <Head>
+        <title>Goal Editor</title>
         <meta name="description" content="You edit your created goals here." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-    </Head>
+      </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
+        <div className={styles.leftDiv}></div>
+        <div className={styles.rightDiv}></div>
         <Circles title={"Goal Editor"} />
         <main className={styles.main}>
           <form className={styles.goalEditor} onSubmit={handleSubmit}>
@@ -99,10 +119,16 @@ export default function GoalEditor() {
           <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
             <h1>CONGRANTATION</h1><br /><p>You are one step closer to achieving ur DREAM</p>
             <div className={styles.buttonContainer}>
-              <Button3
-              onClick={() => handleCloseModal()}
-              name={"Close"}
-              />
+              <Link
+                href={{
+                  pathname: "/SuccessDashboard/GoalTracking",
+                  query: { updatedGoalData: JSON.stringify(goalData) }
+                }}
+              >
+                <Button3
+                  name={"Close"}
+                />
+              </Link>
               <ConfettiButton
                 name={"Celebrate"}
                 className={styles.button}

@@ -19,8 +19,6 @@ export default function Ask() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
       <Circles
         title="Ask"
         />
