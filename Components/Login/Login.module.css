@@ -1,4 +1,33 @@
-.greeting{
-    color: black;
-    font-size: var(--font-headings);
+.hello{
+    color: var(--main-color-purple);
+    font-weight: bold;
+    font-size: var(--font-sub-header);
+   text-align: center;
+}
+
+.name{
+    font-weight:600;
+    font-size: var(--font-body);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.inputBox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 100px;
+}
+
+.input {
+    height: 30px;
 }
