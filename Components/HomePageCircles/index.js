@@ -1,4 +1,5 @@
 import styles from "./HomePageCircles.module.css"
+import OscarHome from "../OscarHome"
 
 export default function HomePageCircles() {
     return (
@@ -12,7 +13,10 @@ export default function HomePageCircles() {
             <div className={styles.background__circle5}></div>
             <div className={styles.background__circle6}></div>
             <div className={styles.background__circle7}></div>
-        </div>
+            <div className={styles.oscar}>
+              <OscarHome/>
+            </div>
+          </div>
         </header>
         </>
       )
