@@ -43,3 +43,8 @@
 .buttonContainer{
   margin: auto;
 }
+
+.goalTextContainer {
+  display: flex;
+  flex-direction: column;
+}
