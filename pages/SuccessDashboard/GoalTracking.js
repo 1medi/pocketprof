@@ -5,11 +5,9 @@ import { Montserrat } from "next/font/google";
 import Circles from "@/Components/Shapes/Circles";
 import NavBar from "@/Components/Navbar";
 import HorizontalChart from "@/Components/horizontalChart";
-import Doughnut from "@/Components/doughnutChart";
-import ArrowLeft from "@/Components/Shapes/Arrows/ArrowLeft";
 import Link from "next/link";
-import GoalCheck from "@/Components/GoalStuff/GoalCheck";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useRouter } from 'next/router';
 import GoalChart1 from "@/Components/GoalStuff/GoalCharts/GoalChart1";
 import GoalChart2 from "@/Components/GoalStuff/GoalCharts/GoalChart2";
 import GoalChart3 from "@/Components/GoalStuff/GoalCharts/GoalChart3";
@@ -21,16 +19,22 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
 const [data,setData] = useState();
 const [goalData, setGoalData] = useState({
-  goalName: "Play the guitar once a day for a week!",
+  goalName: "Goal 1",
   goalDescription: "",
   goalDuration: "",
   favoriteColor: ""
 });
 
+const router = useRouter();
 
-const handleGoalEdit = (editedGoalData) => {
-  setGoalData(editedGoalData);
-};
+useEffect(() => {
+  const { goalName } = router.query;
+  if (goalName) {
+    setGoalData(prevData => ({ ...prevData, goalName }));
+  }
+}, [router.query]);
+
+
 
   return (
     <>
@@ -41,13 +45,10 @@ const handleGoalEdit = (editedGoalData) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
         <Circles title={"Goal Tracking"} />
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.backContainer}>
           <Link href={"Settings"}>
-          <ArrowLeft/>
         </Link>
           </div>
           <div className={styles.chartContainer}>
@@ -59,12 +60,12 @@ const handleGoalEdit = (editedGoalData) => {
             <div className={styles.doughnutContainer}>
             <GoalChart1/>
             </div>
-          <p className={styles.goalText}>Play the guitar once a day for a week!</p>
+          <p id="goalName" className={styles.goalText}>{goalData.goalName}</p>
           <Link
-           href={{ pathname: "/SuccessDashboard/GoalEditor", query: { goalData: JSON.stringify(goalData) } }}
+           href={{ pathname: "/SuccessDashboard/GoalEditor",  query: { goalName: goalData.goalName }}}
           >
           <Button3
-          name="See More"
+          name="Edit"
           />          
           </Link>
           </li>

@@ -3,22 +3,26 @@ import NavBar from "@/Components/Navbar"
 import Circles from "@/Components/Shapes/Circles"
 import { useEffect, useState } from 'react';
 import Button3 from "@/Components/Buttons/Button3";
-import Modal from "react-modal";
-import Oscar from "@/Components/Oscar";
-import Link from "next/link";
-import ConfettiButton from "@/Components/Buttons/ConfettiButton";
 import Head from "next/head";
-export default function GoalEditor() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [data, setData] = useState([]);
+import { useRouter } from 'next/router'
 
-  Modal.setAppElement("body");
+export default function GoalEditor() {
+  const [data, setData] = useState([]);
+  const router = useRouter();
+  const { goalName } = router.query;
   const [formData, setFormData] = useState({
-    goalName: "",
+    goalName: goalName || "", // Pre-fill the input field with the goalName from the query parameter
     goalDescription: "",
     goalDuration: "",
-    favoriteColor: "#ff0000", // default value for the color input
+    favoriteColor: "#ff0000",
   });
+
+  useEffect(() => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      goalName: goalName || "", // Update formData.goalName whenever goalName changes
+    }));
+  }, [goalName]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,27 +34,21 @@ export default function GoalEditor() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsOpen(true);
     setData([...data, formData]);
-    console.log(formData);
-  };
-
-  const handleCloseModal = () => {
-    setIsOpen(false);
-    setData([]); // Clear data array when modal is closed
+    console.log("Form Data:", formData); 
+    console.log("Goal Name:", formData.goalName); // Add this line to check the value of goalName
+    router.push("/SuccessDashboard/GoalTracking", { query: { goalName: formData.goalName } });
   };
 
   return (
     <>
-    <Head>
-    <title>Goal Editor</title>
+      <Head>
+        <title>Goal Editor</title>
         <meta name="description" content="You edit goals here" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-    </Head>
+      </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
         <Circles title={"Goal Editor"} />
         <main className={styles.main}>
           <form className={styles.goalEditor} onSubmit={handleSubmit}>
@@ -65,14 +63,14 @@ export default function GoalEditor() {
               />
             </div>
             <div className={styles.editContainer}>
-              <label className={styles.label}>Goal Description</label>
-              <input
-                type="input"
-                name="goalDescription"
-                value={formData.goalDescription}
-                onChange={handleChange}
-              />
-            </div>
+          <label className={styles.label}>Goal Description</label>
+          <input
+            type="input"
+            name="goalDescription"
+            value={formData.goalDescription}
+            onChange={handleChange}
+          />
+        </div>
             <div className={styles.editContainer}>
               <label className={styles.label}>Goal Duration</label>
               <input
@@ -96,31 +94,6 @@ export default function GoalEditor() {
             </div>
 
           </form>
-          <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
-            <h1>CONGRANTATION</h1><br /><p>You are one step closer to achieving ur DREAM</p>
-            <div className={styles.buttonContainer}>
-              <Button3
-              onClick={() => handleCloseModal()}
-              name={"Close"}
-              />
-              <ConfettiButton
-                name={"Celebrate"}
-                className={styles.button}
-                ariaHideApp={false} />
-            </div>
-            {
-              data.map((formData, index) => (
-                <div key={index} className={styles.CContainer}>
-                  <div><p>Goal Name: </p>{formData.goalName}</div>
-                  <div><p>Goal Description: </p>{formData.goalDescription}</div>
-                  <div><p>Goal Duration: </p>{formData.goalDuration}</div>
-                  <div><p>Goal Color: </p><div style={{ backgroundColor: formData.favoriteColor, width: '20px', height: '20px', display: 'inline-block', marginRight: '5px' }}></div></div>
-
-                </div>
-              ))
-            }
-
-          </Modal>
           <NavBar />
         </main>
       </div>
