@@ -19,21 +19,23 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
 const [data,setData] = useState();
 const [goalData, setGoalData] = useState({
-  goalName: "Goal 1",
+  goalName: "Play the guitar once a day!",
   goalDescription: "",
   goalDuration: "",
   favoriteColor: ""
 });
-
 const router = useRouter();
+const [goalName, setGoalName] = useState('Play the guitar once a day!');
+const [goalDescription, setDescription] = useState('Description');
+const [goalDuration, setDuration] = useState('1 Month');
+
 
 useEffect(() => {
   const { goalName } = router.query;
   if (goalName) {
-    setGoalData(prevData => ({ ...prevData, goalName }));
+    setGoalName(goalName);
   }
 }, [router.query]);
-
 
 
   return (
@@ -57,10 +59,15 @@ useEffect(() => {
           <ul className={styles.jumboContainer}>
             <label>Active Goals</label>
           <li className={styles.goalContainer}>
-            <div className={styles.doughnutContainer}>
+            <div className={styles.doughnutContainer}>  
             <GoalChart1/>
             </div>
-          <p id="goalName" className={styles.goalText}>{goalData.goalName}</p>
+            <div className={styles.goalTextContainer}>
+            <p id="goalName" className={styles.goalText}>{goalName}</p>
+          <p id="goalDescription" className={styles.goalText}>{goalDescription}</p>
+          <p id="goalDuration" className={styles.goalText}>{goalDuration}</p>
+            </div>
+
           <Link
            href={{ pathname: "/SuccessDashboard/GoalEditor",  query: { goalName: goalData.goalName }}}
           >
