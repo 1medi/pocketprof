@@ -92,19 +92,22 @@ export default function GoalEditor() {
           <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
             <h1>CONGRANTATION</h1><br /><p>You are one step closer to achieving ur DREAM</p>
             <div className={styles.buttonContainer}>
+              <Button3
+              onClick={() => handleCloseModal()}
+              name={"Close"}
+              />
               <ConfettiButton
-                name={"HUZZAH"}
+                name={"Celebrate"}
                 className={styles.button}
-                onClick={() => setIsOpen(false)}
                 ariaHideApp={false} />
             </div>
             {
               data.map((formData, index) => (
                 <div key={index} className={styles.CContainer}>
-                  <div><p>Goal Description :</p>{formData.goalName}</div>
-                  <div><p>Goal Description :</p>{formData.goalDescription}</div>
-                  <div><p>Goal Description :</p>{formData.goalDuration}</div>
-                  <div><p>Goal Description :</p>{formData.favouriteColor}</div>
+                  <div><p>Goal Name: </p>{formData.goalName}</div>
+                  <div><p>Goal Description: </p>{formData.goalDescription}</div>
+                  <div><p>Goal Duration: </p>{formData.goalDuration}</div>
+                  <div><p>Goal Color: </p><div style={{ backgroundColor: formData.favoriteColor, width: '20px', height: '20px', display: 'inline-block', marginRight: '5px' }}></div></div>
 
                 </div>
               ))

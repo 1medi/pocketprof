@@ -42,6 +42,12 @@
   display: flex;
 }
 
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
 .alert{
   width: 430px;
   margin: auto;
