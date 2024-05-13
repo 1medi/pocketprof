@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from "./RadioButton.module.css";
 
 
-export default function RadioButtons({ options, onSelect }) {
+export default function RadioButtons({ options, onSelect, style, tabIndex }) {
     const [selectedOption, setSelectedOption] = useState(null);
 
     const handleOptionChange = (event) => {
@@ -14,7 +14,7 @@ export default function RadioButtons({ options, onSelect }) {
     return (
         <div>
             {options.map((option) => (
-                <div key={option.value}>
+                <div key={option.value} className={styles.radioWrapper}>
                     <input
                         type="radio"
                         id={option.value}
@@ -24,10 +24,12 @@ export default function RadioButtons({ options, onSelect }) {
                         onChange={handleOptionChange}
                     />
                     <label
-                        className={styles.label} 
+                        className={styles.label}
                         htmlFor={option.value}
-                        style={{ color: option.color }}
-                    >{option.label}</label>
+                        style={style}
+                        tabIndex={tabIndex}
+                    >
+                        {option.label}</label>
                 </div>
             ))}
         </div>

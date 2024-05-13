@@ -4,10 +4,20 @@ import Link from "next/link";
 import { Montserrat } from "next/font/google";
 import Button3 from "@/Components/Buttons/Button3";
 import Image from "next/image";
+import React, { useState } from 'react';
+
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Landing() {
+
+  const [username, setUsername] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onLogin(username);
+  };
+
   return (
     <>
       <Head>
@@ -27,6 +37,18 @@ export default function Landing() {
               alt="oscar"
               className={styles.oscar}
             />
+            <form onSubmit={handleSubmit}>
+              <label>
+                Username:
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                />
+              </label>
+              <button type="submit">Login</button>
+            </form>
             <div className={styles.titleBox}><h1 className={styles.title}>Welcome to <br />Pocket Prof.</h1></div>
             <div className={styles.descriptionContainer}>
               <h3>Let's dig in your interest together!</h3>

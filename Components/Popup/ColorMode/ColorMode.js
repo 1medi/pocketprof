@@ -8,7 +8,7 @@ const options = [
     { label: 'Dark Mode', value: 'option2', color:'black' },
 ];
 
-export default function ColorMode({ onClose, onSave }) {
+export default function ColorMode({ onClose, onSave, style }) {
 
     const [selectedOption, setSelectedOption] = useState('option1');
 
@@ -25,16 +25,19 @@ export default function ColorMode({ onClose, onSave }) {
 
     return (
         <div className={styles.overlay} tabIndex={0}>
-            <div className={styles.popupContainer}>
-                <div className={styles.popup}>
+            <div className={styles.popupContainer} style={style}>
+                <div className={styles.popup} style={style}>
                     <div>
-                        <h1 className={styles.title}>Color Mode</h1>
-                        <RadioButton options={options} onSelect={handleOptionSelect} />
+                        <h1 className={styles.title} style={style}>Color Mode</h1>
+                        <RadioButton options={options} onSelect={handleOptionSelect} style={style}/>
                     </div>
-                    <div className={styles.buttonInnerContainer}>
-                        <div className={styles.buttonContainer}>
-                            <Button3 className={styles.closeButton} name={"Save"} onClick={handleSubmit} tabIndex={2}>
+                    <div className={styles.buttonInnerContainer} style={style}>
+                        <div className={styles.buttonContainer} style={style}>
+                            <Button3 className={styles.closeButton} name={"Save"} onClick={handleSubmit} style={style} tabIndex={2}>
                                 Save
+                            </Button3>
+                            <Button3 name={"Close"} onClick={onClose} style={style}>
+                                Close
                             </Button3>
                         </div>
                     </div>

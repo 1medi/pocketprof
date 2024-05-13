@@ -1,7 +1,8 @@
 .header {
   max-height: 400px;
   height: 8.8rem;
-  position: relative;
+  position: fixed;
+  width:430px
 }
 
 .background__circle {
@@ -59,5 +60,5 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: var(--background-color);
+  opacity: 1;
 }

@@ -45,6 +45,9 @@
   margin: 0;
 }
 
+.mobileContainer{
+  background-color: var(--background-color);
+}
 
 ol,
 ul {

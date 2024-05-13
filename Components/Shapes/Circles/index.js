@@ -12,10 +12,10 @@ export default function Circles({
         <div className={styles.containerOfCircles}>
           <ArrowLeft />
           <div className={`${styles.background__circle}`} style={style}></div>
-          <div className={`${styles.background__circle2}`} style={style}></div>
+          <div className={`${styles.background__circle2}`}></div>
         </div>
-        <div className={styles.heading__container} style={style}>
-            <h1 style={{ fontSize: fontSize }} className={styles.heading}>
+        <div className={styles.heading__container}>
+            <h1 style={style} className={styles.heading}>
               {title}
             </h1>
           </div>

@@ -1,0 +1,10 @@
+.label {
+    display: absolute; 
+    margin-bottom: 15px; 
+    margin-left:10px;
+    cursor: pointer; 
+}
+
+.radioWrapper {
+    margin-bottom: 10px; 
+}
