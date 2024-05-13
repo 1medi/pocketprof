@@ -4,25 +4,23 @@ import Link from "next/link";
 import { Montserrat } from "next/font/google";
 import Button3 from "@/Components/Buttons/Button3";
 import Image from "next/image";
-import React, { useState } from 'react';
+import React from 'react'; 
+import Login from "@/Components/Login";
+import { useUser } from './UserContext';
 
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Landing() {
 
-  const [username, setUsername] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onLogin(username);
-  };
+  const { username } = useUser(); 
+  const showLogin = !username; 
 
   return (
     <>
       <Head>
         <title>Landing Page</title>
-        <meta name="description" content="Sign in or sign up" />
+        <meta name="description" content="LAnding page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -37,30 +35,27 @@ export default function Landing() {
               alt="oscar"
               className={styles.oscar}
             />
-            <form onSubmit={handleSubmit}>
-              <label>
-                Username:
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
-              </label>
-              <button type="submit">Login</button>
-            </form>
-            <div className={styles.titleBox}><h1 className={styles.title}>Welcome to <br />Pocket Prof.</h1></div>
-            <div className={styles.descriptionContainer}>
-              <h3>Let's dig in your interest together!</h3>
-            </div>
-            <div className={styles.containerContainer}>
-              <Link href='/onboarding/page' className={styles.buttonContainer}>
-                <Button3 name={"Start"} />
-              </Link>
-              <Link href='/NewSubject' className={styles.buttonContainer}>
-                <Button3 name={"Skip"} />
-              </Link>
-            </div>
+            {showLogin ? (
+              <Login />
+            ) : (
+              <>
+                <div className={styles.titleBox}>
+                  <h1 className={styles.title}>Welcome to <br />Pocket Prof.</h1>
+                  <p>{username}!</p>
+                </div>
+                <div className={styles.descriptionContainer}>
+                  <h3>Let's dig into your interests together!</h3>
+                </div>
+                <div className={styles.containerContainer}>
+                  <Link href='/onboarding/page' className={styles.buttonContainer}>
+                    <Button3 name={"Start"} />
+                  </Link>
+                  <Link href='/NewSubject' className={styles.buttonContainer}>
+                    <Button3 name={"Skip"} />
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
         </main>
       </div>

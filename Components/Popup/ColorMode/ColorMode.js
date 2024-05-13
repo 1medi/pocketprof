@@ -29,14 +29,14 @@ export default function ColorMode({ onClose, onSave, style }) {
                 <div className={styles.popup} style={style}>
                     <div>
                         <h1 className={styles.title} style={style}>Color Mode</h1>
-                        <RadioButton options={options} onSelect={handleOptionSelect} style={style}/>
+                        <RadioButton options={options} onSelect={handleOptionSelect} style={style} tabIndex={1}/>
                     </div>
                     <div className={styles.buttonInnerContainer} style={style}>
                         <div className={styles.buttonContainer} style={style}>
                             <Button3 className={styles.closeButton} name={"Save"} onClick={handleSubmit} style={style} tabIndex={2}>
                                 Save
                             </Button3>
-                            <Button3 name={"Close"} onClick={onClose} style={style}>
+                            <Button3 name={"Close"} onClick={onClose} style={style} tabIndex={3}>
                                 Close
                             </Button3>
                         </div>

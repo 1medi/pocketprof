@@ -28,16 +28,18 @@ export default function FontSize({ onClose, onSave, style }) {
         <div className={styles.overlay}>
             <div className={styles.popupContainer} style={style}>
                 <div className={styles.popup} style={style}>
-                    <div>
+                    <div className={styles.titleBox}>
                     <h1 className={styles.title} style={style}>Select Font Size</h1>
+                    </div>
+                    <div>
                     <RadioButton options={fontSizeOptions} onSelect={handleFontSizeSelect} style={style} tabIndex={1}/>
                     </div>
                     <div className={styles.buttonInnerContainer} style={style}>
                         <div className={styles.buttonContainer}>
-                            <Button3 name={"Save"} onClick={handleSubmit} style={style} tabIndex={2} >
+                            <Button3 name={"Save"} onClick={handleSubmit} style={style} tabIndex={2}  className={styles.button}>
                                 Save
                             </Button3>
-                            <Button3 name={"Close"} onClick={onClose} style={style} tabIndex={3}>
+                            <Button3 name={"Close"} onClick={onClose} style={style} tabIndex={3}  className={styles.button}>
                                 Close
                             </Button3>
                         </div>

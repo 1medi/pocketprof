@@ -13,14 +13,14 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 export default function AppSettings() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isFontSizePopupOpen, setIsFontSizePopupOpen] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState('#FBFAFC'); 
+  const [backgroundColor, setBackgroundColor] = useState('#FBFAFC');
   const [textColor, setTextColor] = useState('black');
   const [lineColor, setLineColor] = useState('var(--main-color-lightpurple')
   const [borderColor, setborderColor] = useState('black')
   const [circlesColor, setCirclesColor] = useState('var(--main-color-purple)')
   const [baseFontSize, setBaseFontSize] = useState('1.1em');
   const [subHeadingFontSize, setSubHeadingFontSize] = useState('1.4em');
-  const [headingFontSize, setHeadingFontSize] = useState('2em'); 
+  const [headingFontSize, setHeadingFontSize] = useState('2em');
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -33,13 +33,13 @@ export default function AppSettings() {
   const handleSaveColorMode = (mode) => {
     if (mode === 'option1') {
       setBackgroundColor('#FBFAFC');
-      setTextColor('black'); 
+      setTextColor('black');
       setLineColor('var(--main-color-lightpurple)');
       setborderColor('black');
       setCirclesColor('var(--main-color-purple)');
     } else if (mode === 'option2') {
-      setBackgroundColor('#2b2b2b'); 
-      setTextColor('white'); 
+      setBackgroundColor('#2b2b2b');
+      setTextColor('white');
       setLineColor('var(--secondary-color-lightblue');
       setborderColor('white')
       setCirclesColor('var(--secondary-color-lightblue)');
@@ -49,26 +49,26 @@ export default function AppSettings() {
 
   const handleSaveFontSize = (size) => {
     const fontSizeMap = {
-        small: '0.9em',
-        medium: '1.1em',
-        large: '1.4em'
+      small: '0.9em',
+      medium: '1.1em',
+      large: '1.4em'
     };
     const subHeadingSizeMap = {
-        small: '1.2m', 
-        medium: '1.4em',
-        large: '1.7em'
+      small: '1.2m',
+      medium: '1.4em',
+      large: '1.7em'
     };
     const headingSizeMap = {
-      small: '1.8em', 
+      small: '1.8em',
       medium: '2.2em',
       large: '2.4em'
-  };
-  
+    };
+
     setBaseFontSize(fontSizeMap[size]);
     setSubHeadingFontSize(subHeadingSizeMap[size]);
-    setHeadingFontSize(headingSizeMap[size]);  
+    setHeadingFontSize(headingSizeMap[size]);
     toggleFontSizePopup();
-};
+  };
 
 
 
@@ -80,118 +80,118 @@ export default function AppSettings() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div 
-      className={styles.mobileContainer}
-      style={{ backgroundColor: backgroundColor, color: textColor }}
+      <div
+        className={styles.mobileContainer}
+        style={{ backgroundColor: backgroundColor, color: textColor }}
       >
-        <Circles 
-        title="App Settings" 
-        style={{ backgroundColor: circlesColor, color: backgroundColor, fontSize: headingFontSize }}/>
-        <main 
-        className={`${styles.main} ${montserrat.className}`}
-        style={{ backgroundColor: backgroundColor , color: textColor }}
+        <Circles
+          title="App Settings"
+          style={{ backgroundColor: circlesColor, color: backgroundColor, fontSize: headingFontSize }} />
+        <main
+          className={`${styles.main} ${montserrat.className}`}
+          style={{ backgroundColor: backgroundColor, color: textColor }}
         >
           <div className={styles.outerContainer}>
             <div className={styles.optionsOuter}>
-              <h4 
-              className={styles.subHeading}
-              style={{ fontSize: subHeadingFontSize }}>Accessibility</h4>
+              <h4
+                className={styles.subHeading}
+                style={{ fontSize: subHeadingFontSize }}>Accessibility</h4>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Color Mode</p>
-                <ArrowRight 
-                onClick={togglePopup}
-                className={styles.arrowRight}
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
-                {isPopupOpen && 
-                <ColorMode 
-                onClose={togglePopup} 
-                onSave={handleSaveColorMode}
-                style={{
-                  backgroundColor: backgroundColor,
-                  color: textColor,
-                  fontSize: baseFontSize
-              }}/>}
-              </div>
-              <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Font Options</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Color Mode</p>
                 <ArrowRight
-                 onClick={toggleFontSizePopup}
-                 className={styles.arrowRight}
-                 style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
-                 {isFontSizePopupOpen && 
-                 <FontSize 
-                 onClose={toggleFontSizePopup} 
-                 onSave={handleSaveFontSize} 
-                 style={{
-                  backgroundColor: backgroundColor,
-                  color: textColor,
-                  fontSize: baseFontSize
-              }}/>}
+                  onClick={togglePopup}
+                  className={styles.arrowRight}
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                {isPopupOpen &&
+                  <ColorMode
+                    onClose={togglePopup}
+                    onSave={handleSaveColorMode}
+                    style={{
+                      backgroundColor: backgroundColor,
+                      color: textColor,
+                      fontSize: baseFontSize
+                    }} />}
               </div>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Color Blindness</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Font Options</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} /> 
+                  onClick={toggleFontSizePopup}
+                  className={styles.arrowRight}
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                {isFontSizePopupOpen &&
+                  <FontSize
+                    onClose={toggleFontSizePopup}
+                    onSave={handleSaveFontSize}
+                    style={{
+                      backgroundColor: backgroundColor,
+                      color: textColor,
+                      fontSize: baseFontSize
+                    }} />}
               </div>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Language</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Color Blindness</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}/>
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
               </div>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Narrator / Voice</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Language</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
               </div>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Privacy</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Narrator / Voice</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
               </div>
-              <div 
-              className={styles.horizontal}
-              style={{borderBottom: `1px solid ${lineColor}`}}>
+              <div className={styles.optionsContainer}>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Privacy</p>
+                <ArrowRight
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+              </div>
+              <div
+                className={styles.horizontal}
+                style={{ borderBottom: `1px solid ${lineColor}` }}>
               </div>
             </div>
             <div className={styles.optionsOuter}>
               <h4 className={styles.subHeading}
-              style={{ fontSize: subHeadingFontSize }}>General</h4>
+                style={{ fontSize: subHeadingFontSize }}>General</h4>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Get Help</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Get Help</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
               </div>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Rate The App</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Rate The App</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
               </div>
               <div className={styles.optionsContainer}>
-                <p 
-                className={styles.description}
-                style={{fontSize: baseFontSize }}>Log Out</p>
+                <p
+                  className={styles.description}
+                  style={{ fontSize: baseFontSize }}>Log Out</p>
                 <ArrowRight
-                style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}/>
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
               </div>
             </div>
-            <NavBar 
-            style={{ backgroundColor: lineColor }}/>
+            <NavBar
+              style={{ backgroundColor: lineColor }} />
           </div>
         </main>
       </div>
