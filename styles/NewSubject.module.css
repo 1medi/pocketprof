@@ -1,6 +1,3 @@
-/**
-BACKGROUND CIRCLES
-**/
 
 .main {
   overflow-x: hidden;
@@ -9,7 +6,7 @@ BACKGROUND CIRCLES
   flex-direction: column;
   align-items: center;
   padding-top: 5em;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 .mobileContainer{
   width: 430px; 

@@ -3,6 +3,7 @@ import styles from "./HomePageCircles.module.css"
 export default function HomePageCircles() {
     return (
         <>
+        <header className={styles.header}>
           <div className={styles.containerOfCircles}>
             <div className={styles.background__circle}></div>
             <div className={styles.background__circle2}></div>
@@ -12,6 +13,7 @@ export default function HomePageCircles() {
             <div className={styles.background__circle6}></div>
             <div className={styles.background__circle7}></div>
         </div>
+        </header>
         </>
       )
 }
