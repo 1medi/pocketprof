@@ -8,17 +8,15 @@ import Oscar from "@/Components/Oscar";
 import Link from "next/link";
 import ConfettiButton from "@/Components/Buttons/ConfettiButton";
 import Head from "next/head";
+import GoalTracking from "@/pages/SuccessDashboard/GoalTracking"
+
 export default function GoalEditor() {
   const [isOpen, setIsOpen] = useState(false)
   const [data, setData] = useState([]);
 
+
   Modal.setAppElement("body");
-  const [formData, setFormData] = useState({
-    goalName: "",
-    goalDescription: "",
-    goalDuration: "",
-    favoriteColor: "#ff0000", // default value for the color input
-  });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,6 +37,8 @@ export default function GoalEditor() {
     setIsOpen(false);
     setData([]); // Clear data array when modal is closed
   };
+
+  
 
   return (
     <>
@@ -100,8 +100,8 @@ export default function GoalEditor() {
             <h1>CONGRANTATION</h1><br /><p>You are one step closer to achieving ur DREAM</p>
             <div className={styles.buttonContainer}>
               <Button3
-              onClick={() => handleCloseModal()}
               name={"Close"}
+              onClick={handleCloseModal()}
               />
               <ConfettiButton
                 name={"Celebrate"}

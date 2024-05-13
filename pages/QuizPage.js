@@ -16,8 +16,6 @@ export default function QuizPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
         <Circles title="Quiz" />
         <main className={`${styles.main}`}>
           <div className={styles.container}>

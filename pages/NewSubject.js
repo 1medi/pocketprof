@@ -18,8 +18,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-      <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
         <HomePageCircles/>
         <main className={styles.main}>
           <div className={styles.heading__section}>

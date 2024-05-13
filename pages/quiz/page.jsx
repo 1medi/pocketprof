@@ -81,8 +81,6 @@ export default function Page() {
   return (
     <>
     <div className={styles.mobileContainer}>
-    <div className={styles.leftDiv}></div>
-      <div className={styles.rightDiv}></div>
     <Circles title="Quiz"/>
     <main className={`${styles.container} ${montserrat.className}`}>
     <div className={styles.oscarBox}>

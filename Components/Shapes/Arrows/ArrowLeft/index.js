@@ -1,7 +1,9 @@
 import styles from "./ArrowLeft.module.css"
 import { useRouter } from 'next/router'; 
 
-export default function ArrowLeft() {
+export default function ArrowLeft({
+  href
+}) {
   const router = useRouter(); 
 
   return (

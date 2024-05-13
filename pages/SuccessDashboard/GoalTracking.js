@@ -20,9 +20,17 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Home() {
 const [data,setData] = useState();
-  const parentToChild = () => {
-    setData("Play the guitar at least once a week")
-  }
+const [goalData, setGoalData] = useState({
+  goalName: "Play the guitar once a day for a week!",
+  goalDescription: "",
+  goalDuration: "",
+  favoriteColor: ""
+});
+
+
+const handleGoalEdit = (editedGoalData) => {
+  setGoalData(editedGoalData);
+};
 
   return (
     <>
@@ -53,7 +61,7 @@ const [data,setData] = useState();
             </div>
           <p className={styles.goalText}>Play the guitar once a day for a week!</p>
           <Link
-           href="/SuccessDashboard/GoalEditor"
+           href={{ pathname: "/SuccessDashboard/GoalEditor", query: { goalData: JSON.stringify(goalData) } }}
           >
           <Button3
           name="See More"
