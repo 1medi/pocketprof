@@ -7,6 +7,7 @@ import Modal from "react-modal";
 import Oscar from "@/Components/Oscar";
 import Link from "next/link";
 import ConfettiButton from "@/Components/Buttons/ConfettiButton";
+import Head from "next/head";
 export default function GoalEditor() {
   const [isOpen, setIsOpen] = useState(false)
   const [data, setData] = useState([]);
@@ -41,6 +42,12 @@ export default function GoalEditor() {
 
   return (
     <>
+    <Head>
+    <title>Goal Editor</title>
+        <meta name="description" content="You edit your created goals here." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+    </Head>
       <div className={styles.mobileContainer}>
       <div className={styles.leftDiv}></div>
       <div className={styles.rightDiv}></div>
