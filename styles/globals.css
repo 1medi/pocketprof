@@ -8,6 +8,7 @@
   --secondary-color-lightblue: #CCE3FB;
   --offest-of-whites: #FBFAFC;
   --background-color: var(--offest-of-whites);
+  --modal-bkg: rgba(0, 0, 0, 0.5);
 
   --font-header: 34pt;
   --font-section-header: 28pt;
