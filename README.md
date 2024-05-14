@@ -20,4 +20,5 @@
 - "react": "^18"
 - "react-chartjs-2": "^5.2.0"
 - "react-dom": "^18"
+- "react-modal": "^3.16.1"
 - "react-query": "^3.39.3"
