@@ -42,13 +42,17 @@ export default function AskOscar() {
       <div className={styles.promptContainer}>
         <form className={styles.formContainer} onSubmit={handleSubmit} >
           <input
+          className={styles.input}
             onChange={(e) => setMessage(e.target.value)}
             type="text"
             placeholder="Got a Question?" />
-          <Button3
+            <div className={styles.buttonContainer}>
+            <Button3
             type="submit"
             name={"Send"}
           />
+            </div>
+
         </form>
         <section className={styles.gptContainer}>
           {messages.map((message, index) => (

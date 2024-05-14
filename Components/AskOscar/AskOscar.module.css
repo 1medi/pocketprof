@@ -1,11 +1,12 @@
 .response{
-  text-align: left;
+  text-align: right;
   font-weight: bold;
 }
 
 .message{
   font-style: italic;
   padding: 10px;
+  font-size: var(--font-body) ;
 }
 
 .gptContainer{
@@ -24,4 +25,14 @@
 .formContainer{
   display: flex;
   flex-direction: column;
+}
+
+.input{
+  width: 300px;
+}
+
+.buttonContainer{
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
