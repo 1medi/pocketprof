@@ -2,10 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/SuccessDashboard/SuccessDashboard.module.css";
 import { Montserrat } from "next/font/google";
-import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
 import DoughnutChart from "@/Components/DoughnutChart";
-import Oscar from "@/Components/Oscar";
 import Image1 from "@/public/img/nature-4964153_1920.jpg";
 import Link from "next/link";
 import Circles from "@/Components/Shapes/Circles";
@@ -14,7 +12,7 @@ import { subjectsCards } from "@/data/card_data";
 
 
 const montserrat = Montserrat({ subsets: ['latin'] });
-export default function Home() {
+export default function SuccessDashboard() {
   return (
     <>
       <Head>
