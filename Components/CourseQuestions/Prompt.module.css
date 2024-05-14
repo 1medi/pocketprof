@@ -11,7 +11,7 @@
   width: 25rem;
 }
 
-.promptContainer{
+.promptContainer {
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -22,26 +22,26 @@
   gap: 2rem;
 }
 
-.prompt{
-  padding:10px;
-  margin:10px;
+.prompt {
+  padding: 10px;
+  margin: 10px;
 }
 
-.container{
+.container {
   display: flex;
   position: inherit;
   justify-content: center;
 }
 
-.response{
-padding:3em;
-background-color: purple;
-margin:10px;
-color:white;
-border-radius: 20px;
+.response {
+  padding: 3em;
+  background-color: purple;
+  margin: 10px;
+  color: white;
+  border-radius: 20px;
 }
 
-.responseContainer{
+.responseContainer {
   animation: 1s ease-out 0s 1 slideInFromLeft;
   margin: 2em;
   width: 300px;
@@ -49,32 +49,32 @@ border-radius: 20px;
   display: flex;
 }
 
-.gptContainer{
+.gptContainer {
   border: 1px solid black;
   width: 100%;
 }
 
-.overlay{
+.overlay {
   display: flex;
   flex-direction: row;
 }
 
-.overlay{
+.overlay {
   background-color: var(--lightpurple-background);
   z-index: 999;
   display: flex;
   width: 100vw;
   height: 100vh;
-  position:relative;
+  position: relative;
   display: flex;
 }
 
-.textContainer{
+.textContainer {
   text-align: center;
 }
 
 .buttonOptions {
-  padding:5em;
+  padding: 5em;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -85,6 +85,7 @@ border-radius: 20px;
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }

@@ -1,19 +1,19 @@
-.response{
+.response {
   text-align: right;
   font-weight: bold;
 }
 
-.message{
+.message {
   font-style: italic;
   padding: 10px;
-  font-size: var(--font-body) ;
+  font-size: var(--font-body);
 }
 
-.gptContainer{
+.gptContainer {
   width: 100%;
 }
 
-.animationContainer{
+.animationContainer {
   display: flex;
   position: relative;
   margin: auto;
@@ -22,16 +22,16 @@
   align-content: center;
 }
 
-.formContainer{
+.formContainer {
   display: flex;
   flex-direction: column;
 }
 
-.input{
+.input {
   width: 300px;
 }
 
-.buttonContainer{
+.buttonContainer {
   display: flex;
   position: relative;
   justify-content: center;

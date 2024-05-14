@@ -10,33 +10,35 @@
   min-height: 60vh;
 }
 
-.mobileContainer{
-  width: 430px; 
-  margin: 0 auto; 
+.mobileContainer {
+  width: 430px;
+  margin: 0 auto;
 }
 
-.cardOuterContainer{
-border: 1px solid var(--main-color-purple);
-border-radius: 10px;
-width: 100%;
-align-items: center;
-justify-content: center;
-display: flex;
+.cardOuterContainer {
+  border: 1px solid var(--main-color-purple);
+  border-radius: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+
 }
 
-.innerContainer{
+.innerContainer {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.textContainer{
+.textContainer {
   flex-direction: column;
   display: flex;
   padding-left: 10px;
 }
 
-.percent{
+.percent {
   position: relative;
   display: flex;
   padding: 0;
@@ -44,10 +46,10 @@ display: flex;
   top: 85px;
   z-index: -999;
   font-weight: bold;
-  font-size: var(--font-body) ;
+  font-size: var(--font-body);
 }
 
-.chartContainer{
+.chartContainer {
   text-align: center;
   align-items: center;
   display: flex;
@@ -55,23 +57,24 @@ display: flex;
   width: 80%;
 }
 
-.textContainer{
+.textContainer {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.description{
+.description {
   width: 80%;
 }
 
 
-.descriptionContainer{
+.descriptionContainer {
   display: flex;
   position: relative;
   justify-content: space-evenly;
 }
-.imageContainer{
+
+.imageContainer {
   margin-left: auto;
   margin-right: auto;
   padding-top: 40px;
@@ -85,22 +88,25 @@ display: flex;
   border: 3px solid var(--main-color-lightpurple)
 }
 
-.tracked{
+.tracked {
   font-size: var(--font-secondary);
 }
-.goal{
-  color:var(--main-color-purple);
+
+.goal {
+  color: var(--main-color-purple);
   font-size: var(--font-body);
 }
-.nameContainer{
+
+.nameContainer {
   margin: auto;
   padding-left: 15px;
 }
-.chart{
+
+.chart {
   width: 140px;
 }
 
-.leftDiv{
+.leftDiv {
   width: 745px;
   height: 100vh;
   background-color: white;
@@ -109,7 +115,7 @@ display: flex;
   right: 950px;
 }
 
-.rightDiv{
+.rightDiv {
   width: 745px;
   height: 1000px;
   background-color: white;

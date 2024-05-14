@@ -20,23 +20,23 @@ export default function Chat() {
           <main>
             <div className={styles.textContainer}>
               <h2 className={styles.header}>What is your current skill level with Guitar?</h2>
-              <p className={styles.subHeader}>Help Oscar help you!</p>
+              <p className={styles.subHeader}>Let Oscar help you!</p>
             </div>
 
             <div className={styles.promptContainer}>
-              <Link 
-              href={"/ShowResources"}>
-              <Button3 className={styles.prompt} name={"Basic"}/>
+              <Link
+                href={"/ShowResources"}>
+                <Button3 className={styles.prompt} name={"Basic"} />
               </Link>
               <Link
-              href={"/ShowResources"}
+                href={"/ShowResources"}
               >
-              <Button3 className={styles.prompt} name={"Intermediate"}/>              
+                <Button3 className={styles.prompt} name={"Average"} />
               </Link>
               <Link
-              href={"/ShowResources"}
+                href={"/ShowResources"}
               >
-              <Button3 className={styles.prompt} name={"Expert"}/>           
+                <Button3 className={styles.prompt} name={"Expert"} />
               </Link>
             </div>
           </main>
