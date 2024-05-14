@@ -18,22 +18,23 @@ export default function Ask() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.mobileContainer}>
-      <Circles
-        title="Ask"
+      <div className={styles.mobileContainer} tabIndex={0}>
+        <Circles
+          title="Ask"
+          tabIndex={1}
         />
-      <main className={styles.main}>
-      <div className={styles.questionContainer}>
-        <QuestionMark
-        tip={"Click the level that best describes your skill level in this subject"}
-        />
-        </div>
-      <Oscar/>
-      <CourseQuestions/>
-      <NavBar/>
-      </main> 
+        <main className={styles.main} tabIndex={2}>
+          <div className={styles.questionContainer} tabIndex={3}>
+            <QuestionMark
+              tip={"Click the level that best describes your skill level in this subject"}
+              tabIndex={4}
+            />
+          </div>
+          <Oscar tabIndex={5}/>
+          <CourseQuestions tabIndex={6}/>
+          <NavBar tabIndex={7}/>
+        </main> 
       </div>
-
     </>
   );
 }

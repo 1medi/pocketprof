@@ -16,11 +16,10 @@ export default function AppSettings() {
   const [backgroundColor, setBackgroundColor] = useState('#FBFAFC');
   const [textColor, setTextColor] = useState('black');
   const [lineColor, setLineColor] = useState('var(--main-color-lightpurple');
-  const [borderColor, setborderColor] = useState('black');
+  const [borderColor, setBorderColor] = useState('black');
   const [circlesColor, setCirclesColor] = useState('var(--main-color-purple)');
   const [baseFontSize, setBaseFontSize] = useState('1.1em');
   const [subHeadingFontSize, setSubHeadingFontSize] = useState('1.4em');
-  const [headingFontSize, setHeadingFontSize] = useState('2em');
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -35,13 +34,13 @@ export default function AppSettings() {
       setBackgroundColor('#FBFAFC');
       setTextColor('black');
       setLineColor('var(--main-color-lightpurple)');
-      setborderColor('black');
+      setBorderColor('black');
       setCirclesColor('var(--main-color-purple)');
     } else if (mode === 'option2') {
       setBackgroundColor('#2b2b2b');
       setTextColor('white');
-      setLineColor('var(--secondary-color-lightblue');
-      setborderColor('white');
+      setLineColor('var(--secondary-color-lightblue)');
+      setBorderColor('white');
       setCirclesColor('var(--secondary-color-lightblue)');
     }
     togglePopup();
@@ -58,15 +57,9 @@ export default function AppSettings() {
       medium: '1.4em',
       large: '1.7em'
     };
-    const headingSizeMap = {
-      small: '1.8em',
-      medium: '2.2em',
-      large: '2.4em'
-    };
 
     setBaseFontSize(fontSizeMap[size]);
     setSubHeadingFontSize(subHeadingSizeMap[size]);
-    setHeadingFontSize(headingSizeMap[size]);
     toggleFontSizePopup();
   };
 
@@ -81,127 +74,170 @@ export default function AppSettings() {
       <div
         className={styles.mobileContainer}
         style={{ backgroundColor: backgroundColor, color: textColor }}
+        tabIndex={0}
       >
         <Circles
           title="App Settings"
-          style={{ backgroundColor: circlesColor, color: backgroundColor, fontSize: headingFontSize }} />
+          style={{ backgroundColor: circlesColor, color: backgroundColor, fontSize: subHeadingFontSize }}
+          tabIndex={1}
+        />
         <main
           className={`${styles.main} ${montserrat.className}`}
           style={{ backgroundColor: backgroundColor, color: textColor }}
+          tabIndex={2}
         >
           <div className={styles.outerContainer}>
             <div className={styles.optionsOuter}>
               <h4
                 className={styles.subHeading}
-                style={{ fontSize: subHeadingFontSize }}>Accessibility</h4>
+                style={{ fontSize: subHeadingFontSize }}
+                tabIndex={3}
+              >
+                Accessibility
+              </h4>
               <div className={styles.optionsContainer}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Color Mode</p>
+                  style={{ fontSize: baseFontSize }}
+                  tabIndex={4}
+                >
+                  Color Mode
+                </p>
                 <ArrowRight
                   onClick={togglePopup}
-                  tabIndex={0}
+                  tabIndex={5}
                   className={styles.arrowRight}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
                 {isPopupOpen &&
                   <ColorMode
                     onClose={togglePopup}
                     onSave={handleSaveColorMode}
-                    style={{
-                      backgroundColor: backgroundColor,
-                      color: textColor,
-                      fontSize: baseFontSize
-                    }} />}
+                    style={{ backgroundColor: backgroundColor, color: textColor, fontSize: baseFontSize }}
+                  />
+                }
               </div>
               <div className={styles.optionsContainer}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Font Options</p>
+                  style={{ fontSize: baseFontSize }}
+                  tabIndex={6}
+                >
+                  Font Options
+                </p>
                 <ArrowRight
                   onClick={toggleFontSizePopup}
-                  tabIndex={1}
+                  tabIndex={7}
                   className={styles.arrowRight}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
                 {isFontSizePopupOpen &&
                   <FontSize
                     onClose={toggleFontSizePopup}
                     onSave={handleSaveFontSize}
-                    style={{
-                      backgroundColor: backgroundColor,
-                      color: textColor,
-                      fontSize: baseFontSize
-                    }} />}
+                    style={{ backgroundColor: backgroundColor, color: textColor, fontSize: baseFontSize }}
+                  />
+                }
               </div>
-              <div className={styles.optionsContainer}>
+              <div className={styles.optionsContainer} tabIndex={8}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Color Blindness</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Color Blindness
+                </p>
                 <ArrowRight
-                  tabIndex={2}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
-              <div className={styles.optionsContainer}>
+              <div className={styles.optionsContainer} tabIndex={9}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Language</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Language
+                </p>
                 <ArrowRight
-                  tabIndex={3}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
-              <div className={styles.optionsContainer}>
+              <div className={styles.optionsContainer} tabIndex={10}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Narrator / Voice</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Narrator / Voice
+                </p>
                 <ArrowRight
-                  tabIndex={4}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
-              <div className={styles.optionsContainer}>
+              <div className={styles.optionsContainer} tabIndex={11}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Privacy</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Privacy
+                </p>
                 <ArrowRight
-                  tabIndex={5}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
               <div
                 className={styles.horizontal}
-                style={{ borderBottom: `1px solid ${lineColor}` }}>
+                style={{ borderBottom: `1px solid ${lineColor}` }}
+              >
               </div>
             </div>
             <div className={styles.optionsOuter}>
-              <h4 className={styles.subHeading}
-                style={{ fontSize: subHeadingFontSize }}>General</h4>
-              <div className={styles.optionsContainer}>
+              <h4
+                className={styles.subHeading}
+                style={{ fontSize: subHeadingFontSize }}
+                tabIndex={12}
+              >
+                General
+              </h4>
+              <div className={styles.optionsContainer} tabIndex={13}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Get Help</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Get Help
+                </p>
                 <ArrowRight
-                  tabIndex={6}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
-              <div className={styles.optionsContainer}>
+              <div className={styles.optionsContainer} tabIndex={14}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Rate The App</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Rate The App
+                </p>
                 <ArrowRight
-                  tabIndex={7}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
-              <div className={styles.optionsContainer}>
+              <div className={styles.optionsContainer} tabIndex={15}>
                 <p
                   className={styles.description}
-                  style={{ fontSize: baseFontSize }}>Log Out</p>
+                  style={{ fontSize: baseFontSize }}
+                >
+                  Log Out
+                </p>
                 <ArrowRight
-                  tabIndex={8}
-                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }} />
+                  style={{ borderRight: `3px solid ${borderColor}`, borderBottom: `3px solid ${borderColor}` }}
+                />
               </div>
             </div>
             <NavBar
-              style={{ backgroundColor: lineColor }} />
+              style={{ backgroundColor: lineColor }}
+              tabIndex={16}
+            />
           </div>
         </main>
       </div>
     </>
   );
-};
+}

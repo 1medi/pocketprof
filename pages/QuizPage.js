@@ -15,10 +15,10 @@ export default function QuizPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.mobileContainer}>
-        <Circles title="Quiz" />
-        <main className={`${styles.main}`}>
-          <div className={styles.container}>
+      <div className={styles.mobileContainer} tabIndex={0}>
+        <Circles title="Quiz" tabIndex={1} />
+        <main className={`${styles.main}`} tabIndex={2}>
+          <div className={styles.container} tabIndex={3}>
             <Image
               priority
               src="/img/oscar/oscar-main-smiling.svg"
@@ -26,30 +26,30 @@ export default function QuizPage() {
               height="200"
               alt="oscar"
               className={styles.oscar}
+              tabIndex={4}
             />
-            <div className={styles.descriptionContainer}>
+            <div className={styles.descriptionContainer} tabIndex={5}>
               <h3 className={styles.title}>ARE YOU READY TO WIN?</h3>
             </div>
-            <Link href='/quiz/page' className={styles.buttonContainer}>
-              <Button3 name={"Press To Start"} />
+            <Link href='/quiz/page' className={styles.buttonContainer} tabIndex={6}>
+              <Button3 name={"Press To Start"} tabIndex={7} />
             </Link>
           </div>
-          <div className={styles.divider}>
+          <div className={styles.divider} tabIndex={8}>
           </div>
-          <div className={styles.onboardingContainer}>
-            <p className={styles.onboardingLink}>Haven't found your interest yet? 
+          <div className={styles.onboardingContainer} tabIndex={9}>
+            <p className={styles.onboardingLink} tabIndex={10}>Haven't found your interest yet? 
               <Link href={'/'}>
-              <h3>Find out here!</h3>
+              <h3 tabIndex={11}>Find out here!</h3>
               </Link> 
             </p>
           </div>
 
-          <div className={styles.bottom}></div>
+          <div className={styles.bottom} tabIndex={12}></div>
 
         </main>
-        <NavBar />
+        <NavBar tabIndex={13} />
       </div>
-
     </>
   );
 }

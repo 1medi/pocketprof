@@ -16,51 +16,48 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.mobileContainer}>
-        <HomePageCircles />
-        <main className={styles.main}>
-          <div className={styles.heading__section}>
-          <div className={styles.banner__content}>
-            <div className={styles.heading__container}>
-              <h1 className={styles.heading}>
+      <div className={styles.mobileContainer} tabIndex={0}>
+        <HomePageCircles tabIndex={1} />
+        <main className={styles.main} tabIndex={2}>
+          <div className={styles.heading__section} tabIndex={3}>
+            <div className={styles.banner__content} tabIndex={4}>
+              <div className={styles.heading__container}>
+                <h1 className={styles.heading} tabIndex={5}>
                   Explore Your Potential
                 </h1>
               </div>
               <div className={styles.heading__container2}>
-                <p className={styles.heading2}>
+                <p className={styles.heading2} tabIndex={6}>
                   One step at a time
                 </p>
               </div>
-              <div className={styles.description__container}>
-                <p className={styles.description}>
+              <div className={styles.description__container} tabIndex={7}>
+                <p className={styles.description} tabIndex={8}>
                   Learn the skills your desire, at your own pace
                 </p>
               </div>
-              <div className={styles.divider}>
-              </div>
-              <div className={styles.subheading__container}>
-                <p className={styles.subheading}>
+              <div className={styles.divider} tabIndex={9}></div>
+              <div className={styles.subheading__container} tabIndex={10}>
+                <p className={styles.subheading} tabIndex={11}>
                   Explore popular categories and begin your next learning journey
                 </p>
               </div>
-              <div className={styles.divider}>
-              </div>
+              <div className={styles.divider} tabIndex={12}></div>
             </div>
-            <div className={styles.category__button__container}>
+            <div className={styles.category__button__container} tabIndex={13}>
               <Link href={'/ArtsCreative'}>
-                <CategoryButton title="Arts / Creative" backgroundImage="/img/arts.jpg" />
+                <CategoryButton title="Arts / Creative" backgroundImage="/img/arts.jpg" tabIndex={14} />
               </Link>
-              <CategoryButton title="Technical" backgroundImage="/img/technicalz.jpg" />
-              <CategoryButton title="Fitness / Lifestyle" backgroundImage="/img/gym.jpg" />
+              <CategoryButton title="Technical" backgroundImage="/img/technicalz.jpg" tabIndex={15} />
+              <CategoryButton title="Fitness / Lifestyle" backgroundImage="/img/gym.jpg" tabIndex={16} />
             </div>
-            <div className={styles.FloatingOscar}>
-            <FloatingOscar/>
+            <div className={styles.FloatingOscar} tabIndex={17}>
+              <FloatingOscar />
             </div>
           </div>
-          <NavBar />
+          <NavBar tabIndex={18} />
         </main>
       </div>
-
     </>
   )
 }

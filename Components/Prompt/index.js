@@ -77,7 +77,7 @@ export default function Chat() {
 
       <div className={styles.promptContainer}>
         <div className={styles.resourceContainer}>
-          <Button3 name={"Get Resources"} className={styles.prompt} onClick={handleFirstButtonClick} />
+          <Button3 name={"Fetch"} className={styles.prompt} onClick={handleFirstButtonClick} />
         </div>
 
         <section className={styles.gptContainer}>
@@ -104,7 +104,7 @@ export default function Chat() {
           <h1>Oscar is searching for resources!</h1>
           <div className={styles.buttonContainer}>
             <Button3
-              name={"Reveal Resources"}
+              name={"Reveal"}
               className={styles.button}
               onClick={() => setIsOpen(false)}
               ariaHideApp={false} />
@@ -119,7 +119,7 @@ export default function Chat() {
               </li>
               <li className={styles.button_container}>
                 <Link href="/AddAGoal">
-                  <Button3 name={"Generate Goals"} />
+                  <Button3 name={"See Goals"} />
                 </Link>
               </li>
             </ul>

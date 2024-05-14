@@ -20,7 +20,7 @@
 }
 
 .chartContainer{
-  padding-top:100px;
+  padding-top:25px;
 }
 
 .goalContainer{
@@ -33,11 +33,10 @@
   width: 100px;
 }
 
-.jumboContainer{
-}
 
 .goalText{
   margin: auto;
+  padding-left: 10px;
 }
 
 .buttonContainer{

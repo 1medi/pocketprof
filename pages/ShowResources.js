@@ -19,21 +19,22 @@ export default function ShowResources() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.mobileContainer}>
-      <Circles title="Show Resources"/>
-      <main className={`${styles.main} ${montserrat.className}`}>
-      <div className={styles.questionContainer}>
-        <QuestionMark
-        tip={"Clicking on get resources will display results based on your selected skill level"}
-        />
-        </div>
-      <Oscar/>
-      <div className={styles.promptContainer}>
-      <Prompt/>
-      </div>
-      <div className={styles.padding}></div>
-      <NavBar/>
-      </main> 
+      <div className={styles.mobileContainer} tabIndex={0}>
+        <Circles title="Show Resources" tabIndex={1}/>
+        <main className={`${styles.main} ${montserrat.className}`} tabIndex={2}>
+          <div className={styles.questionContainer} tabIndex={3}>
+            <QuestionMark
+              tip={"Clicking on get resources will display results based on your selected skill level"}
+              tabIndex={4}
+            />
+          </div>
+          <Oscar tabIndex={5}/>
+          <div className={styles.promptContainer} tabIndex={6}>
+            <Prompt tabIndex={7}/>
+          </div>
+          <div className={styles.padding} tabIndex={8}></div>
+          <NavBar tabIndex={9}/>
+        </main> 
       </div>
     </>
   );
