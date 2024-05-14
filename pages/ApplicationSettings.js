@@ -78,7 +78,7 @@ export default function AppSettings() {
       >
         <Circles
           title="App Settings"
-          style={{ backgroundColor: circlesColor, color: backgroundColor, fontSize: subHeadingFontSize }}
+          style={{ backgroundColor: circlesColor, color: backgroundColor}}
           tabIndex={1}
         />
         <main
