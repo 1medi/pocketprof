@@ -7,7 +7,6 @@ import Modal from "react-modal";
 import Oscar from "../Oscar";
 import Button3 from "../Buttons/Button3";
 
-// Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/chat", { prompt });
   console.log('sendChat response', data);
@@ -29,8 +28,8 @@ export default function Chat() {
         <div>
           <main>
             <div className={styles.textContainer}>
-              <h2 className={styles.header}>What is Your Current Skill Level of Guitar?</h2>
-              <p className={styles.subHeader}>HELP US HELP YOU</p>
+              <h2 className={styles.header}>What is your current skill level with Guitar?</h2>
+              <p className={styles.subHeader}>Help Oscar help you!</p>
             </div>
 
             <div className={styles.promptContainer}>

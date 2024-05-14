@@ -1,4 +1,4 @@
-.card__container {
+.card__container__outer {
     position: relative;
     width: 10rem; 
     height: 10rem; 
@@ -8,7 +8,21 @@
     padding: 0;
     overflow: hidden;
     border-radius: 1rem;
-    border: 1px solid var(--main-color-purple)
+    border: 1px solid var(--main-color-purple);
+    font-family: var(--headings);
+}
+
+.card__container {
+    position: relative;
+    width: 100%; 
+    height: 10rem; 
+    background-size: cover;
+    background-position: center;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    font-family: var(--headings);
 }
 
 .card__image {

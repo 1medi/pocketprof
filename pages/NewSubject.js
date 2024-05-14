@@ -54,7 +54,7 @@ export default function Home() {
               <CategoryButton title="Fitness / Lifestyle" backgroundImage="/img/gym.jpg" />
             </div>
             <div className={styles.FloatingOscar}>
-            <FloatingOscar />
+            <FloatingOscar/>
             </div>
           </div>
           <NavBar />

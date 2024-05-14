@@ -6,16 +6,16 @@ import axios from 'axios';
 import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 
-export default function artArticles() {
+export default function healthArticles() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);  // Initially set to true to show loading state immediately
+  const [isLoading, setIsLoading] = useState(true);  
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const grabNews = async () => {
       setError(null);
       try {
-        var type = 'health_care';
+        var type = 'Learn-about-self-health-care';
         var apiKey = process.env.NEXT_PUBLIC_API_KEY;
         const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
         const response = await axios.get(url);
