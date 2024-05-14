@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./article.module.css";
 import axios from 'axios';
-import Header from '@/Components/Header';
+import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 import { useRouter } from 'next/router';
 import Painting from "@/public/img/articlePhotos/painting.jpg"
@@ -70,7 +70,7 @@ export default function artArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Header name={"Articles"} />
+        <Circles title={"Articles"} />
         <main className={`${styles.main}`}>
           {isLoading && <p>Loading...</p>}
           {error && <p>{error}</p>}
