@@ -1,6 +1,7 @@
 :root {
   align-content: center;
   --main-color-purple: #53239B;
+  --main-color-purple-transparent: #53239b9c;
   --main-color-lightpurple: #CCBFED;
   --main-color-lightpurple-transparent: rgba(204, 191, 237, 0.85);
   --secondary-color-blue: #9AB7F9;

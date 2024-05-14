@@ -7,7 +7,6 @@ import Modal from "react-modal";
 import Oscar from "../Oscar";
 import Button3 from "../Buttons/Button3";
 
-// Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/chat", { prompt });
   console.log('sendChat response', data);

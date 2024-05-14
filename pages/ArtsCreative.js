@@ -27,7 +27,7 @@ export default function ArtsCreative() {
         <Circles title="ARTS / CREATIVE" />
         <main className={`${styles.main} ${montserrat.className}`}>
           <div className={styles.questionContainer}>
-            <QuestionMark tabindex={1} tip={"CLICK A COURSE PLEASE"} />
+            <QuestionMark tabindex={1} tip={"Select a subject to receive learning resources from Oscar!"} />
           </div>
           <div className={styles.cards__section}>
             <div className={styles.card__section__container}>

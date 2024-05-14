@@ -18,7 +18,7 @@
 }
 
 .tooltip_text{
-  background-color: var( --main-color-purple);
+  background-color: var( --main-color-purple-transparent);
   border-radius: 3px;
   padding: 4px;
   width: 200px;
