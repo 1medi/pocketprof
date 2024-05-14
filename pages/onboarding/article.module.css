@@ -117,5 +117,16 @@
 .category{
     font-family: var(--body-text);
     font-size: var(--font-secondary);
+    width: 75%;
+    margin:0;
+    padding:0;
 }
-  
+
+.titles{
+  font-weight:bold;
+}
+
+.image{
+  border-radius: 10px;
+  margin-top: 10px;
+}

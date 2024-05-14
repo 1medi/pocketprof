@@ -49,13 +49,19 @@ export default function Page() {
 
   const routeToResult = () => {
     if (responses.length >= 3) {
-      const interest = responses[0].value; 
-      const learningStyle = responses[2].value; 
+      const interest = responses[0]?.value;
+      const learningStyle = responses[2]?.value; 
+  
+      if (!interest || !learningStyle) {
+        console.error('Required response values are missing');
+        return; 
+      }
+  
       const route = routeMap[interest][learningStyle];
+      console.log('Routing to:', route);
       router.push(route);
     }
   };
-
   const nextButtonRef = useRef(null);
 
   useEffect(() => {
