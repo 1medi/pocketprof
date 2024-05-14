@@ -1,0 +1,12 @@
+.response{
+  text-align: left;
+  font-weight: bold;
+}
+.message{
+  font-style: italic;
+  padding: 10px;
+}
+.gptContainer{
+  width: 100%;
+}
+

@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         {
           role: "system",
           content:
-          "Answer the question to the best of your ability in 1 sentence. You will be Oscar, I will be Buddy. Throughout the whole chat, I want you to only reply as Oscar."
+          "Answer the question to the best of your ability in 1 - 2 sentences max. You will be Oscar, I will be Buddy. Throughout the whole chat, I want you to only reply as Oscar."
         },
         { role: "user", content: prompt },
       ],

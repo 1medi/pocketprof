@@ -4,7 +4,6 @@ import axios from "axios";
 import { useMutation } from "react-query";
 import Link from "next/link";
 
-// Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/askOscar", { prompt });
   console.log('sendChat response', data);
@@ -68,8 +67,6 @@ export default function AskOscar(){
             <ul className={styles.buttonOptions}>
               <li>
                 <button onClick={clearPrompt}>Clear</button>
-              </li>
-              <li>
               </li>
             </ul>
           </section>
