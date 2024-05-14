@@ -2,10 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/SuccessDashboard/SuccessDashboard.module.css";
 import { Montserrat } from "next/font/google";
-import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
-import DoughnutChart from "@/Components/DoughnutChart";
-import Oscar from "@/Components/Oscar";
+import Doughnut from "@/Components/Doughnut";
 import Image1 from "@/public/img/nature-4964153_1920.jpg";
 import Link from "next/link";
 import Circles from "@/Components/Shapes/Circles";
@@ -14,7 +12,7 @@ import { subjectsCards } from "@/data/card_data";
 
 
 const montserrat = Montserrat({ subsets: ['latin'] });
-export default function Home() {
+export default function SuccessDashboard() {
   return (
     <>
       <Head>
@@ -50,7 +48,7 @@ export default function Home() {
               <div className={styles.chartContainer} tabIndex={9}>
                 <p className={styles.percent}>80%</p>
                 <div className={styles.chart}>
-                  <DoughnutChart tabIndex={10} />
+                  <Doughnut tabIndex={10} />
                 </div>
                 <div className={styles.descriptionContainer}>
                   <p className={styles.description}>Of your goals have been completed</p>

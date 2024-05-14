@@ -1,7 +1,7 @@
 .main {
   overflow-x: hidden;
   display: flex;
-  background-color: var(--lightpurple-background);
+  background-color: var(--background-color);
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
