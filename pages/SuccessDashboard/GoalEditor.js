@@ -71,7 +71,7 @@ export default function GoalEditor() {
               <input
                 type="input"
                 name="goalDescription"
-                value={formData.goalName}
+                value={formData.goalDescription}
                 onChange={handleChange}
                 tabIndex={2}
               />
