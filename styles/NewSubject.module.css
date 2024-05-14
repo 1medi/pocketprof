@@ -12,10 +12,6 @@
   margin: 0 auto; 
 }
 
-  /**
-  PAGE CSS
-  **/
-
   .banner__content {
     display: flex;
     flex-direction: column;
@@ -103,7 +99,7 @@
 
 .category__button__container{
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .questionContainer{
@@ -142,13 +138,11 @@
   margin-bottom: 1rem;
 }
 
-.leftDiv{
-  width: 745px;
-  height: 100vh;
-  background-color: white;
-  position: absolute;
-  z-index: 10;
-  right: 950px;
+.FloatingOscar{
+  position: relative;
+  display: flex;
+  bottom: 150px;
+  width: 128px;
 }
 
 .rightDiv{

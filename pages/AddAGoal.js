@@ -24,8 +24,10 @@ export default function Home() {
       </Head>
       <div className={styles.mobileContainer}>
         <Circles title={"Add A Goal"} />
-        <Oscar />
         <main className={`${styles.main} ${montserrat.className}`}>
+        <div className={styles.oscarContainer}>
+        <Oscar />
+        </div>
           <h1>Here's a set of goals that Oscar recommends
           </h1>
           <div >

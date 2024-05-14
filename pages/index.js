@@ -6,10 +6,9 @@ import Button3 from "@/Components/Buttons/Button3";
 import Image from "next/image";
 import React from 'react'; 
 import Login from "@/Components/Login";
-import { useUser } from './UserContext';
+import { useUser } from '../utils/UserContext';
 
-
-const montserrat = Montserrat({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export default function Landing() {
 
@@ -20,7 +19,7 @@ export default function Landing() {
     <>
       <Head>
         <title>Landing Page</title>
-        <meta name="description" content="LAnding page" />
+        <meta name="description" content="Landing page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,7 +31,7 @@ export default function Landing() {
               src="/img/oscar/oscar-main.svg"
               width="300"
               height="300"
-              alt="oscar"
+              alt="Oscar"
               className={styles.oscar}
             />
             {showLogin ? (
@@ -48,10 +47,10 @@ export default function Landing() {
                 </div>
                 <div className={styles.containerContainer}>
                   <Link href='/onboarding/page' className={styles.buttonContainer}>
-                    <Button3 name={"Start"} />
+                    <Button3 name={"Start"} tabIndex={0} />
                   </Link>
                   <Link href='/NewSubject' className={styles.buttonContainer}>
-                    <Button3 name={"Skip"} />
+                    <Button3 name={"Skip"} tabIndex={1} />
                   </Link>
                 </div>
               </>

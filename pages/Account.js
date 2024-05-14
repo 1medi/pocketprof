@@ -2,19 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Account.module.css";
 import NavBar from "@/Components/Navbar";
-import { Montserrat } from "next/font/google"
-import Image1 from "@/public/img/nature-4964153_1920.jpg"
-import Chart from "@/public/img/chart.png"
-import Profile from "@/public/img/user.png"
-import Settings from "@/public/img/settings.png"
+import { Montserrat } from "next/font/google";
+import Image1 from "@/public/img/nature-4964153_1920.jpg";
+import Chart from "@/public/img/chart.png";
+import Profile from "@/public/img/user.png";
+import Settings from "@/public/img/settings.png";
 import Link from "next/link";
 import Circles from "@/Components/Shapes/Circles";
+
 const montserrat = Montserrat({
   subsets: ['latin'],
 });
 
 export default function Account() {
-
   return (
     <>
       <Head>
@@ -25,9 +25,9 @@ export default function Account() {
       </Head>
 
       <div className={styles.mobileContainer}>
-      <Circles title="Account Profile"/>
+        <Circles title="Account Profile"/>
         <main className={`${styles.main} ${montserrat.className}`}>
-        <div className={styles.outerContainer}>
+          <div className={styles.outerContainer}>
             <div className={styles.imageContainer}>
               <Image
                 src={Image1}
@@ -64,7 +64,6 @@ export default function Account() {
                 </div>
               </Link>
               <hr className={styles.shape} />
-
               <Link href={"ApplicationSettings"} style={{ textDecoration: 'none' }}>
                 <div className={styles.appContainer}>
                   <Image
@@ -78,12 +77,10 @@ export default function Account() {
               </Link>
               <hr className={styles.shape} />
             </div>
-            </div>
+          </div>
         </main>
         <NavBar />
       </div>
-
-
     </>
   );
 }

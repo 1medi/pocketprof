@@ -10,7 +10,7 @@ export default function Circles({
     <>
       <header className={styles.header}>
         <div className={styles.containerOfCircles}>
-          <ArrowLeft />
+          <ArrowLeft/>
           <div className={`${styles.background__circle}`} style={style}></div>
           <div className={`${styles.background__circle2}`}></div>
         </div>

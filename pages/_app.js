@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from "react-query";
-import { UserProvider } from './UserContext';
+import { UserProvider } from '../utils/UserContext';
 
 const queryClient = new QueryClient();
 const montserrat = Montserrat({ subsets: ['latin'] })

@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60vh;
+  font-family: "Montserrat", "sans-serif";
 }
 
 .mobileContainer{
@@ -19,6 +20,7 @@
   position: relative;
   justify-content: center;
   display: flex;
+  bottom: 20px;
 }
 
 .lineBreak {
@@ -43,36 +45,6 @@
 
 .questionContainer{
   position: relative;
-  margin-top: 150px;
+
   margin-right: 275px;
-}
-
-.promptContainer{
-  width: 430px;
-}
-
-.padding{
-  padding-bottom: 1000px;
-}
-
-.goalSpacing{
-  padding-bottom: 8em;
-}
-.leftDiv{
-  width: 745px;
-  height: 100vh;
-  background-color: white;
-  position: absolute;
-  z-index: 10;
-  right: 950px;
-}
-
-.rightDiv{
-  width: 745px;
-  height: 1000px;
-  background-color: white;
-  position: absolute;
-  z-index: 10;
-  right: -225px;
-  bottom: 100px;
 }
