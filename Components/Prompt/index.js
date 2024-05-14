@@ -5,7 +5,6 @@ import { useMutation } from "react-query";
 import Link from "next/link";
 import Modal from "react-modal";
 import Oscar from "../Oscar";
-import AskOscar from "../AskOscar";
 import Button3 from "../Buttons/Button3";
 import Khaled from "@/public/img/khaled.jpg"
 import Guitar from "@/public/img/Guitar1.jpg"
@@ -24,7 +23,6 @@ const sendChat = async (prompt) => {
   return data.data;
 }
 export default function Chat() {
-  const [imageUrls, setImageUrls] = useState();
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("")
   const [showMessage, setShowMessage] = useState(false)
@@ -36,7 +34,6 @@ export default function Chat() {
   const formatResponse = (response) => {
     let formattedResponse = '';
 
-    // Check if the response contains an image
     if (response.includes("![") && response.includes(")")) {
       const imageUrl = response.substring(response.indexOf("(") + 1, response.lastIndexOf(")"));
       formattedResponse += `<img src="${imageUrl}" alt="Image" />`;
@@ -77,9 +74,7 @@ export default function Chat() {
 
         <section className={styles.gptContainer}>
           {messages.map((message, index) => {
-            // Randomly select a photo index
             const randomPhotoIndex = Math.floor(Math.random() * photos.length);
-            // Get the randomly selected photo
             const randomPhoto = photos[randomPhotoIndex];
 
             return (
@@ -87,7 +82,6 @@ export default function Chat() {
                 <p className={styles.message}>{message.message}</p>
                 <p id="response" className={styles.response} dangerouslySetInnerHTML={{ __html: formatResponse(message.response) }} />
                 <div>
-                  {/* Render the randomly selected photo */}
                   <Image src={randomPhoto.src} alt={randomPhoto.alt} />
                 </div>
               </div>

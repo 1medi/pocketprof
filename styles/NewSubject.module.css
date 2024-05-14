@@ -12,10 +12,6 @@
   margin: 0 auto; 
 }
 
-  /**
-  PAGE CSS
-  **/
-
   .banner__content {
     display: flex;
     flex-direction: column;
@@ -141,4 +137,8 @@
   display: flex;
   bottom: 150px;
   width: 128px;
+}
+
+.lmao{
+  padding-bottom: 5em;
 }

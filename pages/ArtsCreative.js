@@ -24,8 +24,9 @@ export default function ArtsCreative() {
       <div className={styles.mobileContainer}>
         <Circles title="ARTS / CREATIVE" />
         <main className={`${styles.main} ${montserrat.className}`}>
+        <div className={styles.lmao}></div>
           <div className={styles.questionContainer}>
-            <QuestionMark tabIndex={1} tip={"CLICK A COURSE PLEASE"} />         
+            <QuestionMark tabIndex={1} tip={"CLICK A COURSE PLEASE"} />
           </div>
           <div className={styles.subheading__section}>
             <div className={styles.subheading__container}>
