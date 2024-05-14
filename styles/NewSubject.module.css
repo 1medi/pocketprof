@@ -99,7 +99,7 @@
 
 .category__button__container{
   position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .questionContainer{
@@ -141,7 +141,7 @@
 .FloatingOscar{
   position: relative;
   display: flex;
-  width: 128px;
+  bottom: 100px;
 }
 
 .rightDiv{

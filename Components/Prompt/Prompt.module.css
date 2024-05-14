@@ -46,6 +46,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .gptContainer {
@@ -74,11 +75,13 @@
 }
 
 .buttonOptions {
-  padding: 5em;
+  padding-bottom: 5em;
+  margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   justify-content: center;
+  align-items: center;
 }
 
 .alert {
@@ -100,6 +103,7 @@
 .button_container {
   padding: 10px;
   margin: 10px;
+
 }
 
 .oscarContainer {

@@ -12,3 +12,11 @@
   width: 100%;
 }
 
+.animationContainer{
+  display: flex;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
