@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./AskOscar.module.css";
 import axios from "axios";
 import { useMutation } from "react-query";
-import Link from "next/link";
 
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/askOscar", { prompt });
@@ -68,6 +67,7 @@ export default function AskOscar(){
               <li>
                 <button onClick={clearPrompt}>Clear</button>
               </li>
+
             </ul>
           </section>
         )}

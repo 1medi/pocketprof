@@ -16,8 +16,8 @@ export default function FloatingOscar() {
   return (
     <>
       <div className={styles.oscarContainer} onClick={toggleModal}>
-        <Image src={OscarImage} width={128} height={128} />
-        <p className={styles.text}>Got a Question?</p>
+        <Image className={styles.oscarImage} src={OscarImage} width={128} height={128} />
+        <p className={styles.text}>Got a Question? ASK OSCAR!</p>
       </div>
       {isOpen && (
         <div className={styles.modal}>
