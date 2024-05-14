@@ -53,7 +53,7 @@ export default function Chat() {
   }
   const handleFirstButtonClick = async () => {
     setShowMessage(true)
-    const response = await mutation.mutateAsync("I want to learn how to play a guitar. Give me a list of 3 resources (I am a Beginner Guitar Player)");
+    const response = await mutation.mutateAsync("I want to learn how to play a guitar. Give me a list of 5 resources (I am a Beginner Guitar Player)");
     setMessages([...messages, { message: prompt, response }]);
     setIsOpen(true)
   }

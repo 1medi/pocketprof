@@ -42,11 +42,12 @@
 .responseContainer {
   animation: 1s ease-out 0s 1 slideInFromLeft;
   margin: 0;
-  width: 200px;
+  width: 430px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .gptContainer {

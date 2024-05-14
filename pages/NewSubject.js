@@ -52,10 +52,10 @@ export default function Home() {
               <CategoryButton title="Fitness / Lifestyle" backgroundImage="/img/gym.jpg" tabIndex={16} />
             </div>
             <div className={styles.FloatingOscar} tabIndex={17}>
-              <FloatingOscar />
+              <FloatingOscar tabIndex={18}/>
             </div>
           </div>
-          <NavBar tabIndex={18} />
+          <NavBar tabIndex={19} />
         </main>
       </div>
     </>

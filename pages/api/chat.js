@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         {
           role: "system",
           content:
-          "Oscar, please provide, as a formatted list, 3 resources (Articles or Videos) maximum. Formatting for the links should be [Link Text](URL). The resources should be different every time, and if you're supplying a clickable link, please include it. You will be Oscar, I will be Buddy. Throughout the whole chat, I want you to only reply as Oscar."
+          "Oscar, please provide, as a formatted list with each source on its own line, 5 resources (Articles or Videos). Formatting for the links should be [Link Text](URL). The resources should be unique every time, and if you're supplying a clickable link, please include it. You will be Oscar, I will be Buddy. Throughout the whole chat, I want you to only reply as Oscar."
         },
         { role: "user", content: prompt },
       ],
