@@ -55,10 +55,6 @@ export default function artArticles() {
     grabNews();
   }, []);
 
-  const navigateToAnotherPage = () => {
-    router.push('/Home');
-  };
-
   const shuffledPhotos = shuffleArray(photos);
 
   return (
@@ -72,17 +68,7 @@ export default function artArticles() {
       <div className={styles.mobileContainer}>
         <Circles title={"Articles"}/>
         <main className={`${styles.main}`}>
-          {isLoading ? (
-            <div className={styles.buttonContainer}>
-              <button disabled className={styles.button}>
-                Loading...
-              </button>
-            </div>
-          ) : (
-            <button onClick={navigateToAnotherPage} className={styles.button}>
-              Home
-            </button>
-          )}
+          {isLoading  && <p>Loading...</p>}
           {error && <p>{error}</p>}
           <div className={styles.articleContainer}>
             {data.map((post, index) => {

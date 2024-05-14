@@ -6,9 +6,9 @@ import axios from 'axios';
 import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 
-export default function artArticles() {
+export default function healthArticles() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);  // Initially set to true to show loading state immediately
+  const [isLoading, setIsLoading] = useState(true);  
   const [error, setError] = useState(null);
 
   useEffect(() => {
