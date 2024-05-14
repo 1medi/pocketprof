@@ -6,7 +6,8 @@ import Modal from "react-modal";
 import { useState } from "react";
 import Oscar from "@/Components/Oscar";
 import { useRouter } from "next/router";
-
+import Button3 from "@/Components/Buttons/Button3";
+import Link from "next/link";
 export default function goalCard({
     number,
     description
@@ -14,9 +15,8 @@ export default function goalCard({
     const [isOpen, setIsOpen] = useState(false)
     Modal.setAppElement('body');
 
-    const router = useRouter(); // Initialize useRouter
+    const router = useRouter(); 
 
-    // Function to prefetch the hover state image
     const handleMouseEnter = () => {
         router.prefetch(PlusHover);
     };
@@ -48,15 +48,20 @@ export default function goalCard({
                         Add More Goals!
                     </h3>
                     <div className={styles.buttonContainer}>
-                    <button
+                    <Link
+                    href={"/SuccessDashboard/GoalTracking"}
+                    >
+                                        <Button3
                     className={styles.button}
+                    name={"Close"}
+                    ariaHideApp={false}/>
+                    </Link>
+
+                    <Button3 
                     onClick={() => setIsOpen(false)}
-                    ariaHideApp={false}>
-                    Close
-                    </button>
-                    <button className={styles.button}>
-                    Add More!
-                    </button>
+                    name={"Add More!"}
+                    className={styles.button}/>
+
                     </div>
 
                 </Modal>

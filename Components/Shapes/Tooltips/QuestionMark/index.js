@@ -11,12 +11,12 @@ export default function QuestionMark({
     <>
       <div className={`${styles.tooltip}`}>
 
-        <Image 
-        height={32}
-        width={32}
-        src={Question}
-        onMouseLeave={() => setTooltip()} onClick={() => setTooltip('copied')} className=
-          {`${styles.tooltip_button}`}/>
+        <Image
+          height={32}
+          width={32}
+          src={Question}
+          onMouseLeave={() => setTooltip()} onClick={() => setTooltip('copied')} className=
+          {`${styles.tooltip_button}`} />
         <div className={`${styles.tooltip_container}`}>
           <div className={`${styles.tooltip_text}`}>{tip}</div>
         </div>

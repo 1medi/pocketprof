@@ -1,7 +1,7 @@
 .header {
   max-height: 400px;
   height: 8.8rem;
-  position: fixed;
+  position: sticky;
   width:430px
 }
 
@@ -12,7 +12,7 @@
   height: 400px; 
   background-color: var(--main-color-purple); 
   border-radius: 50%;
-  z-index: 3; 
+  z-index: 1; 
 }
 
 .background__circle2 {
@@ -22,14 +22,14 @@
   height: 15rem; 
   background-color: var(--main-color-lightpurple); 
   border-radius: 50%;
-  z-index: 2; 
+  z-index: -1; 
 }
 
 .heading {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 8;
+  z-index: 2;
 }
 
 .heading{

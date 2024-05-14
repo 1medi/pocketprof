@@ -6,13 +6,10 @@ import Link from "next/link";
 
 // Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
-  const { data } = await axios.post("api/chat", { prompt });
+  const { data } = await axios.post("api/askOscar", { prompt });
   console.log('sendChat response', data);
   return data.data;
 }
-
-
-
   
 export default function AskOscar(){
   const [messages, setMessages] = useState([]);
@@ -73,9 +70,6 @@ export default function AskOscar(){
                 <button onClick={clearPrompt}>Clear</button>
               </li>
               <li>
-                <button>
-                  <Link href="/AddAGoal">Generate Goals</Link>
-                </button>
               </li>
             </ul>
           </section>

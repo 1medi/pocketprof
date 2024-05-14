@@ -5,6 +5,7 @@ import { useMutation } from "react-query";
 import Link from "next/link";
 import Modal from "react-modal";
 import Oscar from "../Oscar";
+import Button3 from "../Buttons/Button3";
 
 // Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
@@ -35,17 +36,17 @@ export default function Chat() {
             <div className={styles.promptContainer}>
               <Link 
               href={"/ShowResources"}>
-              <button className={styles.prompt}>Basic</button>
+              <Button3 className={styles.prompt} name={"Basic"}/>
               </Link>
               <Link
               href={"/ShowResources"}
               >
-              <button className={styles.prompt}>Intermediate</button>              
+              <Button3 className={styles.prompt} name={"Intermediate"}/>              
               </Link>
               <Link
               href={"/ShowResources"}
               >
-              <button className={styles.prompt}>Expert</button>           
+              <Button3 className={styles.prompt} name={"Expert"}/>           
               </Link>
             </div>
           </main>
