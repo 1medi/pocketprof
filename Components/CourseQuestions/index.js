@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import styles from "./Prompt.module.css";
 import axios from "axios";
-import { useMutation } from "react-query";
 import Link from "next/link";
 import Button3 from "../Buttons/Button3";
 
