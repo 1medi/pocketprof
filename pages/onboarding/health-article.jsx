@@ -15,7 +15,7 @@ export default function healthArticles() {
     const grabNews = async () => {
       setError(null);
       try {
-        var type = 'health_care';
+        var type = 'Learn-about-self-health-care';
         var apiKey = process.env.NEXT_PUBLIC_API_KEY;
         const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
         const response = await axios.get(url);
