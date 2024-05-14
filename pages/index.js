@@ -6,7 +6,7 @@ import Button3 from "@/Components/Buttons/Button3";
 import Image from "next/image";
 import React from 'react'; 
 import Login from "@/Components/Login";
-import { useUser } from './UserContext';
+import { useUser } from '../utils/UserContext';
 
 
 const montserrat = Montserrat({ subsets: ['latin'] })
