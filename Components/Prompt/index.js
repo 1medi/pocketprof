@@ -33,14 +33,21 @@ export default function Chat() {
 
   const formatResponse = (response) => {
     let formattedResponse = '';
-
-    if (response.includes("![") && response.includes(")")) {
-      const imageUrl = response.substring(response.indexOf("(") + 1, response.lastIndexOf(")"));
-      formattedResponse += `<img src="${imageUrl}" alt="Image" />`;
+  
+    const regex = /\[(.*?)\]\((.*?)\)/g;
+    const matches = response.matchAll(regex);
+    
+    let index = 1;
+    for (const match of matches) {
+      const linkText = match[1];
+      const linkUrl = match[2];
+      formattedResponse += `${index}. <a href="${linkUrl}" target="_blank">${linkText}</a>`;
+      index++;
     }
-    formattedResponse += response.replace(/##(.*?)##/g, '<strong>$1</strong>');
+  
+    formattedResponse = formattedResponse.replace(/##(.*?)##/g, '<strong>$1</strong>');
     formattedResponse = formattedResponse.replace(/#(.*?)#/g, '<strong>$1</strong>');
-
+  
     return formattedResponse;
   }
   const handleFirstButtonClick = async () => {
