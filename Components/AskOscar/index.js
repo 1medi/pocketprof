@@ -10,9 +10,6 @@ const sendChat = async (prompt) => {
   console.log('sendChat response', data);
   return data.data;
 }
-
-
-
   
 export default function AskOscar(){
   const [messages, setMessages] = useState([]);
@@ -73,9 +70,6 @@ export default function AskOscar(){
                 <button onClick={clearPrompt}>Clear</button>
               </li>
               <li>
-                <button>
-                  <Link href="/AddAGoal">Generate Goals</Link>
-                </button>
               </li>
             </ul>
           </section>
