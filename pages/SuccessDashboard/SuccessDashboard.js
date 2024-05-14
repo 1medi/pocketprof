@@ -4,7 +4,7 @@ import styles from "@/styles/SuccessDashboard/SuccessDashboard.module.css";
 import { Montserrat } from "next/font/google";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
-import DoughnutChart from "@/Components/doughnutChart";
+import DoughnutChart from "@/Components/DoughnutChart";
 import Oscar from "@/Components/Oscar";
 import Image1 from "@/public/img/nature-4964153_1920.jpg";
 import Link from "next/link";
@@ -58,17 +58,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href={"/"} tabIndex={11}>
-            <div tabIndex={12}>View More</div>
-          </Link>
-          <div className={styles.section__cards} tabIndex={13}>
+          <div className={styles.section__cards} tabIndex={11}>
             {subjectsCards.music.filter((card) => card.category === "Arts & Creative").map((card, index) => (
               <SubjectCard key={index} card={card} />
             ))}
           </div>
 
         </main>
-        <NavBar tabIndex={14} />
+        <NavBar tabIndex={12} />
       </div>
 
     </>
