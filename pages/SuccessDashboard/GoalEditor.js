@@ -8,12 +8,16 @@ import Oscar from "@/Components/Oscar";
 import Link from "next/link";
 import ConfettiButton from "@/Components/Buttons/ConfettiButton";
 import Head from "next/head";
-import { useRouter } from 'next/router'
 
 export default function GoalEditor() {
   const [isOpen, setIsOpen] = useState(false)
   const [data, setData] = useState([]);
-
+  const [formData, setFormData] = useState({
+    goalName: "",
+    goalDescription: "",
+    goalDuration: "",
+    favoriteColor: "#ff0000",
+  });
 
 
   Modal.setAppElement("body");
