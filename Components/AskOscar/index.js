@@ -12,9 +12,7 @@ const sendChat = async (prompt) => {
 export default function AskOscar() {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("")
-  const [showMessage, setShowMessage] = useState(false)
   const mutation = useMutation(sendChat);
-  const [isOpen, setIsOpen] = useState(false)
   const formatResponse = (response) => {
     let formattedResponse = '';
     if (response.includes("![") && response.includes(")")) {
@@ -45,7 +43,7 @@ export default function AskOscar() {
           <input
             onChange={(e) => setMessage(e.target.value)}
             type="text"
-            placeholder="Have Another Question?" />
+            placeholder="Got a Question?" />
           <button
             type="submit"
           >Send

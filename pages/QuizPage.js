@@ -32,7 +32,7 @@ export default function QuizPage() {
               <h3 className={styles.title}>ARE YOU READY TO WIN?</h3>
             </div>
             <Link href='/quiz/page' className={styles.buttonContainer} tabIndex={6}>
-              <Button3 name={"Press To Start"} tabIndex={7} />
+              <Button3 name={"Begin"} tabIndex={7} />
             </Link>
           </div>
           <div className={styles.divider} tabIndex={8}>

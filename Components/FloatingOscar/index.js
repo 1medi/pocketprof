@@ -4,7 +4,7 @@ import OscarImage from "@/public/img/oscar/oscar-head.svg";
 import Image from "next/image";
 import { useState } from "react";
 import Oscar from "../Oscar";
-import Images from "../images";
+import Images from "../Images";
 
 export default function FloatingOscar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -14,8 +14,7 @@ width: 300px;
 }
 
 .buttonContainer{
-  width: 250px;
   display: flex;
   position: relative;
-  margin: auto;
+  justify-content: center;
 }
