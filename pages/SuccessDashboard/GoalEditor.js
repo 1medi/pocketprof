@@ -106,7 +106,7 @@ export default function GoalEditor() {
           <Modal className={styles.alert} isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
             <h1>CONGRANTATION</h1><br /><p>You are one step closer to achieving ur DREAM</p>
             <div className={styles.buttonContainer}>
-              <Button3
+              <ConfettiButton
                 name={"Celebrate"}
                 className={styles.button}
                 ariaHideApp={false} 

@@ -71,9 +71,12 @@ useEffect(() => {
           <Link
            href={{ pathname: "/SuccessDashboard/GoalEditor",  query: { goalName: goalData.goalName }}}
           >
-          <Button3
+            <div className={styles.buttonContainer}>
+            <Button3
           name="Edit"
-          />          
+          />      
+            </div>
+    
           </Link>
           </li>
           <li className={styles.goalContainer}>
