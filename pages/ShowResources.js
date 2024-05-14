@@ -35,7 +35,6 @@ export default function ShowResources() {
       <NavBar/>
       </main> 
       </div>
-
     </>
   );
 }

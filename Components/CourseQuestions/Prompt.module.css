@@ -7,6 +7,10 @@
   min-height: 20vh;
 }
 
+.header {
+  width: 25rem;
+}
+
 .promptContainer{
   display: flex;
   flex-direction: column;
@@ -15,6 +19,7 @@
   padding: 3em;
   align-items: center;
   margin-bottom: 5em;
+  gap: 2rem;
 }
 .prompt{
   padding:10px;

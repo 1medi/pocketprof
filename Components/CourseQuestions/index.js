@@ -29,8 +29,8 @@ export default function Chat() {
         <div>
           <main>
             <div className={styles.textContainer}>
-              <h2 className={styles.header}>What is Your Current Skill Level of Guitar?</h2>
-              <p className={styles.subHeader}>HELP US HELP YOU</p>
+              <h2 className={styles.header}>What is your current skill level with Guitar?</h2>
+              <p className={styles.subHeader}>Help Oscar help you!</p>
             </div>
 
             <div className={styles.promptContainer}>
