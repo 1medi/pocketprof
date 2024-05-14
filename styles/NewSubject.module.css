@@ -78,9 +78,15 @@
     text-align: center;
     font-family: var(--headings);
     font-size: var(--font-body);
-    width: 19rem;
+    width: 20rem;
     font-weight: bold;
     padding-top: 0.8rem;
+    padding-left: 1.5rem;
+  }
+
+  .subhead {
+    text-align: left;
+    width: 15rem;
   }
 
   .categories__heading{
@@ -98,7 +104,6 @@
 
 .questionContainer{
   position: relative;
-  margin-top: 50px;
 }
 
 .oscar{
@@ -110,6 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -1rem;
 }
 
 .categories__heading__container {
@@ -135,10 +141,26 @@
 .FloatingOscar{
   position: relative;
   display: flex;
-  bottom: 150px;
   width: 128px;
 }
 
-.lmao{
-  padding-bottom: 5em;
+.rightDiv{
+  width: 745px;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  right: -225px;
+}
+
+.cards__section {
+  margin-top: 0rem;
+}
+
+
+.section__cards {
+  margin-top: -1rem;
+  display: flex;
+  padding: 1.7rem;
+  gap: 0.5rem;
 }

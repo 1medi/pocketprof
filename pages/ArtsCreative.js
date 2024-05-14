@@ -9,6 +9,8 @@ import WritingCarousel from "@/Components/WritingCarousel";
 import ArtCarousel from "@/Components/ArtCarousel";
 import MusicCarousel from "@/Components/MusicCarousel";
 import QuestionMark from "@/Components/Shapes/Tooltips/QuestionMark";
+import SubjectCard from "@/Components/SubjectCard";
+import { subjectsCards } from "@/data/card_data";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -24,31 +26,58 @@ export default function ArtsCreative() {
       <div className={styles.mobileContainer}>
         <Circles title="ARTS / CREATIVE" />
         <main className={`${styles.main} ${montserrat.className}`}>
-        <div className={styles.lmao}></div>
           <div className={styles.questionContainer}>
-            <QuestionMark tabIndex={1} tip={"CLICK A COURSE PLEASE"} />
+            <QuestionMark tabindex={1} tip={"CLICK A COURSE PLEASE"} />
           </div>
-          <div className={styles.subheading__section}>
-            <div className={styles.subheading__container}>
-              <h2 className={styles.subhead}>Music</h2>
-              <MusicCarousel tabIndex={2} />
+          <div className={styles.cards__section}>
+            <div className={styles.card__section__container}>
+              <div className={styles.subheading__section}>
+                <div className={styles.subheading__container}>
+                  <h3 className={styles.subhead}>Music</h3>
+                </div>
+              </div>
+              <div className={styles.divider__container}>
+                <div className={styles.divider}></div>
+              </div>
+              <div className={styles.section__cards}>
+              {subjectsCards.music.filter((card) => card.category === "Arts & Creative").map((card, index) => (
+              <SubjectCard key={index} card={card} />
+              ))}
+              </div>
+            </div>
+            <div className={styles.card__section__container}>
+              <div className={styles.subheading__section}>
+                <div className={styles.subheading__container}>
+                  <h3 className={styles.subhead}>Art Design</h3>
+                </div>
+              </div>
+              <div className={styles.divider__container}>
+                <div className={styles.divider}></div>
+              </div>
+              <div className={styles.section__cards}>
+              {subjectsCards.art.filter((card) => card.category === "Arts & Creative").map((card, index) => (
+              <SubjectCard key={index} card={card} />
+              ))}
+              </div>
+            </div>
+            <div className={styles.card__section__container}>
+              <div className={styles.subheading__section}>
+                <div className={styles.subheading__container}>
+                  <h3 className={styles.subhead}>Writing</h3>
+                </div>
+              </div>
+              <div className={styles.divider__container}>
+                <div className={styles.divider}></div>
+              </div>
+              <div className={styles.section__cards}>
+              {subjectsCards.writing.filter((card) => card.category === "Arts & Creative").map((card, index) => (
+              <SubjectCard key={index} card={card} />
+              ))}
+              </div>
             </div>
           </div>
-          <div className={styles.subheading__section}>
-            <div className={styles.subheading__container}>
-              <h2 className={styles.subhead}>Art Design</h2>
-              <ArtCarousel tabIndex={3} />
-            </div>
-          </div>
-          <div className={styles.subheading__section}>
-            <div className={styles.subheading__container}>
-              <h2 className={styles.subhead}>Writing</h2>
-              <WritingCarousel tabIndex={4} />
-            </div>
-          </div>
-          <div className={styles.lmao}></div>
-          <NavBar tabIndex={5} />
         </main>
+        <NavBar/>
       </div>
     </>
   );

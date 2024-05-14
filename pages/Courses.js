@@ -25,7 +25,7 @@ export default function Ask() {
       <main className={styles.main}>
       <div className={styles.questionContainer}>
         <QuestionMark
-        tip={"Click the level that best describes you skill level in this subject"}
+        tip={"Click the level that best describes your skill level in this subject"}
         />
         </div>
       <Oscar/>

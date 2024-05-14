@@ -1,24 +1,22 @@
-/* tooltip css */
+
 
 .tooltip{
   position: relative; 
   display: flex;
   color: white;
 }
-/* make our tooltip show up only on button hover */
+
 .tooltip_button:hover ~.tooltip_container{
   visibility: visible;
   
 }
-/* make the tooltip hidden */
+
 .tooltip_container{
   position: absolute;
-/* this is used to place the tooltip bubble above the button, edit to value that fits you*/
-/* also you can change top to bottom, right or left for different tooltip location */
   left: 70px;
   visibility: hidden;
 }
-/* top part of tooltip container */
+
 .tooltip_text{
   background-color: var( --main-color-purple);
   border-radius: 3px;
