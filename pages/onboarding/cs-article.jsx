@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Head from "next/head";
 import styles from "./article.module.css";
 import axios from 'axios';
-import Header from "@/Components/Header";
+import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 
 export default function csArticles() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function csArticles() {
         var type = 'learn-about_computer_languages_basic';
         const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
         const response = await axios.get(url);
-        setData(response.data.posts); 
+        setData(response.data.posts);
       } catch (err) {
         console.error(err);
         setError('Failed to fetch data');
@@ -29,7 +29,7 @@ export default function csArticles() {
     };
 
     grabNews();
-  }, []); 
+  }, []);
 
   return (
     <>
@@ -40,20 +40,20 @@ export default function csArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Header name={"Articles"}/>
+        <Circles title={"Articles"} />
         <main className={`${styles.main}`}>
           {isLoading && <p>Loading...</p>}
           {error && <p>{error}</p>}
           {data.map((post, index) => (
             <div key={index} className={styles.article}>
               <div className={styles.articleInnerContainer}>
-                <div className={styles.category}><p className={styles.titles}>Title:</p><p> {post.title}</p></div>
-                <div className={styles.category}><p className={styles.titles}>Author: </p><p>{post.author}</p></div>
-                <div className={styles.category}><p><a href={post.url}>Read more</a></p></div>
+                <div className={styles.category}><p className={styles.titles}>Title:</p><p>{post.title}</p></div>
+                <div className={styles.category}><p className={styles.titles}>Author:</p><p>{post.author}</p></div>
+                <div className={styles.category}><p><a href={post.url} tabIndex={0}>Read more</a></p></div>
               </div>
             </div>
           ))}
-          <NavBar/>
+          <NavBar />
         </main>
       </div>
     </>
