@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60vh;
+  font-family: "Montserrat", "sans-serif";
 }
 
 .mobileContainer{
@@ -19,6 +20,7 @@
   position: relative;
   justify-content: center;
   display: flex;
+  bottom: 20px;
 }
 
 .lineBreak {
@@ -45,16 +47,4 @@
   position: relative;
   margin-top: 150px;
   margin-right: 275px;
-}
-
-.promptContainer{
-  width: 430px;
-}
-
-.padding{
-  padding-bottom: 100px;
-}
-
-.goalSpacing{
-  padding-bottom: 8em;
 }
