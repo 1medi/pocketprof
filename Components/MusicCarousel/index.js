@@ -31,31 +31,31 @@ export default function Carousel() {
       <div className={styles.slide}>
         <img className={styles.image} src="https://image.hurimg.com/i/hurriyet/75/0x0/59c7165145d2a027e83a35dd.jpg" alt="" />
         <div className={styles.captionContainer}>
-        <h1 className={styles.caption}>HEHEHE</h1>
-      </div>
+          <h1 className={styles.caption}>HEHEHE</h1>
+        </div>
       </div>
       <div className={styles.slide}>
-      <Link href={'/Courses'}>   
-      <img className={styles.image} src="https://cdn.mos.cms.futurecdn.net/TKLDtTBhLsBKwcUxTySmK5.jpg" alt="" />
-      <div className={styles.captionContainer}>
-        <h1 className={styles.caption}>HEHEHE</h1>
-      </div>              
-      </Link>
+        <Link href={'/Courses'}>
+          <img className={styles.image} src="https://cdn.mos.cms.futurecdn.net/TKLDtTBhLsBKwcUxTySmK5.jpg" alt="" />
+          <div className={styles.captionContainer}>
+            <h1 className={styles.caption}>HEHEHE</h1>
+          </div>
+        </Link>
       </div>
       <div className={styles.slide}>
         <img className={styles.image} src="https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg" alt="" />
         <div className={styles.captionContainer}>
-        <h1 className={styles.caption}>HEHEHE</h1>
-      </div>
+          <h1 className={styles.caption}>HEHEHE</h1>
+        </div>
       </div>
       <div className={styles.slide}>
         <img className={styles.image} src="https://source.unsplash.com/random?landscape,city" alt="" />
         <div className={styles.captionContainer}>
-        <h1 className={styles.caption}>HEHEHE</h1>
+          <h1 className={styles.caption}>HEHEHE</h1>
+        </div>
       </div>
-      </div>
-      <button className={styles.btnNext} onClick={nextSlide}><ArrowRight/></button>
-      <button className={styles.btnPrev} onClick={prevSlide}><ArrowLeft/></button>
+      <button className={styles.btnNext} onClick={nextSlide}><ArrowRight /></button>
+      <button className={styles.btnPrev} onClick={prevSlide}><ArrowLeft /></button>
     </div>
   );
 }

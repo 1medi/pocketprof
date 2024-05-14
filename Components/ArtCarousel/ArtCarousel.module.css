@@ -9,7 +9,6 @@
     place-items: center;
     margin: 20px;
   }
-
   
   .btn:active {
     transform: scale(1.1);

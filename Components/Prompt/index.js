@@ -10,18 +10,19 @@ import Khaled from "@/public/img/khaled.jpg"
 import Guitar from "@/public/img/Guitar1.jpg"
 import Guitar2 from "@/public/img/Guitar2.jpg"
 import Image from "next/image";
+
 const photos = [
   { id: 1, src: Khaled, alt: "Photo 1" },
   { id: 2, src: Guitar, alt: "Photo 2" },
   { id: 3, src: Guitar2, alt: "Photo 3" }
 ]
 
-
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/chat", { prompt });
   console.log('sendChat response', data);
   return data.data;
 }
+
 export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("")
@@ -33,10 +34,10 @@ export default function Chat() {
 
   const formatResponse = (response) => {
     let formattedResponse = '';
-  
+
     const regex = /\[(.*?)\]\((.*?)\)/g;
     const matches = response.matchAll(regex);
-    
+
     let index = 1;
     for (const match of matches) {
       const linkText = match[1];
@@ -44,10 +45,10 @@ export default function Chat() {
       formattedResponse += `${index}. <a href="${linkUrl}" target="_blank">${linkText}</a>`;
       index++;
     }
-  
+
     formattedResponse = formattedResponse.replace(/##(.*?)##/g, '<strong>$1</strong>');
     formattedResponse = formattedResponse.replace(/#(.*?)#/g, '<strong>$1</strong>');
-  
+
     return formattedResponse;
   }
   const handleFirstButtonClick = async () => {

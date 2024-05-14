@@ -17,10 +17,9 @@ export default function OscarHome() {
 
   return (
     <>
-    <div className={styles.lottieContainer}>
-    <div className={styles.container} ref={animationContainer}></div>
-    </div>
-
+      <div className={styles.lottieContainer}>
+        <div className={styles.container} ref={animationContainer}></div>
+      </div>
     </>
   );
 }

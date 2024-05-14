@@ -30,8 +30,8 @@ export default function Images() {
 
   const clearPrompt = () => {
     setMessages([]);
-    setImageUrl(null); // Clear the image URL when clearing messages
-    setInputValue(""); // Clear the input value
+    setImageUrl(null);
+    setInputValue("");
   }
 
   return (
@@ -43,11 +43,11 @@ export default function Images() {
         value={inputValue}
         onChange={handleInputChange}
       />
-      <Button3 name={"Generate"} onClick={handleGenerateImage}/>
+      <Button3 name={"Generate"} onClick={handleGenerateImage} />
       {imageUrl && (
         <ul className={styles.buttonOptions}>
           <li>
-            <Button3 name={"Clear"} onClick={clearPrompt}/>
+            <Button3 name={"Clear"} onClick={clearPrompt} />
           </li>
         </ul>
       )}

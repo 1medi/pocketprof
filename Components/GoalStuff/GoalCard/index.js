@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Plus from "@/public/img/add.png"
-import PlusHover from "@/public/img/addHover.png" 
+import PlusHover from "@/public/img/addHover.png"
 import styles from "./GoalCard.module.css"
 import Modal from "react-modal";
 import { useState } from "react";
@@ -8,6 +8,7 @@ import Oscar from "@/Components/Oscar";
 import { useRouter } from "next/router";
 import Button3 from "@/Components/Buttons/Button3";
 import Link from "next/link";
+
 export default function goalCard({
     number,
     description
@@ -15,11 +16,12 @@ export default function goalCard({
     const [isOpen, setIsOpen] = useState(false)
     Modal.setAppElement('body');
 
-    const router = useRouter(); 
+    const router = useRouter();
 
     const handleMouseEnter = () => {
         router.prefetch(PlusHover);
     };
+
     return (
         <>
             <div className={styles.goalCard}>
@@ -29,7 +31,7 @@ export default function goalCard({
                     <Image
                         className={styles.image}
                         src={Plus}
-                        onMouseEnter={handleMouseEnter} // Call handleMouseEnter on mouse enter
+                        onMouseEnter={handleMouseEnter}
                         onClick={() => setIsOpen(true)}
                     />
                     <Image
@@ -43,24 +45,24 @@ export default function goalCard({
                         <Oscar />
                     </div>
                     <h1>Your Subject and Goals have been added to your account!</h1>
-                    <h3>Go to your Profile page to see yours goals 
-                        <br/> OR <br/>
+                    <h3>Go to your Profile page to see yours goals
+                        <br /> OR <br />
                         Add More Goals!
                     </h3>
                     <div className={styles.buttonContainer}>
-                    <Link
-                    href={"/SuccessDashboard/GoalTracking"}
-                    >
-                                        <Button3
-                    className={styles.button}
-                    name={"Close"}
-                    ariaHideApp={false}/>
-                    </Link>
+                        <Link
+                            href={"/SuccessDashboard/GoalTracking"}
+                        >
+                            <Button3
+                                className={styles.button}
+                                name={"Close"}
+                                ariaHideApp={false} />
+                        </Link>
 
-                    <Button3 
-                    onClick={() => setIsOpen(false)}
-                    name={"Add More!"}
-                    className={styles.button}/>
+                        <Button3
+                            onClick={() => setIsOpen(false)}
+                            name={"Add More!"}
+                            className={styles.button} />
 
                     </div>
 
