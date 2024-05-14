@@ -1,0 +1,14 @@
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonOptions{
+  display: flex;
+  margin: auto;
+}
+
+.input{
+margin: auto;
+width: 300px;
+}
