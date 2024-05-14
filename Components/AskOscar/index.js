@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./AskOscar.module.css";
 import axios from "axios";
 import { useMutation } from "react-query";
+import Button3 from "../Buttons/Button3";
 
 const sendChat = async (prompt) => {
   const { data } = await axios.post("api/askOscar", { prompt });
@@ -44,10 +45,10 @@ export default function AskOscar() {
             onChange={(e) => setMessage(e.target.value)}
             type="text"
             placeholder="Got a Question?" />
-          <button
+          <Button3
             type="submit"
-          >Send
-          </button>
+            name={"Send"}
+          />
         </form>
         <section className={styles.gptContainer}>
           {messages.map((message, index) => (
