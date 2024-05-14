@@ -1,28 +1,27 @@
 .nav {
-  position: fixed; 
-  bottom: 0; 
-  width: 430px; /* Hard-coded width */
-  margin:  auto; /* Center the container horizontally */
+  position: fixed;
+  bottom: 0;
+  width: 430px;
+  margin: auto;
   display: flex;
   flex-direction: row;
-  background-color:var(--main-color-lightpurple);
+  background-color: var(--main-color-lightpurple);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   justify-content: space-around;
 }
 
-.navContainer{
+.navContainer {
   position: relative;
   justify-content: space-around;
-
   width: 100%;
 }
-.buttonContainer{
-  padding:10px;
 
+.buttonContainer {
+  padding: 10px;
 }
 
-.navOptions{
+.navOptions {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -32,7 +31,7 @@
   text-decoration: none;
 }
 
-.navLink{
+.navLink {
   border-radius: 10px;
   text-decoration: none;
   list-style: none;
@@ -40,23 +39,23 @@
   justify-content: center;
 }
 
-.image:hover{
+.image:hover {
   background-color: #8b82a4;
   border-radius: 10px;
 }
 
-.navText{
-  text-decoration: none;
-  list-style: none;
-  color:black;
-}
-
-.navText:visited{
+.navText {
   text-decoration: none;
   list-style: none;
   color: black;
 }
 
-.oscar{
-  position:relative
+.navText:visited {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.oscar {
+  position: relative
 }

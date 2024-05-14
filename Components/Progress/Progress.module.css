@@ -9,10 +9,10 @@
   position: absolute;
   height: 100%;
   background-color: #25F;
-  transition: width 2s; /* Adjust the duration of the animation as needed */
-  width: 5%; /* Initial width */
+  transition: width 2s;
+  width: 5%;
 }
 
 .barStatus.active {
-  width: 100%; /* Final width */
+  width: 100%;
 }

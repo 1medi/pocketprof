@@ -1,21 +1,21 @@
 import styles from "./ArrowLeft.module.css"
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router';
 
 export default function ArrowLeft({
   href
 }) {
-  const router = useRouter(); 
+  const router = useRouter();
 
   return (
     <>
-    <div 
-    className={styles.arrowLeft} 
-    onClick={() => router.back()} 
-    style={{
-            position: 'absolute',
-            cursor: 'pointer'
+      <div
+        className={styles.arrowLeft}
+        onClick={() => router.back()}
+        style={{
+          position: 'absolute',
+          cursor: 'pointer'
         }}>
-        </div>
+      </div>
     </>
   )
 }

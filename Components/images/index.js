@@ -30,8 +30,8 @@ export default function Images() {
 
   const clearPrompt = () => {
     setMessages([]);
-    setImageUrl(null); // Clear the image URL when clearing messages
-    setInputValue(""); // Clear the input value
+    setImageUrl(null);
+    setInputValue("");
   }
 
   return (

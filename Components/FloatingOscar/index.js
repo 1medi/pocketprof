@@ -27,15 +27,15 @@ export default function FloatingOscar() {
               &times;
             </span>
             <div className={styles.animationContainer}>
-            <Oscar/>
+              <Oscar />
             </div>
 
             <h1 className={styles.query}>Got a query?</h1>
             <div className={styles.askOscarContainer}>
-            <AskOscar />
+              <AskOscar />
             </div>
             <h3 className={styles.query}>Need some inspiration?</h3>
-            <Images/>
+            <Images />
           </div>
         </div>
       )}

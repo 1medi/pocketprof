@@ -1,9 +1,7 @@
 import styles from "./GoalCheck.module.css"
-import DoughnutChart from "@/Components/doughnutChart"
 
 export default function GoalCheck({
     description,
-    name
 }) {
     return(
         <>

@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 )
 
-export default function doughnutChart(){
+export default function doughnutChart() {
   const [chartData, setChartData] = useState({
     datasets: []
   })
@@ -35,19 +35,19 @@ export default function doughnutChart(){
         {
           data: [24, 6],
           borderColor: ['rgba(53, 162, 135, 0.4',
-          'rgba(63, 62, 235, 0.4',
-        ],
+            'rgba(63, 62, 235, 0.4',
+          ],
           backgroundColor: ['#53239B',
-          '#CCE3FB'
-        ],
-        borderWidth: .5
+            '#CCE3FB'
+          ],
+          borderWidth: .5
         }
       ]
     })
 
     setChartOptions({
       plugins: {
-        legend:{
+        legend: {
           display: false
         }
       },
@@ -55,9 +55,9 @@ export default function doughnutChart(){
       responsive: true
     })
   }, [])
-  return(
+  return (
     <>
-    <Doughnut data={chartData} options={chartOptions}/>
+      <Doughnut data={chartData} options={chartOptions} />
     </>
   )
 }

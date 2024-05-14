@@ -8,33 +8,32 @@ const sendChat = async (prompt) => {
   console.log('sendChat response', data);
   return data.data;
 }
-  
-export default function AskOscar(){
+
+export default function AskOscar() {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("")
   const [showMessage, setShowMessage] = useState(false)
   const mutation = useMutation(sendChat);
   const [isOpen, setIsOpen] = useState(false)
-
-
   const formatResponse = (response) => {
     let formattedResponse = '';
-  
     if (response.includes("![") && response.includes(")")) {
       const imageUrl = response.substring(response.indexOf("(") + 1, response.lastIndexOf(")"));
       formattedResponse += `<img src="${imageUrl}" alt="Image" />`;
     }
     formattedResponse += response.replace(/##(.*?)##/g, '<strong>$1</strong>');
     formattedResponse = formattedResponse.replace(/#(.*?)#/g, '<strong>$1</strong>');
-    
+
     return formattedResponse;
   }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await mutation.mutateAsync(message)
     setMessages([...messages, { message: message, response: formatResponse(response) }])
     setMessage("")
   }
+
   const clearPrompt = async => {
     setMessages([]);
   }
@@ -62,15 +61,14 @@ export default function AskOscar(){
         </section>
       </div>
       {messages.length > 0 && (
-          <section id="label">
-            <ul className={styles.buttonOptions}>
-              <li>
-                <button onClick={clearPrompt}>Clear</button>
-              </li>
-
-            </ul>
-          </section>
-        )}
+        <section id="label">
+          <ul className={styles.buttonOptions}>
+            <li>
+              <button onClick={clearPrompt}>Clear</button>
+            </li>
+          </ul>
+        </section>
+      )}
     </>
   )
 }

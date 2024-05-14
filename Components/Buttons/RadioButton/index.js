@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./RadioButton.module.css";
 
-
 export default function RadioButtons({ options, onSelect, style, tabIndex }) {
     const [selectedOption, setSelectedOption] = useState(null);
 

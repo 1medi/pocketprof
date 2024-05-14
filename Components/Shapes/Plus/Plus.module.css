@@ -4,6 +4,7 @@
   position: relative;
   width: 8px;
 }
+
 .plus:after {
   background: #333;
   content: "";

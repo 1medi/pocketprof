@@ -38,7 +38,7 @@ export default function AccountName({ onClose, onSave }) {
                                     size="40"
                                     value={accountName}
                                     onChange={handleChange}
-                                    tabIndex={2} 
+                                    tabIndex={2}
                                 />
                             </div>
                         </div>

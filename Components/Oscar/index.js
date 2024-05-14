@@ -17,9 +17,9 @@ export default function Oscar() {
 
   return (
     <>
-        <div className={styles.lottieContainer}>
+      <div className={styles.lottieContainer}>
         <div className={styles.container} ref={animationContainer}></div>
-        </div>
+      </div>
     </>
   );
 }

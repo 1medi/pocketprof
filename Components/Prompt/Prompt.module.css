@@ -4,41 +4,42 @@
   justify-content: space-between;
   align-items: center;
   min-height: 20vh;
-  
 }
 
-.promptContainer{
+.promptContainer {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 430px;
+}
 
+.resourceContainer {
+  padding: 10px;
+  margin: auto;
 }
-.resourceContainer{
-  padding:10px;
-margin:auto;
-}
-.container{
+
+.container {
   display: flex;
   position: inherit;
   justify-content: center;
   margin: 0 auto;
 }
 
-.response{
-  width:430px;
+.response {
+  width: 430px;
 }
 
-.message{
+.message {
   margin: 0;
   font-style: italic;
 }
 
-.formContainer{
+.formContainer {
   margin: auto;
 
 }
-.responseContainer{
+
+.responseContainer {
   animation: 1s ease-out 0s 1 slideInFromLeft;
   margin: 0;
   width: 200px;
@@ -48,29 +49,29 @@ margin:auto;
   justify-content: center;
 }
 
-.gptContainer{
+.gptContainer {
   white-space: pre-wrap;
   width: 100%;
 }
 
-.overlay{
+.overlay {
   display: flex;
   flex-direction: row;
 }
 
-.overlay{
+.overlay {
   background-color: var(--lightpurple-background);
   z-index: 999;
   display: flex;
   width: 100vw;
   height: 100vh;
-  position:relative;
+  position: relative;
   display: flex;
 }
 
-.textContainer{
+.textContainer {
   text-align: center;
-  margin:auto;
+  margin: auto;
 }
 
 .buttonOptions {
@@ -83,7 +84,7 @@ margin:auto;
   align-items: center;
 }
 
-.alert{
+.alert {
   width: 430px;
   height: 600px;
   position: relative;
@@ -99,13 +100,13 @@ margin:auto;
   border: 1px solid black
 }
 
-.button_container{
-  padding:10px;
+.button_container {
+  padding: 10px;
   margin: 10px;
 
 }
 
-.oscarContainer{
+.oscarContainer {
   display: flex;
   position: relative;
   justify-content: center;
@@ -115,6 +116,7 @@ margin:auto;
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
