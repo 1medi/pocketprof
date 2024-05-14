@@ -9,11 +9,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
   background-color: var(--background-color);
-  
 }
 
 .quote,
@@ -31,18 +30,18 @@
   text-align: center;
 }
 
-.imageContainer{
-margin-left:auto;
-margin-right: auto;
-margin-top:20px;
+.imageContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   overflow: hidden;
   border-radius: 100px;
   object-fit: cover;
-  width: 150px; 
+  width: 150px;
   height: 150px;
 }
 
-.profileImg{
+.profileImg {
   object-fit: cover;
 }
 
@@ -72,7 +71,7 @@ margin-top:20px;
   color: black;
 }
 
-.successText:hover{
+.successText:hover {
   color: var(--main-color-purple)
 }
 
@@ -107,7 +106,7 @@ margin-top:20px;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-.leftDiv{
+.leftDiv {
   width: 745px;
   height: 100vh;
   background-color: white;
@@ -116,7 +115,7 @@ margin-top:20px;
   right: 950px;
 }
 
-.rightDiv{
+.rightDiv {
   width: 745px;
   height: 1000px;
   background-color: white;
@@ -136,18 +135,15 @@ margin-top:20px;
   }
 }
 
-.quote{
+.quote {
   font-family: var(--body-text);
   font-size: var(--font-secondary);
   font-weight: 400;
 }
 
-.student{
+.student {
   font-family: var(--body-text);
   font-size: var(--font-secondary);
   font-weight: 400;
 }
 
-.outerContainer{
-  margin-top: 50px;
-}

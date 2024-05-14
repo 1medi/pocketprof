@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from "next/head";
 import styles from "./article.module.css";
 import axios from 'axios';
-import Header from '@/Components/Header';
+import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
 
 export default function healthArticles() {
@@ -40,7 +40,7 @@ export default function healthArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Header name={"Articles"} />
+        <Circles title={"Articles"} />
         <main className={`${styles.main}`}>
           {isLoading && <p>Loading...</p>}
           {error && <p>{error}</p>}

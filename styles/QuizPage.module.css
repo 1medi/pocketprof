@@ -1,20 +1,18 @@
 .mobileContainer{
   width: 430px; 
   margin: 0 auto; 
-
 }
 
 .main {
   overflow-x: hidden;
-  justify-content: center;
+  justify-content:flex-start;
   display: flex;
   background-color: var(--background-color);
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  min-height: 60vh;
-  padding-top:4rem;
+  min-height: 100vh;
+  padding-top:0;
 }
 
 .container {
@@ -29,17 +27,17 @@
  position: relative;
  display: flex;
  flex-direction: column;
- margin-top: 130px;
+ margin-top: 30px;
  align-items: center;
  justify-content: center;
 }
 
 .divider {
-  background: linear-gradient(140deg,  #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%) border-box;;
+  background: linear-gradient(140deg,  #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%) border-box;
   width: 24rem;
   height: 0.15rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .onboardingContainer{
