@@ -70,30 +70,30 @@ export default function artArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Header name={"Articles"}/>
+        <Header name={"Articles"} />
         <main className={`${styles.main}`}>
-        {isLoading && <p>Loading...</p>}
+          {isLoading && <p>Loading...</p>}
           {error && <p>{error}</p>}
           <div className={styles.articleContainer}>
-              {data.map((post, index) => {
-                const randomPhoto = shuffledPhotos[index % shuffledPhotos.length];
-                return (
-                  <div key={index} className={styles.article}>
-                    <div className={styles.articleInnerContainer}>
-                      <div className={styles.imageContainer}>
-                        <Image className={styles.image} src={randomPhoto.src} alt={randomPhoto.alt} />
-                      </div>
-                      <div className={styles.category}><p className={styles.titles}>Title:</p><p>{post.title}</p></div>
-                      <div className={styles.category}><p className={styles.titles}>Author:</p><p>{post.author}</p></div>
-                      <div className={styles.category}><p> <br/><a href={post.url}>Read more</a></p></div>
+            {data.map((post, index) => {
+              const randomPhoto = shuffledPhotos[index % shuffledPhotos.length];
+              return (
+                <div key={index} className={styles.article}>
+                  <div className={styles.articleInnerContainer}>
+                    <div className={styles.imageContainer} tabIndex={0}>
+                      <Image className={styles.image} src={randomPhoto.src} alt={randomPhoto.alt} />
                     </div>
+                    <div className={styles.category}><p className={styles.titles}>Title:</p><p>{post.title}</p></div>
+                    <div className={styles.category}><p className={styles.titles}>Author:</p><p>{post.author}</p></div>
+                    <div className={styles.category}><p> <br /><a href={post.url} tabIndex={0}>Read more</a></p></div>
                   </div>
-                );
-              })}
-            </div>
-            <NavBar/>
-          </main>
-        </div>
-      </>
-    );
-  }
+                </div>
+              );
+            })}
+          </div>
+          <NavBar />
+        </main>
+      </div>
+    </>
+  );
+}
