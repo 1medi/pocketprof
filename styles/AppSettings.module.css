@@ -8,7 +8,6 @@
   background-color: var(--background-color);
   padding-top:0;
   align-items: flex-start;
-  padding-top:4rem;
 }
 
 .mobileContainer{
@@ -46,10 +45,6 @@
 .horizontal{
   margin-top: 20px;
   border-bottom: 0.7px solid var(--main-color-purple);
-}
-
-.outerContainer{
-  margin-top:5rem;
 }
 
 .leftDiv{
