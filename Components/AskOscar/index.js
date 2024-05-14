@@ -6,7 +6,7 @@ import Link from "next/link";
 
 // Function to send chat with a specified prompt
 const sendChat = async (prompt) => {
-  const { data } = await axios.post("api/chat", { prompt });
+  const { data } = await axios.post("api/askOscar", { prompt });
   console.log('sendChat response', data);
   return data.data;
 }
