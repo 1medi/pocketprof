@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./article.module.css";
 import axios from 'axios';
-import Circles from '@/Components/Shapes/Circles';
+import Header from '@/Components/Header';
 import NavBar from "@/Components/Navbar";
 import { useRouter } from 'next/router';
 import Painting from "@/public/img/articlePhotos/painting.jpg"
@@ -55,6 +55,10 @@ export default function artArticles() {
     grabNews();
   }, []);
 
+  const navigateToAnotherPage = () => {
+    router.push('/NewSubject');
+  };
+
   const shuffledPhotos = shuffleArray(photos);
 
   return (
@@ -66,30 +70,30 @@ export default function artArticles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mobileContainer}>
-        <Circles title={"Articles"}/>
+        <Header name={"Articles"}/>
         <main className={`${styles.main}`}>
-          {isLoading  && <p>Loading...</p>}
+        {isLoading && <p>Loading...</p>}
           {error && <p>{error}</p>}
           <div className={styles.articleContainer}>
-            {data.map((post, index) => {
-              const randomPhoto = shuffledPhotos[index % shuffledPhotos.length];
-              return (
-                <div key={index} className={styles.article}>
-                  <div className={styles.articleInnerContainer}>
-                    <div className={styles.category}>
-                      <Image src={randomPhoto.src} alt={randomPhoto.alt} />
+              {data.map((post, index) => {
+                const randomPhoto = shuffledPhotos[index % shuffledPhotos.length];
+                return (
+                  <div key={index} className={styles.article}>
+                    <div className={styles.articleInnerContainer}>
+                      <div className={styles.imageContainer}>
+                        <Image className={styles.image} src={randomPhoto.src} alt={randomPhoto.alt} />
+                      </div>
+                      <div className={styles.category}><p className={styles.titles}>Title:</p><p>{post.title}</p></div>
+                      <div className={styles.category}><p className={styles.titles}>Author:</p><p>{post.author}</p></div>
+                      <div className={styles.category}><p> <br/><a href={post.url}>Read more</a></p></div>
                     </div>
-                    <div className={styles.category}><p>Title: <br/>{post.title}</p></div>
-                    <div className={styles.category}><p>Author: <br/>{post.author}</p></div>
-                    <div className={styles.category}><p> <br/><a href={post.url}>Read more</a></p></div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-          <NavBar/>
-        </main>
-      </div>
-    </>
-  );
-}
+                );
+              })}
+            </div>
+            <NavBar/>
+          </main>
+        </div>
+      </>
+    );
+  }

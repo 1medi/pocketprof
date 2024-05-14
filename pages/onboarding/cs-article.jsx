@@ -16,7 +16,7 @@ export default function csArticles() {
       setError(null);
       try {
         var apiKey = process.env.NEXT_PUBLIC_API_KEY;
-        var type = 'learn_computer_science';
+        var type = 'learn-about_computer_languages_basic';
         const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
         const response = await axios.get(url);
         setData(response.data.posts); 
@@ -47,10 +47,9 @@ export default function csArticles() {
           {data.map((post, index) => (
             <div key={index} className={styles.article}>
               <div className={styles.articleInnerContainer}>
-                <div className={styles.category}><p>Category: <br/> {post.section_title}</p></div>
-                <div className={styles.category}><p>Title: <br/> {post.title}</p></div>
-                <div className={styles.category}><p>Author: <br/>{post.author}</p></div>
-                <div className={styles.category}><p> <br/><a href={post.url}>Read more</a></p></div>
+                <div className={styles.category}><p className={styles.titles}>Title:</p><p> {post.title}</p></div>
+                <div className={styles.category}><p className={styles.titles}>Author: </p><p>{post.author}</p></div>
+                <div className={styles.category}><p><a href={post.url}>Read more</a></p></div>
               </div>
             </div>
           ))}

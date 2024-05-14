@@ -2,7 +2,8 @@
   max-height: 400px;
   height: 8.8rem;
   position: sticky;
-  width:430px
+  width:430px;
+  background-color: var(--background-color);
 }
 
 .background__circle {
