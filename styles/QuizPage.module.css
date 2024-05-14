@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60vh;
+  padding-top:4rem;
 }
 
 .container {

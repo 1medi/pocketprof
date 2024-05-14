@@ -1,11 +1,9 @@
 import Head from "next/head";
 import NavBar from "@/Components/Navbar";
-import Image from "next/image";
 import styles from "@/styles/NewSubject.module.css";
 import CategoryButton from "@/Components/Buttons/CategoriesButton";
 import Link from "next/link";
 import HomePageCircles from "@/Components/HomePageCircles";
-import Header from "@/Components/Header";
 import OscarHome from "@/Components/OscarHome";
 import FloatingOscar from "@/Components/FloatingOscar";
 
@@ -13,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>New Subject</title>
+        <title>Home</title>
         <meta name="description" content="Discover a new subject here" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -22,14 +20,9 @@ export default function Home() {
         <HomePageCircles />
         <main className={styles.main}>
           <div className={styles.heading__section}>
-            <div className={styles.oscar__container}>
-              <div className={styles.oscar}>
-                <OscarHome />
-              </div>
-            </div>
-            <div className={styles.banner__content}>
-              <div className={styles.heading__container}>
-                <h1 className={styles.heading}>
+          <div className={styles.banner__content}>
+            <div className={styles.heading__container}>
+              <h1 className={styles.heading}>
                   Explore Your Potential
                 </h1>
               </div>
