@@ -24,19 +24,19 @@ export default function Chat() {
             </div>
 
             <div className={styles.promptContainer}>
-              <Link 
-              href={"/ShowResources"}>
-              <Button3 className={styles.prompt} name={"Basic"}/>
+              <Link
+                href={"/ShowResources"}>
+                <Button3 className={styles.prompt} name={"Basic"} />
               </Link>
               <Link
-              href={"/ShowResources"}
+                href={"/ShowResources"}
               >
-              <Button3 className={styles.prompt} name={"Intermediate"}/>              
+                <Button3 className={styles.prompt} name={"Intermediate"} />
               </Link>
               <Link
-              href={"/ShowResources"}
+                href={"/ShowResources"}
               >
-              <Button3 className={styles.prompt} name={"Expert"}/>           
+                <Button3 className={styles.prompt} name={"Expert"} />
               </Link>
             </div>
           </main>

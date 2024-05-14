@@ -9,7 +9,7 @@ import Link from "next/link";
 import Circles from "@/Components/Shapes/Circles";
 import SubjectCard from "@/Components/SubjectCard";
 import { subjectsCards } from "@/data/card_data";
-
+import Button3 from "@/Components/Buttons/Button3";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 export default function SuccessDashboard() {
@@ -42,7 +42,7 @@ export default function SuccessDashboard() {
                 <h5 className={styles.tracked}>Currently Tracked Subject</h5>
                 <h4 className={styles.goal}>Learning Intermediate Skills on Violin</h4>
                 <Link href={"/SuccessDashboard/GoalTracking"} tabIndex={8}>
-                  <button className={styles.buddon}>View Your Goals</button>
+                  <Button3 name={"View Goals"} className={styles.buddon}/>
                 </Link>
               </div>
               <div className={styles.chartContainer} tabIndex={9}>

@@ -4,22 +4,23 @@
     padding: 10px;
 }
 
-.description, .number {
+.description,
+.number {
     font-size: var(--font-body);
 }
 
-.number{
+.number {
     padding: 10px;
 }
 
-.plus{
-    display:flex;
+.plus {
+    display: flex;
     position: relative;
     justify-content: flex-end;
     margin-left: auto;
 }
 
-.alert{
+.alert {
     width: 430px;
     position: relative;
     display: flex;
@@ -34,7 +35,7 @@
     border: 1px solid black
 }
 
-.oscarContainer{
+.oscarContainer {
     position: relative;
     display: flex;
     justify-content: center;
@@ -46,25 +47,26 @@
     margin: auto;
 }
 
-.buttonContainer{
-    padding:10px;
+.buttonContainer {
+    padding: 10px;
 }
 
 .imageContainer {
     position: relative;
-    width: 100px; 
-    height: 50px; 
+    width: 100px;
+    height: 50px;
     left: 0;
 }
 
-.image, .hoverImage {
+.image,
+.hoverImage {
     position: absolute;
     top: 0;
     left: 0;
     right: 50px;
     width: 50px;
     height: 50px;
-}   
+}
 
 .hoverImage {
     display: none;
@@ -76,9 +78,10 @@
 
 @keyframes slideInFromLeft {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
+}
