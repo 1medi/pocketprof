@@ -33,9 +33,7 @@
 }
 
 .heading{
-  padding-right: 10px;
   font-family: var(--headings);
-  padding-right: 30px;
 }
 
 .heading__container{
