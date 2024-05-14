@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Courses.module.css";
 import { Montserrat } from "next/font/google";
 import Oscar from "@/Components/Oscar";
-import Images from "@/Components/Images";
+import Images from "@/Components/ImageGeneration";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/Navbar";
 import Circles from "@/Components/Shapes/Circles";
