@@ -1,11 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./article.module.css";
 import axios from 'axios';
 import Circles from '@/Components/Shapes/Circles';
 import NavBar from "@/Components/Navbar";
-import Button3 from '@/Components/Buttons/Button3';
 import { useRouter } from 'next/router';
 import Painting from "@/public/img/articlePhotos/painting.jpg"
 import Painting2 from "@/public/img/articlePhotos/painting2.jpg"
@@ -21,7 +20,6 @@ const photos = [
   { id: 5, src: Painting5, alt: 'Painting 5' },
 ];
 
-
 const shuffleArray = (array) => {
   const shuffledArray = [...array];
   for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -33,81 +31,79 @@ const shuffleArray = (array) => {
 
 export default function artArticles() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const router = useRouter();
 
+  useEffect(() => {
+    const grabNews = async () => {
+      setError(null);
+      try {
+        const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+        const type = 'Learn-about-artistic-techniques';
+        const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
+        const response = await axios.get(url);
+        setData(response.data.posts.slice(0, 5));
+      } catch (err) {
+        console.error(err);
+        setError('Failed to fetch data');
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  var type = 'Learn-about-artistic-techniques';
-  var apiKey = process.env.NEXT_PUBLIC_API_KEY;
-  var date = '2024-04-13';
-  const url = `https://api.webz.io/newsApiLite?token=${apiKey}&q=${type}`;
-
-  const grabNews = async () => {
-    setIsLoading(true);
-    setError(null);
-    try {
-      const response = await axios.get(url);
-      console.clear();
-      setData(response.data.posts.slice(0, 5));
-      console.log(response.data.posts);
-    } catch (err) {
-      console.error(err);
-      setError('Failed to fetch data');
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    grabNews();
+  }, []);
 
   const navigateToAnotherPage = () => {
     router.push('/Home');
   };
 
-    const shuffledPhotos = shuffleArray(photos);
+  const shuffledPhotos = shuffleArray(photos);
 
-    return (
-      <>
-        <Head>
-          <title>Articles</title>
-          <meta name="description" content="On-boarding Process" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <div className={styles.mobileContainer}>
-          <Circles title={"Articles"}/>
-          <main className={`${styles.main}`}>
-            {data.length === 0 ? (
-              <div className={styles.buttonContainer}>
-                <button onClick={grabNews} disabled={isLoading} className={styles.button}>
-                  {isLoading ? 'Loading...' : 'Search'}
-                </button>
-              </div>
-            ) : (
-              <button onClick={navigateToAnotherPage} className={styles.button}>
-                Home
+  return (
+    <>
+      <Head>
+        <title>Articles</title>
+        <meta name="description" content="On-boarding Process" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles.mobileContainer}>
+        <Circles title={"Articles"}/>
+        <main className={`${styles.main}`}>
+          {isLoading ? (
+            <div className={styles.buttonContainer}>
+              <button disabled className={styles.button}>
+                Loading...
               </button>
-            )}
-            {error && <p>{error}</p>}
-            <div className={styles.articleContainer}>
-              {data.map((post, index) => {
-                const randomPhoto = shuffledPhotos[index % shuffledPhotos.length];
-                return (
-                  <div key={index} className={styles.article}>
-                    <div className={styles.articleInnerContainer}>
-                      <div className={styles.category}>
-                        <Image src={randomPhoto.src} alt={randomPhoto.alt} />
-                      </div>
-                      <div className={styles.category}><p>Title: <br/>{post.title}</p></div>
-                      <div className={styles.category}><p>Author: <br/>{post.author}</p></div>
-                      <div className={styles.category}><p> <br/><a href={post.url}>Read more</a></p></div>
-                    </div>
-                  </div>
-                );
-              })}
             </div>
-            <NavBar/>
-          </main>
-        </div>
-      </>
-    );
-  }
+          ) : (
+            <button onClick={navigateToAnotherPage} className={styles.button}>
+              Home
+            </button>
+          )}
+          {error && <p>{error}</p>}
+          <div className={styles.articleContainer}>
+            {data.map((post, index) => {
+              const randomPhoto = shuffledPhotos[index % shuffledPhotos.length];
+              return (
+                <div key={index} className={styles.article}>
+                  <div className={styles.articleInnerContainer}>
+                    <div className={styles.category}>
+                      <Image src={randomPhoto.src} alt={randomPhoto.alt} />
+                    </div>
+                    <div className={styles.category}><p>Title: <br/>{post.title}</p></div>
+                    <div className={styles.category}><p>Author: <br/>{post.author}</p></div>
+                    <div className={styles.category}><p> <br/><a href={post.url}>Read more</a></p></div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <NavBar/>
+        </main>
+      </div>
+    </>
+  );
+}
