@@ -39,7 +39,7 @@ export default function QuizPage() {
           </div>
           <div className={styles.onboardingContainer} tabIndex={9}>
             <p className={styles.onboardingLink} tabIndex={10}>Haven't found your interest yet? 
-              <Link href={'/'}>
+              <Link href={'/onboarding/page'}>
               <h3 tabIndex={11}>Find out here!</h3>
               </Link> 
             </p>

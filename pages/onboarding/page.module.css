@@ -1,26 +1,26 @@
 .mobileContainer{
     width: 430px; 
     margin: 0 auto; 
+    background: linear-gradient(140deg,  #d9edf7 35%, rgba(237, 202, 216, 0) 50%, var(--main-color-lightpurple)), radial-gradient(circle, #ffcae1 0, #daeafc 100%) border-box;
 }
   
 .main {
   overflow-x: hidden;
   justify-content: center;
-  display: flex;  
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 20vh;
+  min-height: 100vh;
 }
 
 .container{
-    height: vh;
     background-color: var(--lightpurple-background);
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top:30px;
+
 }
 
 
@@ -232,7 +232,7 @@
 }
 
 .container{
-    height: 80vh;
+    height: 100vh;
     background-color: var(--lightpurple-background);
     align-items: center;
     display: flex;
@@ -462,9 +462,47 @@
     padding: 10px;
   }
 
+  .oscarCircle{
+    width: 150px;
+    height: 150px;
+    border: 50px solid var(--main-color-lightpurple);
+    border-radius: 125px;
+  }
+
+  .oscarContainer{
+    padding: 0;
+    top: 30px;
+    position: relative;
+    height: 30%;
+  }
+
+  .oscarImage{
+    display: flex;
+    position: relative;
+    margin: auto;
+    bottom:240px;
+  }
   .textContainer{
     padding:10px;
   }
+
+  .progressBar{
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 10px;
+  } 
+
+  .step{
+    background-color: var(--main-color-purple);
+    transition: background-color 0.5s ease;
+    height:2rem;
+    width: 5em;
+    margin-right:10px;
+    border-radius: 30px;
+  }
+  
   @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);

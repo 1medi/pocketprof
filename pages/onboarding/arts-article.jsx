@@ -11,7 +11,8 @@ import Painting2 from "@/public/img/articlePhotos/painting2.jpg"
 import Painting3 from "@/public/img/articlePhotos/painting3.jpg"
 import Painting4 from "@/public/img/articlePhotos/painting4.jpg"
 import Painting5 from "@/public/img/articlePhotos/painting5.jpg"
-
+import Button3 from '@/Components/Buttons/Button3';
+import Link from 'next/link';
 const photos = [
   { id: 1, src: Painting, alt: 'Painting 1' },
   { id: 2, src: Painting2, alt: 'Painting 2' },
@@ -88,8 +89,15 @@ export default function artArticles() {
                     <div className={styles.category}><p> <br /><a href={post.url} tabIndex={0}>Read more</a></p></div>
                   </div>
                 </div>
+
               );
+              
             })}
+              <div className={styles.buttonContainer}>
+            <Link href="/NewSubject">
+                <Button3 name="Go Home" />
+            </Link>
+          </div>
           </div>
           <NavBar />
         </main>

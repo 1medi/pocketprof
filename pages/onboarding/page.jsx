@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import { onboarding } from "@/quizData/onboarding";
 import styles from "./page.module.css";
 import Button3 from '@/Components/Buttons/Button3';
+import Image from 'next/image';
+import Oscar from '@/public/img/oscar/oscar-main.svg';
 
 export default function Page() {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -11,6 +13,7 @@ export default function Page() {
   const router = useRouter();
   const [checked, setChecked] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+  const [progress, setProgress] = useState(1); // Start progress at 1 instead of 0
 
   const routeMap = {
     'arts': {
@@ -45,6 +48,8 @@ export default function Page() {
       routeToResult();      
     }
     setChecked(false);
+    // Update progress
+    setProgress(newQuestionIndex + 1);
   };
 
   const routeToResult = () => {
@@ -62,6 +67,7 @@ export default function Page() {
       router.push(route);
     }
   };
+
   const nextButtonRef = useRef(null);
 
   useEffect(() => {
@@ -69,39 +75,53 @@ export default function Page() {
       nextButtonRef.current.focus();
     }
   }, [checked]);
-  
+
   return (
     <div className={styles.mobileContainer}>
       <main className={styles.container}>
+        <div className={styles.oscarContainer}>
+          <div className={styles.oscarCircle}></div>
+          <Image
+            className={styles.oscarImage}
+            src={Oscar}
+            width={256}
+            height={256}
+          />
+        </div>
         {!showResult ? (
           <div className={styles.quizContainer}>
             <div className={styles.quizInnerContainer}>
               <h3 className={styles.question}>{onboarding.questions[activeQuestion].question}</h3>
               {onboarding.questions[activeQuestion].answers.map((answer, idx) => (
                 <li key={idx}
-                    onClick={() => onAnswerSelected(answer, idx)}
-                    onKeyDown={(event) => onAnswerSelected(answer, idx, event)}
-                    className={`${styles.answerList} ${selectedAnswerIndex === idx ? styles.itemSelected : styles.itemHover}`}
-                    tabIndex={0}>
+                  onClick={() => onAnswerSelected(answer, idx)}
+                  onKeyDown={(event) => onAnswerSelected(answer, idx, event)}
+                  className={`${styles.answerList} ${selectedAnswerIndex === idx ? styles.itemSelected : styles.itemHover}`}
+                  tabIndex={0}>
                   {answer.text}
                 </li>
               ))}
               <button
-              ref={nextButtonRef} 
-              onClick={nextQuestion}
-              className={checked ? styles.btn : styles.btnDisabled}
-              disabled={!checked}
-              tabIndex={2}>
+                ref={nextButtonRef} 
+                onClick={nextQuestion}
+                className={checked ? styles.btn : styles.btnDisabled}
+                disabled={!checked}
+                tabIndex={2}>
                 {activeQuestion === onboarding.totalQuestions - 1 ? 'Finish' : 'Next'}
               </button>
             </div>
           </div>
-        ) : (
-          <div className={styles.result}>
-            <h3>Quiz Completed</h3>
-            <Button3 name="Home" onClick={() => setShowResult(false)} />
-          </div>
-        )}
+        ) : <h1>Loading Your Resources</h1>}
+        <div className={styles.progressBar}>
+          {[...Array(onboarding.totalQuestions)].map((_, index) => (
+            <div
+              key={index}
+              className={styles.step}
+              style={{ opacity: index < progress ? 1 : 0 }}
+            >
+            </div>
+          ))}
+        </div>
       </main>
     </div>
   );
