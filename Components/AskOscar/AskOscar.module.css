@@ -1,16 +1,36 @@
 .response {
   text-align: right;
   font-weight: bold;
+  border: 1px solid var(--main-color-lightpurple-transparent);
+  display: inline-block;
+  width: 60%; 
+  box-sizing: border-box; 
+  margin-left: 155px;
+  border-radius: 10px;
+  font-size: var(--font-body);
+  background-color: var(--secondary-color-lightblue);
+  padding: 5px;
+  position: flex-end;
 }
 
 .message {
   font-style: italic;
   padding: 10px;
   font-size: var(--font-body);
+  border: 1px solid black;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: var(--secondary-color-lightblue);
+  padding: 5px;
 }
 
 .gptContainer {
   width: 100%;
+  border: 2px solid var(--main-color-purple);
+  border-radius: 30px;
+  padding: 10px;
+  background-color: var(  --offest-of-whites);
 }
 
 .animationContainer {
@@ -35,4 +55,6 @@
   display: flex;
   position: relative;
   justify-content: center;
+  width:100px;
+  margin: auto;
 }

@@ -34,7 +34,7 @@ export default function FloatingOscar() {
             <div className={styles.askOscarContainer}>
               <AskOscar />
             </div>
-            <h3 className={styles.query}>Need some inspiration?</h3>
+            <h1 className={styles.query}>Need some inspiration?</h1>
             <Images />
           </div>
         </div>
