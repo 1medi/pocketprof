@@ -42,6 +42,7 @@ export default function Home() {
                   Explore popular categories and begin your next learning journey
                 </p>
               </div>
+              
               <div className={styles.divider} tabIndex={12}></div>
             </div>
             <div className={styles.category__button__container} tabIndex={13}>

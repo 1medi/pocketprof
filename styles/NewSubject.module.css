@@ -5,12 +5,15 @@
   align-items: center;
   flex-direction: column;
   align-items: center;
-  min-height: 140vh;
+  min-height: 80vh;
   background-color: var(--background-color);
+  font-family: "Montserrat", "sans-serif";
 }
+
 .mobileContainer{
   width: 430px; 
   margin: 0 auto; 
+  font-family: "Montserrat", "sans-serif";
 }
 
   .banner__content {
@@ -39,6 +42,7 @@
   .oscar__container {
     display: flex;
     z-index: 10;
+
   }
 
   .heading__container{
@@ -100,7 +104,6 @@
 
 .category__button__container{
   position: relative;
-  margin-bottom: 100px;
 }
 
 .questionContainer{
@@ -142,7 +145,8 @@
 .FloatingOscar{
   position: relative;
   display: flex;
-  bottom: 100px;
+  position: static;
+  bottom: 50px;
 }
 
 .rightDiv{

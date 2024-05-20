@@ -41,8 +41,15 @@
 
 .mobileContainer{
   background-color: var(--background-color);
+  
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headings);
+}
+body {
+  font-family: var(--body-text);
+}
 ol,
 ul {
   list-style: none;
