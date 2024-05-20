@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 :root {
   align-content: center;
   --main-color-purple: #53239B;
@@ -15,6 +17,7 @@
   --font-sub-header: 24pt;
   --font-body-large: 18pt;
   --font-button: 16pt;
+  --font-fab-button: 12pt;
   --font-body: 16pt;
   --font-secondary: 14pt;
   --font-tertiary:12pt;
@@ -28,8 +31,7 @@
 
 
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 
 
 

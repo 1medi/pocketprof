@@ -5,15 +5,14 @@
   align-items: center;
   flex-direction: column;
   align-items: center;
-  min-height: 80vh;
+  min-height: 85vh;
   background-color: var(--background-color);
-  font-family: "Montserrat", "sans-serif";
+
 }
 
 .mobileContainer{
   width: 430px; 
   margin: 0 auto; 
-  font-family: "Montserrat", "sans-serif";
 }
 
   .banner__content {
@@ -58,7 +57,7 @@
     width: 100%;
     text-align: right;
     color: white;
-    z-index: 3;
+
     color: var(--main-color-purple);
     font-family: var(--headings);
   }
@@ -145,8 +144,8 @@
 .FloatingOscar{
   position: relative;
   display: flex;
-  position: static;
-  bottom: 50px;
+  bottom: 75px;
+  left: 250px;
 }
 
 .rightDiv{
