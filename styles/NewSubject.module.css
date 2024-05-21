@@ -144,7 +144,8 @@
 .FloatingOscar{
   position: relative;
   display: flex;
-  bottom: 75px;
+  padding-bottom: 60px;
+  bottom: 50px;
   left: 250px;
 }
 

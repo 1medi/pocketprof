@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Oscar from "../Oscar";
 import Images from "@/Components/ImageGeneration";
+import QuestionMark from "../Shapes/Tooltips/QuestionMark";
 
 export default function FloatingOscar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,7 @@ export default function FloatingOscar() {
               &times;
             </span>
             <div className={styles.animationContainer}>
+              <QuestionMark tip={"Ask any questions you may have an Oscar will answer your query! "}/>
               <Oscar />
             </div>
 
@@ -34,6 +36,7 @@ export default function FloatingOscar() {
             <div className={styles.askOscarContainer}>
               <AskOscar />
             </div>
+            <QuestionMark tip={"Type in anything and Oscar will try to visualize it for YOU!"}/>
             <h1 className={styles.query}>Need some inspiration?</h1>
             <Images />
           </div>

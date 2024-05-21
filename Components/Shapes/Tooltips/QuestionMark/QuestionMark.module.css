@@ -24,4 +24,5 @@
   width: 200px;
   display: flex;
   justify-content: center;
+  z-index: 999;
 }
