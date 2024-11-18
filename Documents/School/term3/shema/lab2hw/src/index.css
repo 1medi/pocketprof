@@ -1,0 +1,27 @@
+.card {
+  background-color: #D8A47F;
+  margin: 100px;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.photo{
+  width:150px;
+  height: 150px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.info{
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
